@@ -9,7 +9,8 @@ function CareAbout(props: {title:string, description:string, icon?:string, backg
     return (
         <div 
             style={{backgroundColor: background||"#4f3130"}}
-            className={`h-screen w-full max-w-99 flex flex-col justify-center items-center px-2`}
+            className={`h-screen min-w-80 w-80 flex flex-col justify-center items-center px-2`}
+            // className={`h-screen min-w-80 w-full max-w-99 flex flex-col justify-center items-center px-2`}
         >
             <div className='w-28 h-28 bg-white rounded-full flex justify-center items-center'>
 

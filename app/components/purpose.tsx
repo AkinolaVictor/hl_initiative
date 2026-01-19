@@ -1,9 +1,14 @@
-import React from 'react'
+"use client"
+import IsMobile from '@/utils/isMobile';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useEffect } from 'react'
 
 interface Props {bg?:string, iconbg?:string}
 
 function Purpose(props: Props) {
     const {bg, iconbg} = props
+    const {ifMobile} = IsMobile({val:900})
 
     const mission = [
         {
@@ -24,9 +29,47 @@ function Purpose(props: Props) {
         },
     ]
 
+    function purpose_animation() {
+        const isMobile = window.innerWidth < 900;
+        if(!isMobile) return
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        ScrollTrigger.create({
+            trigger: ".purpose_layer_container",
+            start: "top top",
+            end: "+=900vh",
+            scrub: 1,
+            pin: true,
+            invalidateOnRefresh: true,
+        })
+
+        ScrollTrigger.create({
+            trigger: ".purpose_container",
+            start: "top top",
+            end: "+=900vh",
+            scrub: 1,
+            pin: true,
+            invalidateOnRefresh: true,
+            onUpdate: (self)=>{
+                const widt = window.innerWidth
+                gsap.to(".purpose_container", {
+                    x: `${-(widt+50)*self.progress}`, // multiplied by the number of the total widths additional cards to be scrolled to view
+                    duration: 0.5,
+                    ease: "power3.out"
+                })
+            }
+        })
+
+        // return ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        return ScrollTrigger.refresh();;
+    }
+
+    useEffect(purpose_animation, [])
+
     return (
         // <div className='w-full h-auto sticky top-0'>
-        <div className='w-full h-screen relative'>
+        <div className='w-full h-screen relative purpose_layer_container'>
             {/* <div className='relative'> */}
                 <div 
                     className='absolute z-1 w-full h-full' 
@@ -43,8 +86,9 @@ function Purpose(props: Props) {
                 
                 {!bg&&<div className='w-full h-screen bg-[rgba(0,0,0,0.7)] absolute z-2'></div>}
 
-                <div className='w-full h-screen flex flex-col bp9:flex-row justify-start bp9:justify-center items-center absolute z-3 text-white'>
-                    <div className='w-full min-h-screen p-5 flex flex-col items-center justify-center'>
+                {/* <div className='min-w-screen w-full h-screen flex flex-col bp9:flex-row justify-start bp9:justify-center items-center absolute z-3 text-white purpose_container'> */}
+                <div className='min-w-screen w-full h-screen flex justify-start items-start absolute z-3 text-white purpose_container'>
+                    <div className='bp9:min-w-0 min-w-screen w-full h-screen p-5 flex flex-col items-center justify-center'>
                         <p className='dmd text-[30px] mb-5'>Our Vision</p>
                         <p className='text-[15px] w-full max-w-75 font-semibold text-justify'>
                             To build a healthier and more informed society by equipping individuals 
@@ -52,7 +96,8 @@ function Purpose(props: Props) {
                             and promote well-being.
                         </p>
                     </div>
-                    <div className='w-full min-h-screen p-5 hidden bp9:flex flex-col items-center justify-center'>
+
+                    <div className='min-w-screen bp9:min-w-0 w-full min-h-screen p-5 flex flex-col items-center justify-center'>
                         <p className='dmd text-[30px] mb-5'>Our Mission</p>
 
                         <div className='flex flex-row bp9:flex-col flex-wrap'>

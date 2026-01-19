@@ -2,6 +2,7 @@
 
 import { allLinks } from '@/utils/exports'
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 // import Draggable from 'gsap/src/Draggable'
 // import { Draggable } from 'gsap/Draggable'
 import Link from 'next/link'
@@ -30,6 +31,7 @@ function Header(props: Props) {
             ease: "back",
             runBackwards: true,
             delay: 2,
+            
             // repeat: -1,
             // onComplete: (e)=>{
             //     console.log(e)
@@ -53,6 +55,7 @@ function Header(props: Props) {
 
     function headerGsapAnimation_timeline(){
         // const tl = gsap.timeline()
+        gsap.registerPlugin(ScrollTrigger);
         const tl = gsap.timeline({
             delay: 0,
             // repeat: -1,
@@ -79,12 +82,24 @@ function Header(props: Props) {
         //     type: "x",
         //     bounds: ".headerContainer"
         // })
+        const items = [".headerContainer", ".headerLogo", ".linkContainer", ".leftIcon"]
+        for(let i=0; i<items.length; i++){
+            let each = items[i]
+
+            ScrollTrigger.create({
+                trigger: each,
+                start: "top 90%",
+                onEnter: () => tl.restart(),
+                onEnterBack: () => tl.restart(),
+                invalidateOnRefresh: true,
+                // scrub: true,
+            })
+        }
+        // return ()=>ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        return ()=> ScrollTrigger.refresh();
     }
 
-    useEffect(()=>{
-        // headerGsapAnimation_from_to()
-        headerGsapAnimation_timeline()
-    }, [])
+    useEffect(headerGsapAnimation_timeline, [])
 
     return (
         <div className={`flex justify-between items-center px-6 py-8 w-full ${dark?"text-black":"text-white"} headerContainer opacity-0`}>

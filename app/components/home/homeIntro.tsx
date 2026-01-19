@@ -33,11 +33,13 @@ function HomeIntro(props: Props) {
         }, "starter")
         
         
-        tl.from(split2.words, {
-            y: 150,
-            autoAlpha: 0,
-            stagger: 0.08,
-            duration: 1,
+        // tl.from(split2.words, {
+        tl.from(".home_description", {
+            // y: 150,
+            // autoAlpha: 0,
+            // stagger: 0.08,
+            scale: 0,
+            duration: 2,
             toggleActions: "restart none none reset"
         }, "-=1.0")
 
@@ -45,17 +47,24 @@ function HomeIntro(props: Props) {
         ScrollTrigger.create({
             trigger: ".home_title",
             start: "top 80%",
+            invalidateOnRefresh: true,
             onEnter: () => tl.restart(),
-            onEnterBack: () => tl.restart()
+            onEnterBack: () => tl.restart(),
         })
         
         // ScrollTrigger only watches visibility
         ScrollTrigger.create({
             trigger: ".home_description",
             start: "top 80%",
+            invalidateOnRefresh: true,
             onEnter: () => tl.restart(),
             onEnterBack: () => tl.restart()
         })
+
+        animate_home_button()
+
+        // return ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        return ScrollTrigger.refresh();;
     }
 
     function animate_home_button() {
@@ -64,6 +73,7 @@ function HomeIntro(props: Props) {
         const tl = gsap.from(".home_buttn", {
             y: 150,
             duration: 2,
+            
             // delay: 1.5
         })
         
@@ -71,17 +81,16 @@ function HomeIntro(props: Props) {
         ScrollTrigger.create({
             trigger: ".home_buttn",
             start: "top 80%",
+            invalidateOnRefresh: true,
             onEnter: () => tl.restart(),
             onEnterBack: () => tl.restart()
         })
-
         
+        return ()=>ScrollTrigger.refresh();;
     }
 
-    useEffect(()=>{
-        animate_home_title()
-        animate_home_button()
-    }, [])
+    // ScrollTrigger.refresh();
+    useEffect(animate_home_title, [])
 
     return (
         <div className='w-full h-screen relative'>
@@ -119,8 +128,8 @@ function HomeIntro(props: Props) {
                     make informed health decisions, and build healthier lives 
                     for themselves and their communities
                 </p>
-                <Link href={"/volunteer"} className='w-auto h-auto rounded-full bg-white py-2 px-7 text_1 cursor-pointer mt-5 home_buttn'>
-                    <p className='text-black font-semibold'>Learn More</p>
+                <Link href={"/about"} className='w-auto h-auto rounded-full bg-white py-2 px-7 text_1 cursor-pointer mt-5 home_buttn'>
+                    <p className='text-black font-semibold'>More</p>
                 </Link>
             </div>
         </div>
