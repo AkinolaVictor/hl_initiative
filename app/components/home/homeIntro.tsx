@@ -34,7 +34,7 @@ function HomeIntro(props: Props) {
         
         
         tl.from(split2.words, {
-            y: 400,
+            y: 150,
             autoAlpha: 0,
             stagger: 0.08,
             duration: 1,
