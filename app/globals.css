@@ -45,6 +45,8 @@ body {
   font-family: Overpass, Arial, Helvetica, sans-serif;
   /* font-family: "DM Serif Display", Arial, Helvetica, sans-serif; */
   /* font-family: Dosis, Arial, Helvetica, sans-serif; */
+
+  overflow-x: hidden;
 }
 
 .overpass{
