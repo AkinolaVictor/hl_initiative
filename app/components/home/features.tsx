@@ -73,7 +73,7 @@ function Features(props: Props) {
 
         // tl.from(".about-image", {
         gsap.from(".about-image", {
-            x: 700,
+            x: isMobile ? 400 : 700,
             duration: 2,
             scrollTrigger: {
                 trigger: ".about-image",
