@@ -72,9 +72,16 @@ function Header(props: Props) {
         // tl.from(".leftIcon", {x: 200, duration: 0.8})
 
         tl.to(".headerContainer", {opacity: 1}, "-=1")
-        tl.from(".headerLogo", {x:-200, duration: 0.8}, "begin")
-        tl.from(".linkContainer", {y: -200, duration: 1.2}, "-=0.5")
-        tl.from(".leftIcon", {x: 200, duration: 0.8}, "begin")
+        // tl.from(".headerLogo", {x:-200, duration: 0.8}, "begin")
+        // tl.from(".linkContainer", {y: -200, duration: 1.2}, "-=0.5")
+        // tl.from(".leftIcon", {x: 200, duration: 0.8}, "begin")
+
+
+        tl.fromTo(".headerLogo", {x:-200, duration: 0.8}, {x:0}, "begin")
+        tl.fromTo(".linkContainer", {y: -200, duration: 1.2}, {y:0}, "-=0.5")
+        tl.fromTo(".leftIcon", {x: 200, duration: 0.8}, {x:0}, "begin")
+
+
         // tl.from(".leftIcon", {x: 200, duration: 0.8}, "begin-=25%")
         // tl.from(".leftIcon", {x: 200, duration: 0.8}, "begin-=0.4")
         
@@ -95,11 +102,14 @@ function Header(props: Props) {
                 // scrub: true,
             })
         }
-        // return ()=>ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-        return ()=> ScrollTrigger.refresh();
+        return ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        // return ()=> ScrollTrigger.refresh();
     }
 
-    useEffect(headerGsapAnimation_timeline, [])
+    useEffect(()=>{
+        return headerGsapAnimation_timeline()
+    }, [])
+    // useEffect(()=>ScrollTrigger.refresh(), [path])
 
     return (
         <div className={`flex justify-between items-center px-6 py-8 w-full ${dark?"text-black":"text-white"} headerContainer opacity-0`}>

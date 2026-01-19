@@ -41,29 +41,29 @@ function Features(props: Props) {
 
 
         // text should only stagger on big screen
-        if(!isMobile){
-            const split = SplitText.create(".title_description", {
-                type: "words",
-            })
+        // if(!isMobile){
+        //     const split = SplitText.create(".title_description", {
+        //         type: "words",
+        //     })
     
             
-            tl.from(split.words, {
-                y: 100,
-                autoAlpha: 0,
-                stagger: 0.08,
-                duration: .5,
-                toggleActions: "restart none none reset"
-            })
+        //     tl.from(split.words, {
+        //         y: 100,
+        //         autoAlpha: 0,
+        //         stagger: 0.08,
+        //         duration: .5,
+        //         toggleActions: "restart none none reset"
+        //     })
             
-            // ScrollTrigger only watches visibility
-            ScrollTrigger.create({
-                trigger: ".title_description",
-                start: "top 80%",
-                invalidateOnRefresh: true,
-                onEnter: () => tl.restart(),
-                onEnterBack: () => tl.restart()
-            })
-        }
+        //     // ScrollTrigger only watches visibility
+        //     ScrollTrigger.create({
+        //         trigger: ".title_description",
+        //         start: "top 80%",
+        //         invalidateOnRefresh: true,
+        //         onEnter: () => tl.restart(),
+        //         onEnterBack: () => tl.restart()
+        //     })
+        // }
 
         const anim1 = isMobile?{
             scale: 0
@@ -71,8 +71,9 @@ function Features(props: Props) {
             x: -400,
         }
 
-        const tl3 = gsap.from(".description_container", {
-            ...anim1,
+        const tl3 = gsap.to(".description_container", {
+            // ...anim1,
+            x: 0,
             duration: 2,
             scrollTrigger:  isMobile?{}:{
                 trigger: ".description_container",
@@ -89,8 +90,9 @@ function Features(props: Props) {
         }:{
             x: isMobile ? 400 : 700,
         }
-        const tl2 = gsap.from(".about-image", {
-            ...anim2,
+        const tl2 = gsap.to(".about-image", {
+            // ...anim2,
+            x: 0,
             duration: 2,
             // if its mobile, don't apply scrolltrigger
             scrollTrigger: isMobile?{}:{
@@ -151,8 +153,15 @@ function Features(props: Props) {
         // <div className='w-full h-[600vh]'>
             <div className='min-w-screen w-auto h-auto bg-white text-black flex justify-start items-start relative feature_container'>
             {/* <div className='w-full h-auto bg-white text-black flex flex-wrap sticky top-0'> */}
-                <div className='min-w-full h-screen flex flex-col bp9:flex-row justify-center items-center'>
-                    <div className={`w-full h-auto p-5 bp9:p-15 description_container ${ifMobile?"scale-0":""}`}>
+                <div 
+                    className='min-w-full h-screen flex flex-col bp9:flex-row justify-center items-center'
+                >
+                    <div 
+                        className={`w-full h-auto p-5 bp9:p-15 description_container ${ifMobile?"scale-0":""}`}
+                        style={{
+                            transform: "translateX(-400px)"
+                        }}
+                    >
                         <p className='dmd text-[30px] mb-5 text-center'>What we care about</p>
                         <p className='text-[15px] text-justify title_description'>
                             To be a voice to the less privileged by creating opportunities that 
@@ -162,7 +171,12 @@ function Features(props: Props) {
                         </p>
                     </div>
 
-                    <div className={`w-full h-auto p-5 bp9:p-15 about-image ${ifMobile?"scale-0":""}`}>
+                    <div 
+                        className={`w-full h-auto p-5 bp9:p-15 about-image ${ifMobile?"scale-0":""}`}
+                        style={{
+                            transform: "translateX(500px)"
+                        }}
+                    >
                         <img 
                             src="./check_bp.jpg" alt="a doctor checking patient heart bp" 
                             className={`rounded-[20px] w-auto h-auto max-h-99 bp9:max-h-full ml-auto mr-auto bp9:ml-0 bp9:mr-0`}

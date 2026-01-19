@@ -2,6 +2,7 @@
 import IsMobile from '@/utils/isMobile';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { usePathname } from 'next/navigation';
 import React, { useEffect } from 'react'
 
 interface Props {bg?:string, iconbg?:string}
@@ -61,11 +62,16 @@ function Purpose(props: Props) {
             }
         })
 
-        // return ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-        return ScrollTrigger.refresh();;
+        return ()=>ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        // return ScrollTrigger.refresh();;
     }
 
-    useEffect(purpose_animation, [])
+    useEffect(()=>{
+        return purpose_animation()
+    }, [])
+
+    // const path = usePathname()
+    // useEffect(()=>ScrollTrigger.refresh(), [path])
 
     return (
         // <div className='w-full h-auto sticky top-0'>
