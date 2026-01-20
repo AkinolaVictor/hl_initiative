@@ -2,7 +2,7 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import {motion} from "framer-motion"
 
 interface Props {}
@@ -10,11 +10,17 @@ interface Props {}
 function CareAbout(props: {title:string, description:string, icon?:string, background?:string, index?:number}) {
     const {title, description, icon, background, index} = props
     const card_class = `each_feature_card_${index}`
+    const [mobile, setMobile] = useState(false)
     // const card_text_class = `description_containzxzx_${index}`
     const card_text_class = `description_containzxzx`
 
 
     function animate_cards(){
+        const isMobile = window.innerWidth < 768;
+        setMobile(isMobile)
+
+        if(isMobile) return
+
         gsap.registerPlugin(ScrollTrigger, SplitText);
         // each_feature_card
         
@@ -53,8 +59,9 @@ function CareAbout(props: {title:string, description:string, icon?:string, backg
     return (
         <motion.div 
             style={{backgroundColor: background||"#4f3130"}}
-            className={`h-0 min-w-80 w-80 flex flex-col justify-center items-center px-2 ${card_class}`}
-            initial={{height: 0}}
+            className={`h-[20vh] min-w-88 w-88 flex flex-col justify-center items-center px-2 ${card_class}`}
+            initial={{height: "20vh"}}
+            viewport={{once: true}}
             whileInView={{height: "100vh"}}
             transition={{duration: 1}}
             // animate=
@@ -68,7 +75,7 @@ function CareAbout(props: {title:string, description:string, icon?:string, backg
             <p className='dmd text-[22px] text-white mt-7'>{title}</p>
 
             {/* <p className='text-white text-[15px] opacity-80 mt-4 w-[80%] max-w-75 text-justify'> */}
-            <p className={`text-white text-[15px] opacity-0 mt-4 w-[80%] max-w-75 text-justify ${card_text_class}`}>
+            <p className={`text-white text-[15px] ${mobile?"opacity-100":"opacity-0"} mt-4 w-[80%] max-w-75 text-justify ${card_text_class}`}>
                 {description}
             </p>
         </motion.div>

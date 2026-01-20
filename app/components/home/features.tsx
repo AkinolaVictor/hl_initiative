@@ -140,7 +140,7 @@ function Features(props: Props) {
                 // console.log("dir", self.direction);
                 // console.log("prog", self.progress);
                 gsap.to(".feature_container", {
-                    x: `${-1610*self.progress}`, // multiplied by the number of the total widths additional cards to be scrolled to view
+                    x: `${-(352*5)*self.progress}`, // multiplied by the number of the total widths additional cards to be scrolled to view
                     duration: 0.5,
                     ease: "power3.out"
                 })

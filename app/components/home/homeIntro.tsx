@@ -5,7 +5,6 @@ import Link from 'next/link'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/SplitText'
-import { usePathname } from 'next/navigation'
 
 interface Props {}
 
@@ -20,10 +19,6 @@ function HomeIntro(props: Props) {
         const split = SplitText.create(".home_title", {
             type: "words",
         })
-
-        // const split2 = SplitText.create(".home_description", {
-        //     type: "words",
-        // })
         
         tl.from(split.words, {
             y: 400,
@@ -32,15 +27,22 @@ function HomeIntro(props: Props) {
             duration: 1,
             toggleActions: "restart none none reset"
         }, "starter")
+
+        gsap.set(".home_description", {opacity: 0.7})
+        const split2 = SplitText.create(".home_description", {
+            type: "words",
+        })
         
         
-        // tl.from(split2.words, {
-        tl.to(".home_description", {
+        
+        tl.from(split2.words, {
+        // tl.to(".home_description", {
             // y: 150,
-            // autoAlpha: 0,
-            // stagger: 0.08,
-            scale: 1,
-            duration: 2,
+            opacity: 0,
+            autoAlpha: 0,
+            stagger: 0.08,
+            // scale: 1,
+            duration: 1,
             toggleActions: "restart none none reset"
         }, "-=1.0")
 
@@ -89,13 +91,11 @@ function HomeIntro(props: Props) {
 
         return ()=>ScrollTrigger.refresh();;
     }
-
     // ScrollTrigger.refresh();
+
     useEffect(()=>{
         return animate_home_title()
     }, [])
-    // const path = usePathname()
-    // useEffect(()=>ScrollTrigger.refresh(), [path])
 
     return (
         <div className='w-full h-screen relative'>
@@ -125,7 +125,7 @@ function HomeIntro(props: Props) {
                 </p>
                 
                 <p 
-                    className='text-white w-auto max-w-150 text-center opacity-70 text-[15px] mt-3 p-4 home_description scale-0'
+                    className='text-white w-auto max-w-150 text-center opacity-0 text-[15px] mt-3 p-4 home_description'
                     style={{textShadow:"2px 2px 8px rgba(0,0,0,0.5)"}}
                 >
                     We inspire and equip individuals with the knowledge, tools, 
