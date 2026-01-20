@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import CareAbout from './careAbout'
 import { cares } from '@/utils/exports'
 import gsap from 'gsap'
@@ -12,10 +12,12 @@ interface Props {}
 function Features(props: Props) {
     const {} = props
     const {ifMobile} = IsMobile({})
+    const [mobile, setMobile] = useState(false)
     
     
     function feature_animation(){
         const isMobile = window.innerWidth < 768;
+        setMobile(isMobile)
         gsap.registerPlugin(ScrollTrigger, SplitText);
         // gsap.registerPlugin(ScrollTrigger,ScrollSmoother,SplitText);
 
@@ -66,41 +68,43 @@ function Features(props: Props) {
         // }
 
         const anim1 = isMobile?{
-            scale: 0
+            scale: 1
         }:{
-            x: -400,
+            // x: -400,
+            x: 0,
         }
 
         const tl3 = gsap.to(".description_container", {
             // ...anim1,
             x: 0,
-            duration: 2,
+            duration: 1,
             scrollTrigger:  isMobile?{}:{
                 trigger: ".description_container",
                 scrub: true,
                 invalidateOnRefresh: true,
-                start: "top 90%", // when head of element reaches 50% of screen
-                end: "top 30%",  //when top of element reaches 20% of the screen,
+                start:  isMobile ? "top 10%" : "top 90%", // when head of element reaches 50% of screen
+                end:  isMobile ? "bottom 40%" : "top 30%",  //when top of element reaches 20% of the screen,
                 // markers: true,
             }
         })
 
         const anim2 = isMobile?{
-            scale: 0
+            scale: 1
         }:{
-            x: isMobile ? 400 : 700,
+            // x: isMobile ? 400 : 700,
+            x: 0,
         }
         const tl2 = gsap.to(".about-image", {
             // ...anim2,
             x: 0,
-            duration: 2,
+            duration: 1,
             // if its mobile, don't apply scrolltrigger
             scrollTrigger: isMobile?{}:{
                 trigger: ".about-image",
                 scrub: true,
                 invalidateOnRefresh: true,
-                start: isMobile ? "top 90%" : "top 90%", // when head of element reaches 50% of screen
-                end: isMobile ? "bottom 90%" : "top 30%",  //when top of element reaches 20% of the screen,
+                start: isMobile ? "top 10%" : "top 90%", // when head of element reaches 50% of screen
+                end: isMobile ? "bottom 40%" : "top 30%",  //when top of element reaches 20% of the screen,
                 // markers: true
             },
         })
@@ -144,7 +148,7 @@ function Features(props: Props) {
         })
 
         // return ()=>ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-        return ()=>ScrollTrigger.refresh();;
+        return ScrollTrigger.refresh;
     }
     
     useEffect(feature_animation, [])
@@ -157,10 +161,8 @@ function Features(props: Props) {
                     className='min-w-full h-screen flex flex-col bp9:flex-row justify-center items-center'
                 >
                     <div 
-                        className={`w-full h-auto p-5 bp9:p-15 description_container ${ifMobile?"scale-0":""}`}
-                        style={{
-                            transform: "translateX(-400px)"
-                        }}
+                        className={`w-full h-auto p-5 bp9:p-15 description_container ${mobile?"scale-0.5":""}`}
+                        style={{transform: "translateX(-400px)"}}
                     >
                         <p className='dmd text-[30px] mb-5 text-center'>What we care about</p>
                         <p className='text-[15px] text-justify title_description'>
@@ -172,10 +174,8 @@ function Features(props: Props) {
                     </div>
 
                     <div 
-                        className={`w-full h-auto p-5 bp9:p-15 about-image ${ifMobile?"scale-0":""}`}
-                        style={{
-                            transform: "translateX(500px)"
-                        }}
+                        className={`w-full h-auto p-5 bp9:p-15 about-image ${mobile?"scale-0.5":""}`}
+                        style={{transform: "translateX(500px)"}}
                     >
                         <img 
                             src="./check_bp.jpg" alt="a doctor checking patient heart bp" 
@@ -190,6 +190,7 @@ function Features(props: Props) {
                         return (
                             <CareAbout 
                                 key={index}
+                                index={index}
                                 title={title}
                                 description={description}
                                 background={background}

@@ -147,7 +147,10 @@ function Header(props: Props) {
 
             {/* volunteer */}
             <div className='flex leftIcon'>
-                <div className='w-10 h-10 flex justify-center items-center bg-white rounded-full bp8:hidden'>
+                <div 
+                    onClick={()=>{alert("Work in progress, project is incomplete yet")}}
+                    className='w-10 h-10 flex justify-center items-center bg-white rounded-full bp8:hidden'
+                >
                     <img src="/menu1.svg" alt="menu" className='w-6 h-6' />
                 </div>
                 <Link href={"/volunteer"} className={`hidden bp8:block w-auto h-auto rounded-full ${dark?"bg-black":"bg-white"} py-2 px-7 text_1 cursor-pointer`}>
