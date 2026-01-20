@@ -116,7 +116,7 @@ function HomeIntro(props: Props) {
                 }}>
             </div>
 
-            <div className='h-full w-full absolute z-2 flex flex-col justify-center items-center'>
+            <div className={`h-full w-full absolute z-2 flex flex-col justify-center items-center ${img?"bg-black":""}`}>
                 <div className='absolute top-0 left-0 w-full'>
                     <Header />
                 </div>
