@@ -102,9 +102,11 @@ function AboutIntro(props: Props) {
             <div 
                 className='absolute z-1 w-full h-full' 
                 style={{
-                    // backgroundImage: "url(./bg-red.jpg)", 
-                    backgroundImage: "url(./bg-white.jpg)", 
-                    // backgroundImage: "url(./bg-green.jpg)", 
+                    // backgroundImage: "url(./bg-white-2.jpg)", 
+                    backgroundImage: `image-set(
+                        url(./bg-white.webp) type("image/webp"),
+                        url(./bg-white-2.jpg) type("image/jpeg")
+                    )`,
                     backgroundSize:"cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", 
                     height: "100vh", margin:0, padding: 0
                 }}>

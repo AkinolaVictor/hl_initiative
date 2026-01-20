@@ -159,7 +159,7 @@ function Features2(props: Props) {
                         // }}
                     >
                         <img 
-                            src="./check_bp.jpg" alt="a doctor checking patient heart bp" 
+                            src="./check_bp_2.jpg" alt="a doctor checking patient heart bp" 
                             className={`rounded-[20px] w-auto h-auto max-h-99 bp9:max-h-full ml-auto mr-auto bp9:ml-0 bp9:mr-0`}
                         />
                     </div>

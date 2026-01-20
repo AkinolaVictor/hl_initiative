@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../header'
 import Link from 'next/link'
 import gsap from 'gsap'
@@ -10,6 +10,7 @@ interface Props {}
 
 function HomeIntro(props: Props) {
     const {} = props
+    const [img, setImg] = useState(true)
 
     function animate_home_title() {
         gsap.registerPlugin(ScrollTrigger, SplitText);
@@ -103,10 +104,13 @@ function HomeIntro(props: Props) {
             <div 
                 className='absolute z-1 w-full h-full' 
                 style={{
-                    backgroundImage: "url(./bg-red.jpg)", 
-                    // backgroundImage: "url(./bg-gray.jpg)", 
-                    // backgroundImage: "url(./bg-white.jpg)", 
+                    // backgroundImage: "url(./bg-red.webp)", 
+                    // backgroundImage: "url(./bg-red-2.jpg)", 
                     // backgroundImage: "url(./bg-green.jpg)", 
+                    backgroundImage: img?"":`image-set(
+                        url(./bg-red.webp) type("image/webp"),
+                        url(./bg-red-2.jpg) type("image/jpeg")
+                    )`,
                     backgroundSize:"cover", backgroundPosition: "center", 
                     backgroundRepeat: "no-repeat", height: "100vh", margin:0, padding: 0
                 }}>
@@ -120,6 +124,7 @@ function HomeIntro(props: Props) {
                 <p 
                     className='dmd text-white text-[42px] w-auto max-w-150 text-center opacity-90 mt-15 p-4 home_title'
                     style={{textShadow:"2px 2px 8px rgba(0,0,0,0.5)"}}
+                    onClick={()=>{setImg(!img)}}
                 >
                     Empowering Lives To Care For Health
                 </p>
@@ -137,7 +142,7 @@ function HomeIntro(props: Props) {
                     href={"/about"} 
                     className='w-auto h-auto rounded-full bg-white py-2 px-7 text_1 cursor-pointer mt-5 home_buttn translate-y-37.5'
                 >
-                    <p className='text-black font-semibold'>Click</p>
+                    <p className='text-black font-semibold'>Click Me</p>
                 </Link>
             </div>
         </div>

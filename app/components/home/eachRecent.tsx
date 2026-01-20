@@ -33,10 +33,14 @@ function EachRecent(props: Props) {
             </div>
 
             <div className='w-auto max-w-125 h-auto p-5'>
-                <img 
-                    src="./check_bp.jpg" alt="a doctor checking patient heart bp" 
+                {/* <img 
+                    src="./check_bp_2.jpg" alt="a doctor checking patient heart bp" 
                     className='rounded-[20px]'
-                />
+                /> */}
+                <picture>
+                    <source srcSet="check_bp.webp" type="image/webp" className='rounded-[20px]'/>
+                    <img src="check_bp_2.jpg" alt="image" className='rounded-[20px]'/>
+                </picture>
             </div>
             {isLast?null:<div className='w-full h-px bg-black bp8:hidden mt-5 opacity-50'/>}
             

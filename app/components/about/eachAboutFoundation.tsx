@@ -33,10 +33,14 @@ function EachAboutFoundation(props: Props) {
             </div>
 
             <div className='w-full h-auto max-h-screen'>
-                <img 
-                    src="./check_bp.jpg" alt="a doctor checking patient heart bp" 
+                {/* <img 
+                    src="./check_bp_2.jpg" alt="a doctor checking patient heart bp" 
                     // className='rounded-[20px]'
-                />
+                /> */}
+                <picture>
+                    <source srcSet="check_bp.webp" type="image/webp" />
+                    <img src="check_bp_2.jpg" alt="image"/>
+                </picture>
             </div>
         </div>
     )

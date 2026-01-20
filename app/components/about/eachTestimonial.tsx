@@ -19,7 +19,7 @@ function EachTestimonial(props: Props) {
 
             <div 
                 className={`w-45 h-45 mt-15 rounded-full flex justify-center items-center`}
-                style={{backgroundColor: iconbg||"4f3130"}}
+                style={{backgroundColor: iconbg||"#4f3130"}}
             >
             </div>
 

@@ -177,10 +177,14 @@ function Features(props: Props) {
                         className={`w-full h-auto p-5 bp9:p-15 about-image ${mobile?"scale-0.5":""}`}
                         style={{transform: "translateX(500px)"}}
                     >
-                        <img 
+                        {/* <img 
                             src="./check_bp.jpg" alt="a doctor checking patient heart bp" 
                             className={`rounded-[20px] w-auto h-auto max-h-99 bp9:max-h-full ml-auto mr-auto bp9:ml-0 bp9:mr-0`}
-                        />
+                        /> */}
+                        <picture>
+                            <source srcSet="check_bp.webp" type="image/webp" className={`rounded-[20px] w-auto h-auto max-h-99 bp9:max-h-full ml-auto mr-auto bp9:ml-0 bp9:mr-0`}/>
+                            <img src="check_bp_2.jpg" alt="image" className={`rounded-[20px] w-auto h-auto max-h-99 bp9:max-h-full ml-auto mr-auto bp9:ml-0 bp9:mr-0`}/>
+                        </picture>
                     </div>
                 </div>
 
