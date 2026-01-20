@@ -1,4 +1,3 @@
-"use client"
 import { Metadata } from "next";
 import Head from "next/head";
 import Header from "./components/header";
@@ -13,19 +12,19 @@ import Features2 from "./components/home/features2";
 // import Image from "next/image";
 
 
-// export const metadata: Metadata = {
-//   title: "NGO-The HL Initiative",
-//   description: "The Health enlight initiative home page",
-// };
+export const metadata: Metadata = {
+  title: "NGO-The HL Initiative",
+  description: "The Health enlight initiative home page",
+};
 
 export default function Home() {
   return (
-    <div className="flex-col min-h-screen h-auto items-start justify-start bg-zinc-50 font-sans dark:bg-black overflow-y-auto " onScroll={()=>{console.log({scrollling: "yes"})}}>
+    <div className="flex-col min-h-screen h-auto items-start justify-start bg-zinc-50 font-sans dark:bg-black overflow-y-auto ">
     {/* <div className="flex min-h-screen items-start justify-start"> */}
       {/* <Header />   */}
       <HomeIntro />
-      {/* <Features /> */}
-      <Features2 />
+      <Features />
+      {/* <Features2 /> */}
       <Purpose iconbg="#999999"/>
       <RecentPrograms />
       <VoiceinNumbers />
