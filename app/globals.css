@@ -47,7 +47,7 @@ body {
   /* font-family: Dosis, Arial, Helvetica, sans-serif; */
 
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 .overpass{
