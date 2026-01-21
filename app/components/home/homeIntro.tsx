@@ -10,7 +10,6 @@ interface Props {}
 
 function HomeIntro(props: Props) {
     const {} = props
-    const [img, setImg] = useState(true)
 
     function animate_home_title() {
         gsap.registerPlugin(ScrollTrigger, SplitText);
@@ -107,7 +106,7 @@ function HomeIntro(props: Props) {
                     // backgroundImage: "url(./bg-red.webp)", 
                     // backgroundImage: "url(./bg-red-2.jpg)", 
                     // backgroundImage: "url(./bg-green.jpg)", 
-                    backgroundImage: img?"":`image-set(
+                    backgroundImage: `image-set(
                         url(./bg-red.webp) type("image/webp"),
                         url(./bg-red-2.jpg) type("image/jpeg")
                     )`,
@@ -116,7 +115,7 @@ function HomeIntro(props: Props) {
                 }}>
             </div>
 
-            <div className={`h-full w-full absolute z-2 flex flex-col justify-center items-center ${img?"bg-black":""}`}>
+            <div className={`h-full w-full absolute z-2 flex flex-col justify-center items-center `}>
                 <div className='absolute top-0 left-0 w-full'>
                     <Header />
                 </div>
@@ -124,7 +123,7 @@ function HomeIntro(props: Props) {
                 <p 
                     className='dmd text-white text-[42px] w-auto max-w-150 text-center opacity-90 mt-15 p-4 home_title'
                     style={{textShadow:"2px 2px 8px rgba(0,0,0,0.5)"}}
-                    onClick={()=>{setImg(!img)}}
+                    // onClick={()=>{setImg(!img)}}
                 >
                     Empowering Lives To Care For Health
                 </p>

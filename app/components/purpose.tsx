@@ -83,7 +83,10 @@ function Purpose(props: Props) {
                         // backgroundImage: "url(./bg-red.jpg)", 
                         // backgroundImage: "url(./bg-gray.jpg)", 
                         backgroundColor: bg,
-                        backgroundImage: bg?"":"url(./bg-white.jpg)", 
+                        backgroundImage: bg?"":`image-set(
+                            url(./bg-white.webp) type("image/webp"),
+                            url(./bg-white-2.jpg) type("image/jpeg")
+                        )`, 
                         // backgroundImage: "url(./bg-green.jpg)", 
                         backgroundSize:"cover", backgroundPosition: "center", 
                         backgroundRepeat: "no-repeat", height: "100vh", margin:0, padding: 0
