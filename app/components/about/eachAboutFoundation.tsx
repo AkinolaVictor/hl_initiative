@@ -98,9 +98,9 @@ function EachAboutFoundation(props: Props) {
                     Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse 
                     molestie consequat, vel illum dolore eu feugiat nulla fa
                 </p>
-                <div className='w-40 ml-auto mr-auto h-auto rounded-full bg-black py-2 px-7 text_1 cursor-pointer mt-5'>
+                {/* <div className='w-40 ml-auto mr-auto h-auto rounded-full bg-black py-2 px-7 text_1 cursor-pointer mt-5'>
                     <p className='text-white text-center font-semibold'>Learn More</p>
-                </div>
+                </div> */}
             </div>
 
             <div 
