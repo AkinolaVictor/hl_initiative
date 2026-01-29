@@ -64,7 +64,7 @@ function HomeIntro(props: Props) {
             onEnterBack: () => tl.restart()
         })
 
-        animate_home_button()
+        // animate_home_button()
 
         // return ScrollTrigger.getAll().forEach(trigger => trigger.kill());
         return ()=>ScrollTrigger.refresh();;
@@ -91,7 +91,6 @@ function HomeIntro(props: Props) {
 
         return ()=>ScrollTrigger.refresh();;
     }
-    // ScrollTrigger.refresh();
 
     useEffect(()=>{
         return animate_home_title()
@@ -103,13 +102,11 @@ function HomeIntro(props: Props) {
             <div 
                 className='absolute z-1 w-full h-full' 
                 style={{
-                    // backgroundImage: "url(./bg-red.webp)", 
-                    // backgroundImage: "url(./bg-red-2.jpg)", 
-                    // backgroundImage: "url(./bg-green.jpg)", 
                     backgroundImage: `image-set(
                         url(./bg-red.webp) type("image/webp"),
                         url(./bg-red-2.jpg) type("image/jpeg")
                     )`,
+                    // backgroundColor: "white",
                     backgroundSize:"cover", backgroundPosition: "center", 
                     backgroundRepeat: "no-repeat", height: "100vh", margin:0, padding: 0
                 }}>
@@ -119,7 +116,6 @@ function HomeIntro(props: Props) {
                 <div className='absolute top-0 left-0 w-full'>
                     <Header />
                 </div>
-                {/* <p className=''>The <span>Health</span> enLight <span>Initiative</span></p> */}
                 <p 
                     className='dmd text-white text-[42px] w-auto max-w-150 text-center opacity-90 mt-15 p-4 home_title'
                     style={{textShadow:"2px 2px 8px rgba(0,0,0,0.5)"}}
@@ -137,12 +133,12 @@ function HomeIntro(props: Props) {
                     make informed health decisions, and build healthier lives 
                     for themselves and their communities
                 </p>
-                <Link 
+                {/* <Link 
                     href={"/about"} 
                     className='w-auto h-auto rounded-full bg-white py-2 px-7 text_1 cursor-pointer mt-5 home_buttn translate-y-37.5'
                 >
                     <p className='text-black font-semibold'>Click Me</p>
-                </Link>
+                </Link> */}
             </div>
         </div>
     )

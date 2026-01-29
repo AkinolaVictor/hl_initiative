@@ -5,6 +5,8 @@ import "./globals.css";
 import Header from "./components/header";
 import { Provider } from "react-redux";
 import dataStore from "./redux/store";
+import OverlayMenu from "./components/overlayMenu";
+import OverlayHeader from "./components/overlayHeader";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -38,7 +40,9 @@ export default function RootLayout({
       >
         <Provider store={dataStore}>
           {/* <Header /> */}
+          <OverlayHeader />
           {children}
+          <OverlayMenu />
         </Provider>
       </body>
     </html>

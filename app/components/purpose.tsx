@@ -36,26 +36,27 @@ function Purpose(props: Props) {
 
         gsap.registerPlugin(ScrollTrigger);
 
-        ScrollTrigger.create({
-            trigger: ".purpose_layer_container",
-            start: "top top",
-            end: "+=900vh",
-            scrub: 1,
-            pin: true,
-            invalidateOnRefresh: true,
-        })
+        // ScrollTrigger.create({
+        //     trigger: ".purpose_layer_container",
+        //     start: "top top",
+        //     end: "+=900vh",
+        //     scrub: 1,
+        //     pin: true,
+        //     invalidateOnRefresh: true,
+        // })
 
         ScrollTrigger.create({
-            trigger: ".purpose_container",
+            // trigger: [".purpose_layer_container", ".purpose_container"],
+            trigger: ".purpose_layer_container",
             start: "top top",
-            end: "+=900vh",
+            end: "+=300vh",
             scrub: 1,
             pin: true,
             invalidateOnRefresh: true,
             onUpdate: (self)=>{
                 const widt = window.innerWidth
                 gsap.to(".purpose_container", {
-                    x: `${-(widt+50)*self.progress}`, // multiplied by the number of the total widths additional cards to be scrolled to view
+                    x: `${-(widt)*self.progress}`, // multiplied by the number of the total widths additional cards to be scrolled to view
                     duration: 0.5,
                     ease: "power3.out"
                 })
@@ -93,6 +94,7 @@ function Purpose(props: Props) {
                     }}>
                 </div>
                 
+                {/* OVERLAY FOR IMAGE */}
                 {!bg&&<div className='w-full h-screen bg-[rgba(0,0,0,0.7)] absolute z-2'></div>}
 
                 {/* <div className='min-w-screen w-full h-screen flex flex-col bp9:flex-row justify-start bp9:justify-center items-center absolute z-3 text-white purpose_container'> */}

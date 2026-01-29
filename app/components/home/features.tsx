@@ -1,11 +1,12 @@
 "use client"
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import CareAbout from './careAbout'
-import { cares } from '@/utils/exports'
+import { cares, delayer, overlay_menu_listener } from '@/utils/exports'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/SplitText'
 import IsMobile from '@/utils/isMobile'
+import { generalFunctions } from '@/app/redux/store_controllers/generalFunctions'
 
 interface Props {}
 
@@ -13,6 +14,9 @@ function Features(props: Props) {
     const {} = props
     const {ifMobile} = IsMobile({})
     const [mobile, setMobile] = useState(false)
+    const working = useRef(false)
+    const timeout = useRef(false)
+    const {setGeneralAlpha} = generalFunctions()
     
     
     function feature_animation(){
@@ -112,7 +116,8 @@ function Features(props: Props) {
         if(isMobile) {
             ScrollTrigger.create({
                 trigger: ".about-image",
-                start: "top 90%",
+                // start: "top 90%",
+                start: "top bottom",
                 invalidateOnRefresh: true,
                 onEnter: () => tl2.restart(),
                 onEnterBack: () => tl2.restart(),
@@ -121,7 +126,8 @@ function Features(props: Props) {
             
             ScrollTrigger.create({
                 trigger: ".description_container",
-                start: "top 90%",
+                // start: "top 90%",
+                start: "top bottom",
                 invalidateOnRefresh: true,
                 onEnter: () => tl3.restart(),
                 onEnterBack: () => tl3.restart(),
@@ -136,8 +142,10 @@ function Features(props: Props) {
             scrub: 1,
             pin: true,
             invalidateOnRefresh: true,
+            
             onUpdate: (self)=>{
                 // console.log("dir", self.direction);
+                // console.log("dir2", self.progress);
                 // console.log("prog", self.progress);
                 gsap.to(".feature_container", {
                     x: `${-(352*5)*self.progress}`, // multiplied by the number of the total widths additional cards to be scrolled to view
@@ -146,10 +154,15 @@ function Features(props: Props) {
                 })
             }
         })
-
+        // overlay_menu_listener()
         // return ()=>ScrollTrigger.getAll().forEach(trigger => trigger.kill());
         return ScrollTrigger.refresh;
     }
+
+    // useEffect(()=>{
+    //     overlay_menu_listener({which: "feature_container", ScrollTrigger, working, timeout, setGeneralAlpha})
+    // }, [])
+    // }, [timeout.current, working.current])
     
     useEffect(feature_animation, [])
 
@@ -164,8 +177,8 @@ function Features(props: Props) {
                         className={`w-full h-auto p-5 bp9:p-15 description_container ${mobile?"scale-0.5":""}`}
                         style={{transform: "translateX(-400px)"}}
                     >
-                        <p className='dmd text-[30px] mb-5 text-center'>What we care about</p>
-                        <p className='text-[15px] text-justify title_description'>
+                        <p className='dmd text-[30px] mb-5 text-center mx-auto'>What we care about</p>
+                        <p className='text-[15px] text-justify title_description max-w-110 mx-auto'>
                             To be a voice to the less privileged by creating opportunities that 
                             supports their voices and ideas. And with positivity and guidance 
                             as core values, strengthen their mental activities towards a more 

@@ -8,7 +8,7 @@ import VoiceinNumbers from "./components/home/voiceinNumbers";
 import LatestBlogs from "./components/latestBlogs";
 import Footer from "./components/footer";
 import HomeIntro from "./components/home/homeIntro";
-import Features2 from "./components/home/features2";
+import ConstructionPage from "./components/constructionPage";
 // import Image from "next/image";
 
 
@@ -20,22 +20,22 @@ export const metadata: Metadata = {
 
 export default function Home() {
 
-  // if(process.env.NEXT_PUBLIC_DEVELOPMENT != "local"){
-  //   return (
-  //     <div className="w-full h-screen bg-black flex justify-center items-center p-7 text-white text-center">
-  //       <p>This project is currently under construction, to get a preview, you'll have to contact the developer to grant you access...</p>
-  //     </div>
-  //   )
-  // }
+  // if(process.env.NEXT_PUBLIC_DEVELOPMENT != "local") return <ConstructionPage />
 
   return (
-    <div className="flex-col min-h-screen h-auto items-start justify-start bg-zinc-50 font-sans dark:bg-black overflow-y-auto overflow-x-hidden">
-    {/* <div className="flex min-h-screen items-start justify-start"> */}
+    <div 
+      className="flex-col min-h-screen h-auto items-start justify-start bg-zinc-50 font-sans dark:bg-black overflow-y-auto overflow-x-hidden home-parent"
+      // className="flex-col min-h-screen h-auto items-start justify-start bg-zinc-50 font-sans dark:bg-black home-parent"
+      style={{
+        transformOrigin: "0% 0%",
+        // willChange: "transform",
+        // perspective: "1200px",
+      }}
+    >
       {/* <Header />   */}
       <HomeIntro />
       <Features />
-      {/* <Features2 /> */}
-      <Purpose iconbg="#999999"/>
+      <Purpose iconbg="#999999" bg="green"/>
       <RecentPrograms />
       <VoiceinNumbers />
       <LatestBlogs />

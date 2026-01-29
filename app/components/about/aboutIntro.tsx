@@ -6,7 +6,14 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/SplitText'
 
-interface Props {}
+interface Props {
+    // startTrial: () => string,
+    // startTrial?: () => string,
+    // startTrial3(): string,
+    // startTrial2?(): string,
+    // startTrial4(p1: string, p2: number): string,
+    // startTrial4s?(p1: string, p2: number): string,
+}
 
 function AboutIntro(props: Props) {
     const {} = props
@@ -28,7 +35,7 @@ function AboutIntro(props: Props) {
             toggleActions: "restart none none reset"
         }, "starter")
 
-        gsap.set(".home_description", {opacity: 0.7})
+        gsap.set(".home_description2", {opacity: 0.7})
         const split2 = SplitText.create(".home_description2", {
             type: "words",
         })
@@ -97,12 +104,11 @@ function AboutIntro(props: Props) {
     }, [])
 
     return (
-        <div className='w-full h-screen relative bg-white'>
+        <div className='w-full h-screen relative bg-white the_about_intro'>
         {/* <div className='w-full h-screen sticky top-0'> */}
             <div 
                 className='absolute z-1 w-full h-full' 
                 style={{
-                    // backgroundImage: "url(./bg-white-2.jpg)", 
                     backgroundImage: `image-set(
                         url(./bg-white.webp) type("image/webp"),
                         url(./bg-white-2.jpg) type("image/jpeg")

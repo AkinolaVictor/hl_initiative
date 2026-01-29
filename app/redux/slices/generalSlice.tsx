@@ -4,20 +4,17 @@ import { createSlice, current } from "@reduxjs/toolkit"
 const initialState = {
     height: 30,
     modal: false,
-    createPost: false,
-    name: "General Store",
-    openedPost: null,
-    userID: null,
-    userData: null,
-    posts: []
+    hideTeam: false,
+    show_overlay_menu: false,
+    menu_overlay_listener: false
 }
 
 
-export const generalSlice = createSlice({
+export const generalSlice:{actions?:any, reducer?:any} = createSlice({
     name: "generalSlice",
     initialState,
     reducers: {
-        updateGeneralData: (state:any, action:any)=>{
+        updateGeneralData: (state?:any, action?:any)=>{
             const {which, data} = action.payload
             if(typeof data === "function"){
                 const curr = current(state)
