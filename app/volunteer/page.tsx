@@ -20,7 +20,7 @@ function Page(props: Props) {
         <div className="flex-col min-h-screen h-auto items-start justify-start bg-zinc-50 font-sans dark:bg-black overflow-y-auto overflow-x-hidden">
             <VolunteerMain />
             <FillForm 
-                title='Send a message to us today'
+                title='Send us a message today'
                 description='We will receive your message and get back to you.'
             />
             <Footer />
