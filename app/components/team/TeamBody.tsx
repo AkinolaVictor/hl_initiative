@@ -15,7 +15,7 @@ interface Props {right?: boolean, bg?:string, color?:string, env?:string, item?:
 function TeamBody(props: Props) {
     const {env} = props
     const [mobile, setMobile] = useState(false)
-    // const {hideTeam} = useSelector(state=>state.generalSlice)
+    // const {hideTeam} = useSelector((state:any)=>state.generalSlice)
 
     const nums = [1,2,2,2,2,2,2,2]
 

@@ -11,7 +11,7 @@ interface Props {}
 function OverlayMenu(props: Props) {
     const {} = props
     const path = usePathname()
-    const {show_overlay_menu} = useSelector(state=>state.generalSlice)
+    const {show_overlay_menu} = useSelector((state:any)=>state.generalSlice)
     const {setGeneralAlpha} = generalFunctions()
 
     function hideOverlayMenu(){
