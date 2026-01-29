@@ -134,7 +134,7 @@ export function decideblog(item:{title:string, href:string}, path:any){
 
 
 
-export function overlay_menu_listener(data:{which:string, ScrollTrigger: any, working: any, timeout: any, setGeneralAlpha}){
+export function overlay_menu_listener(data:{which:string, ScrollTrigger: any, working: any, timeout: any, setGeneralAlpha: any}){
     const {which, ScrollTrigger, working, timeout, setGeneralAlpha} = data
     
     ScrollTrigger.create({
