@@ -1,5 +1,5 @@
 import React from 'react'
-import ConstructionPage from '../components/constructionPage'
+// import ConstructionPage from '../components/constructionPage'
 import ContactIntro from '../components/contact/contactIntro'
 import { Metadata } from 'next';
 import FillForm from '../components/fillForm';

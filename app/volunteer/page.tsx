@@ -1,5 +1,5 @@
 import React from 'react'
-import ConstructionPage from '../components/constructionPage'
+// import ConstructionPage from '../components/constructionPage'
 import { Metadata } from 'next';
 import VolunteerMain from '../components/volunteer/VolunteerMain';
 import Footer from '../components/footer';

@@ -7,7 +7,7 @@ import OurStory from '../components/about/ourStory';
 import Testimonial from '../components/about/testimonial';
 import LatestBlogs from '../components/latestBlogs';
 import Footer from '../components/footer';
-import ConstructionPage from '../components/constructionPage';
+// import ConstructionPage from '../components/constructionPage';
 
 export const metadata: Metadata = {
   title: "About Us - The HL Initiative",

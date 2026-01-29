@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Head from "next/head";
-import Header from "./components/header";
+// import Header from "./components/header";
 import Features from "./components/home/features";
 import Purpose from "./components/purpose";
 import RecentPrograms from "./components/home/recentPrograms";
@@ -8,7 +8,7 @@ import VoiceinNumbers from "./components/home/voiceinNumbers";
 import LatestBlogs from "./components/latestBlogs";
 import Footer from "./components/footer";
 import HomeIntro from "./components/home/homeIntro";
-import ConstructionPage from "./components/constructionPage";
+// import ConstructionPage from "./components/constructionPage";
 // import Image from "next/image";
 
 

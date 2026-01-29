@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import React from 'react'
-import ConstructionPage from '../components/constructionPage';
 import BlogIntro from '../components/blog/BlogIntro';
 import BlogBody from '../components/blog/BlogBody';
 import Footer from '../components/footer';
