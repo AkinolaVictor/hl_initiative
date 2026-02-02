@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react'
 import CareAbout from './careAbout'
-import { cares, delayer, overlay_menu_listener } from '@/utils/exports'
+import { call_once_avoid_the_rest, cares, delayer, overlay_menu_listener } from '@/utils/exports'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/SplitText'
@@ -14,8 +14,8 @@ function Features(props: Props) {
     const {} = props
     const {ifMobile} = IsMobile({})
     const [mobile, setMobile] = useState(false)
-    const working = useRef(false)
-    const timeout = useRef(false)
+    // const working = useRef(false)
+    // const timeout = useRef(false)
     const {setGeneralAlpha} = generalFunctions()
     
     
@@ -159,9 +159,49 @@ function Features(props: Props) {
         return ScrollTrigger.refresh;
     }
 
-    // useEffect(()=>{
-    //     overlay_menu_listener({which: "feature_container", ScrollTrigger, working, timeout, setGeneralAlpha})
-    // }, [])
+    const working = useRef(false)
+    const timeout = useRef(false)
+    const called = useRef(false)
+
+    useEffect(()=>{
+        overlay_menu_listener({ScrollTrigger, working, timeout, called, setGeneralAlpha})
+    
+        ScrollTrigger.create({
+            trigger: `.feature_container`,
+            start: "top bottom",
+            scrub: 1,
+            invalidateOnRefresh: true,
+            onUpdate: (self)=>{
+                // console.log("always calling")
+                // call_once_avoid_the_rest({
+                //     working: working2,
+                //     timeout: timeout2,
+                //     time: 600,
+                //     func: ()=>{
+                //         console.log("called once")
+                //     },
+                //     called 
+                // })
+                // console.log(self.progress)
+                // delayer({
+                //     working, 
+                //     timeout, 
+                //     time:200, 
+                //     func: ()=>{
+                //         // const {setGeneralAlpha} = generalFunctions()
+                //         if(self.progress>0.15){
+                //             // setGeneralAlpha("menu_overlay_listener", true)
+                //             console.log("dir", "within view");
+                //         } else {
+                //             // setGeneralAlpha("menu_overlay_listener", false)
+                //             console.log("dir", "outside view");
+                //         }
+                //         // console.log("dir", self.direction);
+                //     }
+                // })
+            }
+        })
+    }, [])
     // }, [timeout.current, working.current])
     
     useEffect(feature_animation, [])

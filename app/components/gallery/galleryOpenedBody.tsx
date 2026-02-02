@@ -1,7 +1,9 @@
 "use client"
+import { generalFunctions } from '@/app/redux/store_controllers/generalFunctions';
+import { overlay_menu_listener } from '@/utils/exports';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 interface Props {}
 
@@ -40,6 +42,14 @@ function GalleryOpenedBody(props: Props) {
         // return ()=>ScrollTrigger.getAll().forEach(trigger => trigger.kill());
         return ScrollTrigger.refresh;
     }
+    const {setGeneralAlpha} = generalFunctions()
+    const working = useRef(false)
+    const timeout = useRef(false)
+    const called = useRef(false)
+    useEffect(()=>{
+        gsap.registerPlugin(ScrollTrigger);
+        overlay_menu_listener({ScrollTrigger, working, timeout, called, setGeneralAlpha})
+    }, [])
     
     useEffect(feature_animation, [])
 

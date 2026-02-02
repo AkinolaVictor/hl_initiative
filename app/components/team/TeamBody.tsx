@@ -1,11 +1,11 @@
 "use client"
 import { generalFunctions } from '@/app/redux/store_controllers/generalFunctions'
-import { cares, team_members } from '@/utils/exports'
+import { cares, overlay_menu_listener, team_members } from '@/utils/exports'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/SplitText'
 import Link from 'next/link'
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
 import Testimonial from '../about/testimonial'
 
@@ -164,13 +164,22 @@ function TeamBody(props: Props) {
         return ScrollTrigger.refresh;
     }
     
-    // useEffect(feature_animation, [hideTeam])
+    
+    
+    const {setGeneralAlpha} = generalFunctions()
+    const working = useRef(false)
+    const timeout = useRef(false)
+    const called = useRef(false)
+    useEffect(()=>{
+        gsap.registerPlugin(ScrollTrigger);
+        overlay_menu_listener({ScrollTrigger, working, timeout, called, setGeneralAlpha, threshold: 330})
+    }, [])
     useEffect(feature_animation, [])
 
 
     return (
         // <div className=' text-black w-full min-h-screen h-auto'>
-        <div className=' text-black w-full h-auto'>
+        <div className=' text-black w-full h-auto team_body_parent_container'>
             <div className='w-full p-20 bg-white flex flex-col items-center'>
 
                 <p className='dmd text-[22px]'>{env == "volunteer"?"Our Volunteers":"Our Team Members"}</p>

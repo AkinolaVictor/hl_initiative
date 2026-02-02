@@ -1,15 +1,28 @@
-import React from 'react'
-
+"use client"
+import React, { useEffect, useRef } from 'react'
+import { generalFunctions } from '../redux/store_controllers/generalFunctions'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { overlay_menu_listener } from '@/utils/exports'
 interface Props {title?:string, bg?: string, color?: string, description?: string}
 
 function FillForm(props: Props) {
     const {title, bg, color, description} = props
     const width_controller = "min-w-62.5 w-full max-w-125"
+            
+    const {setGeneralAlpha} = generalFunctions()
+    const working = useRef(false)
+    const timeout = useRef(false)
+    const called = useRef(false)
+    useEffect(()=>{
+        gsap.registerPlugin(ScrollTrigger);
+        overlay_menu_listener({ScrollTrigger, working, timeout, called, setGeneralAlpha, threshold: 1})
+    }, [])
 
     return (
         <div 
             style={{backgroundColor: bg||"white", color: color||"black"}}
-            className={`w-full h-auto flex flex-col bp8:flex-row justify-between items-center py-12`}
+            className={`w-full h-auto flex flex-col bp8:flex-row justify-between items-center py-12 fill_form_parent_section`}
         >
             <div className='w-full px-5 py-10 flex flex-col items-center text-[13px] '>
                 {title && <p className={`dmd text-[25px] text-left ${width_controller} `}>{title}</p>}

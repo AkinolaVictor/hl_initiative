@@ -60,6 +60,8 @@ function Header(props: Props) {
         const tl = gsap.timeline({
             delay: 0,
             // repeat: -1,
+            // reversed,
+            // repeat,
             onStart: ()=> {
                 console.log("started")
             },

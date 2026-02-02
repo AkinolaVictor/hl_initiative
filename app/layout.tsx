@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -41,7 +41,9 @@ export default function RootLayout({
         <Provider store={dataStore}>
           {/* <Header /> */}
           <OverlayHeader />
-          {children}
+          <div className="classcc">
+            {children}
+          </div>
           <OverlayMenu />
         </Provider>
       </body>

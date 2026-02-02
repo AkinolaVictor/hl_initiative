@@ -3,8 +3,10 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/SplitText'
 import Link from 'next/link'
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useRef, useState } from 'react'
 import Footer from '../footer'
+import { generalFunctions } from '@/app/redux/store_controllers/generalFunctions'
+import { overlay_menu_listener } from '@/utils/exports'
 
 interface Props {
     img?:string, 
@@ -62,6 +64,26 @@ function GalleryContent(props: Props) {
         // return ()=>ScrollTrigger.getAll().forEach(trigger => trigger.kill());
         return ScrollTrigger.refresh;
     }
+
+    const {setGeneralAlpha} = generalFunctions()
+    const working = useRef(false)
+    const timeout = useRef(false)
+    const working2 = useRef(false)
+    const timeout2 = useRef(false)
+    const called = useRef(false)
+    useEffect(()=>{
+        const ht = window.innerHeight
+        gsap.registerPlugin(ScrollTrigger);
+        overlay_menu_listener({
+            ScrollTrigger, 
+            working, 
+            timeout, 
+            called,
+            // threshold: ht,
+            threshold: 330,
+            setGeneralAlpha
+        })
+    }, [])
     
     useEffect(feature_animation, [])
     
@@ -121,7 +143,7 @@ function GalleryContent(props: Props) {
 
     return (
         // <div className='w-full min-h-screen h-auto bg-white text-black'>
-        <div className='w-full h-auto bg-white text-black'>
+        <div className='w-full h-auto bg-white text-black gallery_content_parent_container'>
             <div className='w-full'>
                 <p className='text-center px-7 pt-7 font-semibold text-[17px]'>Our Programmes So Far</p>
                 <p className='text-center px-7 pb-7 text-[13px] text-[#414141]'>Explore some of the programmes we did</p>

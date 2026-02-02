@@ -77,6 +77,29 @@ export const cares = [
     },
 ]
 
+export function call_once_avoid_the_rest(props: {working:any, timeout:any, called: any, time:number, func:any, func2: any}){
+    const {called, working, timeout, time, func, func2} = props
+
+    if(called.current === true) {
+        delayer({
+            working,
+            timeout,
+            time,
+            func: ()=>{
+                called.current = false
+                if(func2) func2()
+                console.log("Ended Call")
+            }
+        })
+
+        return
+    }
+
+    func()
+    called.current = true
+    console.log("Called Once")
+}
+
 
 
 export function delayer(props: {working:any, timeout:any, time:number, func:any}){
@@ -134,28 +157,33 @@ export function decideblog(item:{title:string, href:string}, path:any){
 
 
 
-export function overlay_menu_listener(data:{which:string, ScrollTrigger: any, working: any, timeout: any, setGeneralAlpha: any}){
-    const {which, ScrollTrigger, working, timeout, setGeneralAlpha} = data
-    
+export function overlay_menu_listener(data:{ScrollTrigger: any, working: any, timeout: any, setGeneralAlpha: any, called?:any, threshold?:number}){
+    const {ScrollTrigger, working, timeout, setGeneralAlpha, called, threshold} = data
+    const cap = threshold || 130
+    setGeneralAlpha("menu_overlay_listener", false)
+
+
     ScrollTrigger.create({
-        trigger: `.${which}`,
+        trigger: document.scrollingElement,
         start: "top 80%",
         scrub: 1,
         invalidateOnRefresh: true,
         onUpdate: (self:any)=>{
-            delayer({
-                working, 
-                timeout, 
-                time:400, 
+            call_once_avoid_the_rest({
+                working,
+                timeout,
+                called,
+                time: 1000,
                 func: ()=>{
-                    // const {setGeneralAlpha} = generalFunctions()
-                    if(self.direction>0){
+                    setGeneralAlpha("menu_overlay_listener", false)
+                },
+                func2:()=>{
+                    const pageHeight = document.scrollingElement?.getBoundingClientRect()?.height ?? 0
+                    const scrollLength =  pageHeight * self.progress
+                    if(scrollLength>window.innerHeight+cap){
                         setGeneralAlpha("menu_overlay_listener", true)
-                    } else {
-                        setGeneralAlpha("menu_overlay_listener", false)
                     }
-                    console.log("dir", self.direction);
-                }
+                },
             })
         }
     })

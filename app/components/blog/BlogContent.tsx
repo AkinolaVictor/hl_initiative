@@ -1,12 +1,24 @@
-import React, { Fragment } from 'react'
-
+"use client"
+import { generalFunctions } from '@/app/redux/store_controllers/generalFunctions'
+import { overlay_menu_listener } from '@/utils/exports'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import React, { Fragment, useEffect, useRef } from 'react'
 interface Props {}
 
 function BlogContent(props: Props) {
     const {} = props
+    const {setGeneralAlpha} = generalFunctions()
+    const working = useRef(false)
+    const timeout = useRef(false)
+    const called = useRef(false)
+    useEffect(()=>{
+        gsap.registerPlugin(ScrollTrigger);
+        overlay_menu_listener({ScrollTrigger, working, timeout, called, setGeneralAlpha})
+    }, [])
 
     return (
-        <div className={`w-full h-auto min-h-screen bg-white text-black py-17.5 px-4 bp7:px-10 flex flex-col items-center`}>
+        <div className={`w-full h-auto min-h-screen bg-white text-black py-17.5 px-4 bp7:px-10 flex flex-col items-center blog_content_parent_section`}>
             <div 
                 className='h-90 min-w-80 w-full max-w-250 rounded-xl' 
                 style={{

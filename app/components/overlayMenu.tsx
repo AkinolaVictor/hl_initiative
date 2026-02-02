@@ -6,6 +6,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { generalFunctions } from '../redux/store_controllers/generalFunctions'
 import { AnimatePresence, motion } from 'framer-motion'
+import OverlayHeader from './overlayHeader'
 
 interface Props {}
 
@@ -21,10 +22,6 @@ function OverlayMenu(props: Props) {
 
     if (!show_overlay_menu){
         return null
-    }
-
-    function menu_reveal(){
-        
     }
 
     return (
@@ -50,7 +47,7 @@ function OverlayMenu(props: Props) {
                         />
                     </div>
 
-                    <motion.div 
+                    {/* <motion.div 
                         onClick={hideOverlayMenu}
                         initial={{x: "100px"}}
                         animate={{x: 0}}
@@ -58,13 +55,21 @@ function OverlayMenu(props: Props) {
                         className='absolute z-3 right-8 top-8 cursor-pointer'
                     >
                         <p className='text-white '>Close</p>
+                    </motion.div> */}
+
+                    <motion.div
+                        initial={{y: -300}}
+                        animate={{y: 0}}
+                        transition={{duration: 1, delay: 0.5}}
+                    >
                     </motion.div>
+                        <OverlayHeader env='menu' hideLogoName={"hide"}/>
 
                     <div className='w-full h-full flex flex-col justify-center items-center absolute top-0 left-0 z-2 text-white'>
                         <div className='w-auto h-auto flex flex-col'>
                             {
                                 allLinks.map((item, index)=>{
-                                    const delayCount = 0.4+(0.2*index)
+                                    const delayCount = 0.2+(0.2*index)
                                     return (
                                         <motion.div 
                                             key={index} 

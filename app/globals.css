@@ -46,9 +46,11 @@ body {
   /* font-family: "DM Serif Display", Arial, Helvetica, sans-serif; */
   /* font-family: Dosis, Arial, Helvetica, sans-serif; */
 
+  /* overflow: hidden; */
   overflow-x: hidden;
   overflow-y: auto;
   position: relative;
+  /* height: 100vh; */
 }
 
 .overpass{
