@@ -39,7 +39,7 @@ export const cares = [
         background: "#4f3130"
     },
     {
-        title: "Localized Community Outreaches",
+        title: "Community Outreaches",
         description: `Bridging the healthcare gap by delivering culturally relevant education 
             and basic screenings directly to underserved hearts and homes. 
         `,
