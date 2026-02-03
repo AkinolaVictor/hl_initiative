@@ -27,9 +27,10 @@ function OverlayMenu(props: Props) {
     return (
         
         <AnimatePresence mode='wait'>
-            <div className='w-screen h-screen fixed top-0 left-0 z-10 hidde'>
+            <div className='w-screen h-screen fixed top-0 left-0 z-10'>
                 <div className='w-full h-full relative'>
                     {/* background underlay */}
+
                     <div className='w-full h-full flex absolute top-0 left-0 z-1'>
                         <motion.div 
                             className='w-full h-screen bg-black'
@@ -57,18 +58,12 @@ function OverlayMenu(props: Props) {
                         <p className='text-white '>Close</p>
                     </motion.div> */}
 
-                    <motion.div
-                        initial={{y: -300}}
-                        animate={{y: 0}}
-                        transition={{duration: 1, delay: 0.5}}
-                    >
-                    </motion.div>
-                        <OverlayHeader env='menu' hideLogoName={"hide"}/>
+                    <OverlayHeader env='menu' hideLogoName={"hide"}/>
 
                     <div className='w-full h-full flex flex-col justify-center items-center absolute top-0 left-0 z-2 text-white'>
                         <div className='w-auto h-auto flex flex-col'>
                             {
-                                allLinks.map((item, index)=>{
+                                [...allLinks, {title: "Join Us Today", href: "/volunteer"}].map((item, index)=>{
                                     const delayCount = 0.2+(0.2*index)
                                     return (
                                         <motion.div 
@@ -86,6 +81,9 @@ function OverlayMenu(props: Props) {
                                     )
                                 })
                             }
+                            {/* <Link href={"/volunteer"} className='text-black font-semibold w-auto h-auto rounded-full bg-white py-2 px-7 text_1 cursor-pointer mt-10 home_buttn2 translate-y-37.5'>
+                                Join Us Today
+                            </Link> */}
                         </div>
                     </div>
                 </div>

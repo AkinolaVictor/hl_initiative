@@ -148,7 +148,7 @@ function Features(props: Props) {
                 // console.log("dir2", self.progress);
                 // console.log("prog", self.progress);
                 gsap.to(".feature_container", {
-                    x: `${-(352*5)*self.progress}`, // multiplied by the number of the total widths additional cards to be scrolled to view
+                    x: `${-(352*6)*self.progress}`, // multiplied by the number of the total widths additional cards to be scrolled to view
                     duration: 0.5,
                     ease: "power3.out"
                 })
@@ -165,42 +165,6 @@ function Features(props: Props) {
 
     useEffect(()=>{
         overlay_menu_listener({ScrollTrigger, working, timeout, called, setGeneralAlpha})
-    
-        ScrollTrigger.create({
-            trigger: `.feature_container`,
-            start: "top bottom",
-            scrub: 1,
-            invalidateOnRefresh: true,
-            onUpdate: (self)=>{
-                // console.log("always calling")
-                // call_once_avoid_the_rest({
-                //     working: working2,
-                //     timeout: timeout2,
-                //     time: 600,
-                //     func: ()=>{
-                //         console.log("called once")
-                //     },
-                //     called 
-                // })
-                // console.log(self.progress)
-                // delayer({
-                //     working, 
-                //     timeout, 
-                //     time:200, 
-                //     func: ()=>{
-                //         // const {setGeneralAlpha} = generalFunctions()
-                //         if(self.progress>0.15){
-                //             // setGeneralAlpha("menu_overlay_listener", true)
-                //             console.log("dir", "within view");
-                //         } else {
-                //             // setGeneralAlpha("menu_overlay_listener", false)
-                //             console.log("dir", "outside view");
-                //         }
-                //         // console.log("dir", self.direction);
-                //     }
-                // })
-            }
-        })
     }, [])
     // }, [timeout.current, working.current])
     
@@ -219,10 +183,10 @@ function Features(props: Props) {
                     >
                         <p className='dmd text-[30px] mb-5 text-center mx-auto'>What we care about</p>
                         <p className='text-[15px] text-justify title_description max-w-110 mx-auto'>
-                            To be a voice to the less privileged by creating opportunities that 
-                            supports their voices and ideas. And with positivity and guidance 
-                            as core values, strengthen their mental activities towards a more 
-                            productive future. 
+                            Bridging health gaps through evidence-based education and research. 
+                            By empowering young minds and communities with life-saving knowledge, we foster a 
+                            culture of wellness that replaces misinformation with proactive, informed, and 
+                            healthier lifestyles for everyone.
                         </p>
                     </div>
 
@@ -249,6 +213,7 @@ function Features(props: Props) {
                                 key={index}
                                 index={index}
                                 title={title}
+                                icon={icon}
                                 description={description}
                                 background={background}
                             />

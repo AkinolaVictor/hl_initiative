@@ -109,28 +109,32 @@ function AboutIntro(props: Props) {
             <div 
                 className='absolute z-1 w-full h-full' 
                 style={{
-                    backgroundImage: `image-set(
-                        url(./bg-white.webp) type("image/webp"),
-                        url(./bg-white-2.jpg) type("image/jpeg")
-                    )`,
-                    backgroundSize:"cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", 
-                    height: "100vh", margin:0, padding: 0
+                    backgroundColor: "green"
+                    // backgroundImage: `image-set(
+                    //     url(./bg-white.webp) type("image/webp"),
+                    //     url(./bg-white-2.jpg) type("image/jpeg")
+                    // )`,
+                    // backgroundSize:"cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", 
+                    // height: "100vh", margin:0, padding: 0
                 }}>
             </div>
 
             <div className='h-full w-full absolute z-2 flex flex-col justify-center items-center'>
                 <div className='absolute top-0 left-0 w-full'>
-                    <Header dark/>
+                    {/* <Header dark/> */}
+                    <Header />
                 </div>
                 <p 
-                    className='dmd text-black text-[42px] w-auto max-w-150 text-center opacity-90 mt-15 p-4 home_title2'
+                    // className='dmd text-black text-[42px] w-auto max-w-150 text-center opacity-90 mt-15 p-4 home_title2'
+                    className='dmd text-[42px] w-auto max-w-150 text-center opacity-90 mt-15 p-4 home_title2'
                     style={{textShadow:"2px 2px 8px rgba(0,0,0,0.5)"}}
                     >
                     Let’s Change The World Together
                 </p>
                 
                 <p 
-                    className='text-black w-auto max-w-150 text-center text-[15px] mt-3 p-4 home_description2'
+                    // className='text-black w-auto max-w-150 text-center text-[15px] mt-3 p-4 home_description2'
+                    className='w-auto max-w-150 text-center text-[15px] mt-3 p-4 home_description2'
                     // style={{textShadow:"2px 2px 8px rgba(0,0,0,0.5)"}}
                 >
                     Together, we can improve lives by promoting better health, 
@@ -138,8 +142,8 @@ function AboutIntro(props: Props) {
                     Join us to make a lasting impact, share your time and skills, 
                     and help build a healthier, stronger future for everyone.
                 </p>
-                <Link href={"/volunteer"} className='w-auto h-auto rounded-full bg-black py-2 px-7 text_1 cursor-pointer mt-10 home_buttn2 translate-y-37.5'>
-                    <p className='text-white font-semibold'>Join Us Today</p>
+                <Link href={"/volunteer"} className='text-white font-semibold w-auto h-auto rounded-full bg-black py-2 px-7 text_1 cursor-pointer mt-10 home_buttn2 translate-y-37.5'>
+                    Join Us Today
                 </Link>
             </div>
         </div>

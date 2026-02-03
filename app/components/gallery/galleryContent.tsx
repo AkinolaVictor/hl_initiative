@@ -7,6 +7,7 @@ import React, { Fragment, useEffect, useRef, useState } from 'react'
 import Footer from '../footer'
 import { generalFunctions } from '@/app/redux/store_controllers/generalFunctions'
 import { overlay_menu_listener } from '@/utils/exports'
+import { useRouter } from 'next/navigation'
 
 interface Props {
     img?:string, 
@@ -19,7 +20,7 @@ function GalleryContent(props: Props) {
     const {} = props
     const [mobile, setMobile] = useState(false)
     const imgs = ["check_bp", "bg-white", "bg-red", "bg-white", "check_bp", "bg-red", "bg-white"]
-    
+    const router = useRouter()
     function feature_animation(){
         // if(prevAnim) return
         const screen_width = window.innerWidth
@@ -91,7 +92,7 @@ function GalleryContent(props: Props) {
         const {img, title2, description2, date} = props2
 
         return (
-            <div className='w-full h-auto relative'>
+            <div onClick={()=>{router.push("/gallery/open-12233")}} className='w-full h-auto relative cursor-pointer'>
                 <div className='w-full h-auto flex justify-center items-center'>
                     <div
                         className='w-full h-auto' 

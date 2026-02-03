@@ -23,10 +23,9 @@ function Page(props: Props) {
             <BlogIntro 
                 title='Our Discoveries'
                 description={`
-                    We inspire and equip individuals with the knowledge, tools, 
-                    and confidence they need to take charge of their well-being, 
-                    make informed health decisions, and build healthier lives 
-                    for themselves and their communities
+                    Explore a curated collection of evidence-based articles, deep-dive research, and community stories. 
+                    We translate complex medical data into practical, life-saving advice to keep you and your loved ones 
+                    informed and healthy.
                 `}
             />
             <BlogBody />

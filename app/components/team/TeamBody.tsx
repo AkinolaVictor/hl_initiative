@@ -1,6 +1,6 @@
 "use client"
 import { generalFunctions } from '@/app/redux/store_controllers/generalFunctions'
-import { cares, overlay_menu_listener, team_members } from '@/utils/exports'
+import { cares, overlay_menu_listener, team_members, testimonal_messgaes, volunteers_list } from '@/utils/exports'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/SplitText'
@@ -214,7 +214,11 @@ function TeamBody(props: Props) {
                         // prevAnim={!hideTeam}
                         id='team'
                         title='Volunteers'
+                        description='Meet the selfless individuals who donate their time and expertise to bring health 
+                            enlightenment and tangible support to communities worldwide.'
                         baseText='Volunteers'
+                        // dataSet={testimonal_messgaes}
+                        dataSet={volunteers_list}
                     />
                 </>:
                 <>

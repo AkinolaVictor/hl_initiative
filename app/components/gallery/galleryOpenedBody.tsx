@@ -48,7 +48,7 @@ function GalleryOpenedBody(props: Props) {
     const called = useRef(false)
     useEffect(()=>{
         gsap.registerPlugin(ScrollTrigger);
-        overlay_menu_listener({ScrollTrigger, working, timeout, called, setGeneralAlpha})
+        overlay_menu_listener({ScrollTrigger, working, timeout, called, setGeneralAlpha, threshold: 500})
     }, [])
     
     useEffect(feature_animation, [])
@@ -63,7 +63,7 @@ function GalleryOpenedBody(props: Props) {
             </div>
 
             <div 
-                className={`rounded-full py-1.5 px-4 bg-white text-black text-[13px] font-semibold block bp10:hidden absolute bottom-5 left-[50%] translate-x-[-50%] z-3`}
+                className={`rounded-full py-1.5 px-4 bg-white text-black text-[13px] font-semibold block bp10:hidden absolute bottom-5 left-[50%] translate-x-[-50%] z-10`}
                 style={{boxShadow: "rgba(0,0,0,0.16) 0px 2px 7px"}}
             >
                 <p>{"Medical Outreach"}</p>

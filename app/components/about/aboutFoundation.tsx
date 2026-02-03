@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect, useRef } from 'react'
 import EachAboutFoundation from './eachAboutFoundation'
-import { overlay_menu_listener } from '@/utils/exports'
+import { about_foundation, overlay_menu_listener } from '@/utils/exports'
 import gsap from 'gsap/all'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { generalFunctions } from '@/app/redux/store_controllers/generalFunctions'
@@ -30,11 +30,14 @@ function AboutFoundation(props: Props) {
     return (
         <div className='w-full h-auto min-h-screen bg-white text-black about_foundation_parent_container'>
             {
-                lst.map((item, index)=>{
+                about_foundation.map((item, index)=>{
+                    const {img, sub_title, title, text} = item
                     return (
                         <EachAboutFoundation 
-                            title={item} 
+                            title={title} 
                             key={index} 
+                            text={text}
+                            subTitle={sub_title}
                             index={index}
                             reverse={index%2==1}
                         />

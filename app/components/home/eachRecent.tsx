@@ -31,7 +31,7 @@ function EachRecent(props: Props) {
                 // markers: true,
             }
         })
-
+        
         const tl2 = gsap.to(`.${img_class}`, {
             x: 0,
             duration: 1,
@@ -120,7 +120,7 @@ function EachRecent(props: Props) {
                     <img src="check_bp_2.jpg" alt="image" className='rounded-[15px]'/>
                 </picture>
             </div>
-            {isLast?null:<div className='w-full h-px bg-black bp8:hidden mt-5 opacity-50'/>}
+            {/* {isLast?null:<div className='w-full h-px bg-black bp8:hidden mt-5 opacity-50'/>} */}
             
         </div>
     )

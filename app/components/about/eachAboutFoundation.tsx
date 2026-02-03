@@ -2,10 +2,18 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React, { useEffect, useState } from 'react'
-interface Props {title:string, reverse?:boolean, index?: number}
+
+interface Props {
+    title:string, 
+    reverse?:boolean, 
+    index?: number, 
+    subTitle?: string, 
+    text?: {p_1: string, p_2: string}, 
+    imgs?: string
+}
 
 function EachAboutFoundation(props: Props) {
-    const {reverse, title, index} = props
+    const {reverse, title, index, subTitle, text, imgs} = props
     const [mobile, setMobile] = useState(false)
     const img_class = `about-image2_${index}`
     const text_class = `description_container2_${index}`
@@ -79,24 +87,14 @@ function EachAboutFoundation(props: Props) {
                 className={`w-full px-5 py-10 ${text_class}`}
                 style={{transform: reverse?"translateX(400px)":"translateX(-400px)"}}
             >
-                <p className='dmd text-[23px] text-center'>{title}</p>
-                <p className='text-[13px] text-center opacity-70'>Lorem ipsum dolor sit amet, sit amet</p>
+                <p className='font-semibold text-[23px] text-center'>{title}</p>
+                <p className='text-[13px] text-center opacity-70 text-[rosybrown]'>{subTitle}</p>
 
                 <p className='text-[14px] text-justify opacity-70 mt-10 w-auto max-w-99 ml-auto mr-auto'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam 
-                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat 
-                    volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation 
-                    ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse 
-                    molestie consequat, vel illum dolore eu feugiat nulla fa
+                    {text?.p_1}
                     <br />
                     <br />
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam 
-                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat 
-                    volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation 
-                    ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse 
-                    molestie consequat, vel illum dolore eu feugiat nulla fa
+                    {text?.p_2}
                 </p>
                 {/* <div className='w-40 ml-auto mr-auto h-auto rounded-full bg-black py-2 px-7 text_1 cursor-pointer mt-5'>
                     <p className='text-white text-center font-semibold'>Learn More</p>

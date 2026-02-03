@@ -2,10 +2,17 @@
 import React from 'react'
 import {motion} from "framer-motion"
 
-interface Props {title:string, iconbg?:string, color?:string, description?:string, bg?:string}
+interface Props {
+    title:string, 
+    iconbg?:string | null, 
+    color?:string | null, 
+    description?:string, 
+    bg?:string | null,
+    message: string
+}
 
 function EachTestimonial(props: Props) {
-    const {iconbg, title, color, description, bg} = props
+    const {iconbg, title, color, description, bg, message} = props
 
     return (
         <motion.div 
@@ -24,15 +31,11 @@ function EachTestimonial(props: Props) {
             </div>
 
             <p className='font-semibold text-[20px] mt-7'>{title}</p>
-            <p className='mb-4 text-[13px]'>Description of John Doe</p>
+            <p className='mb-4 text-[13px]'>{description}</p>
 
             <p className='text-[14px] text-justify'>
                 <i>
-                    "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
-                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore 
-                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam, 
-                    quis nostrud exerci tation ullamcorper suscipit lobortis 
-                    nisl ut aliquip ex ea commodo consequat.
+                    {`"${message}`}
                 </i>
             </p>
         </motion.div>
