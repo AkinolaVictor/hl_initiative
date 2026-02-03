@@ -104,7 +104,7 @@ function AboutIntro(props: Props) {
     }, [])
 
     return (
-        <div className='w-full h-screen relative bg-white the_about_intro'>
+        <div className='w-full h-screen relative bg-white text-white the_about_intro'>
         {/* <div className='w-full h-screen sticky top-0'> */}
             <div 
                 className='absolute z-1 w-full h-full' 
