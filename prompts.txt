@@ -69,3 +69,6 @@ if we are to give a brief detail of our story so far, what are 10 major aspects 
 
 Write a full statement of less than 70 words each that best describe each of the points you highlighted in section 1, 4, 5, 8. 
 Fine tune it to be a new NGO of our categories. Also add these two more sections to the list. 5 (Our Tough Lessons), 6 (Our Strength).
+
+
+npm i axios nodemailer googleapis

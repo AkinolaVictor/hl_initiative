@@ -108,22 +108,22 @@ function Page(props: Props) {
             <div className='mt-18 flex justify-center items-center flex-col'>
                 <p className=' text-center mx-10 font-semibold text-[22px] mb-6 '>REFERENCE</p>
                 <div className=' w-full my-5'>
-                    <p className='font-bold text-[17px]'>Mr Ita Godswill</p>
-                    <p className='font-bold'>Goddy Hair Cuts</p>
-                    <p>08138222431</p>
-                    <p>Uquo, Esit Eket, Akwa Ibom, Nigeria</p>
+                    <p className='font-bold text-[17px]'>Mr Duke Safogha</p>
+                    <p className='font-bold'>NYSC Local Government Inspector (LGI)</p>
+                    <p>08064624262</p>
+                    <p>Esit Eket, Akwa Ibom, Nigeria</p>
                 </div>
                 <div className=' w-full my-5'>
-                    <p className='font-bold text-[17px]'>Mr Makinde Elijah</p>
-                    <p className='font-bold'>NCCF, Esit Eket</p>
-                    <p>09021770110</p>
-                    <p>Uquo, Esit Eket, Akwa Ibom, Nigeria</p>
+                    <p className='font-bold text-[17px]'>Mr Inyang Inyang</p>
+                    <p className='font-bold'>In Charge, Model International Secondary School</p>
+                    <p>09072592531</p>
+                    <p>Ntak Inyang, Esit Eket, Akwa Ibom, Nigeria</p>
                 </div>
                 <div className=' w-full my-5'>
-                    <p className='font-bold text-[17px]'>Mrs Chibugo Obiha</p>
-                    <p className='font-bold'>Obiha Family</p>
-                    <p>09160293907</p>
-                    <p>Naze Owerri, Imo State, Nigeria</p>
+                    <p className='font-bold text-[17px]'>Ms. Igho-Uloho Divine</p>
+                    <p className='font-bold'>African Children Aid Education And Development Foundation (ACAEDF)</p>
+                    <p>08127850489</p>
+                    <p>Eket, Akwa Ibom, Nigeria</p>
                 </div>
             </div>
         </div>

@@ -4,6 +4,7 @@ import Header from '../header'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
+import axios from 'axios';
 
 interface Props {title?: string, date?: string}
 
@@ -70,6 +71,14 @@ function GalleryTop(props: Props) {
         // return ScrollTrigger.getAll().forEach(trigger => trigger.kill());
         return ()=>ScrollTrigger.refresh();;
     }
+
+    // async function testApi() {
+    //     console.log("testing...")
+    //     // await fetch("/api/send_email").then((res:any)=>{
+    //     await axios.post("/api/send_email", {something: "something"}).then((res:any)=>{
+    //         console.log(res.data)
+    //     })
+    // }
 
     useEffect(()=>{
         return animate_home_title({head: "home_title3", description: "home_description3"})

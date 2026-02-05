@@ -1,13 +1,14 @@
 "use client"
 import { generalFunctions } from '@/app/redux/store_controllers/generalFunctions'
-import { cares, overlay_menu_listener, team_members, testimonal_messgaes, volunteers_list } from '@/utils/exports'
+import { cares, overlay_menu_listener, team_members, testimonal_messgaes, volunteer_members, volunteers_list } from '@/utils/exports'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/SplitText'
 import Link from 'next/link'
 import React, { Fragment, useEffect, useRef, useState } from 'react'
-import { useSelector } from 'react-redux'
 import Testimonial from '../about/testimonial'
+import { useSelector } from 'react-redux'
+import Media from '../media'
 
 // interface Props {}
 interface Props {right?: boolean, bg?:string, color?:string, env?:string, item?: any}
@@ -60,28 +61,36 @@ function TeamBody(props: Props) {
 
     function Part_A(props2: Props){
         const {item} = props2
-        const {name, role} = item
+        const {name, role, colors, social, image} = item
+        const {bg, color} = colors
+        const {x, instagram, linkedIn} = social
+
         return (
             <div 
                 // className='w-full min-h-screen p-10 flex flex-col justify-center items-center bg-white text-white' style={{backgroundColor: "green"}}
-                className='w-full bp7:min-h-screen h-auto p-0 bp7:p-4 bp9:p-10 flex flex-col justify-center items-center bg-white  bp7:text-white bp7:bg-[rgb(0,128,0)]'
+                className='w-full bp7:min-h-screen h-auto p-4 bp9:p-10 flex flex-col justify-center items-center bg-white  bp7:text-white bp7:bg-[rgb(0,128,0)]'
+                style={{backgroundColor: bg, color }}
             >
                 <div 
-                    className={`w-full bp9:w-[80%] h-auto bp7:rounded-[25px] mt-12.5`} 
+                    // className={`w-full bp9:w-[80%] h-auto bp7:rounded-[25px] mt-12.5`} 
+                    className={`rounded-[30px] mt-10 w-80.5 h-auto max-h-99`} 
                     style={{
-                        backgroundImage: `image-set(
-                            url(./check_bp.webp) type("image/webp"),
-                            url(./check_bp-2.jpg) type("image/jpeg")
-                        )`,
+                        // backgroundImage: `image-set(
+                        //     url(./check_bp.webp) type("image/webp"),
+                        //     url(./check_bp-2.jpg) type("image/jpeg")
+                        // )`,
+                        backgroundImage: `url(./team/${image})`,
                         backgroundSize:"cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", 
-                        minHeight: "calc(50vh - 50px)"
-                    }}>
+                        width: "300px", minHeight: "360px", height: "auto", maxHeight: "400px"
+                    }}
+                >
+                    {/* <img src="./team/team_9.jpg" alt="image" className='h-auto max-w-99 w-auto rounded-[15px]'/> */}
                 </div>
 
                 <p className='text-[22px] font-semibold mt-10'>{name}</p>
                 <p className='text-[13px]'>{role}</p>
 
-                <div className='flex m-2 cursor-pointer'>
+                {/* <div className='flex m-2 cursor-pointer mb-10'>
                     <div className='w-8 h-8 flex m-2 justify-center items-center bg-blue-500 rounded-full'>
                         <p className='text-white dmd text-[15px]'>f</p>
                     </div>
@@ -91,7 +100,12 @@ function TeamBody(props: Props) {
                     <div className='w-8 h-8 flex m-2 justify-center items-center bg-[#cbd5c0] rounded-full'>
                         
                     </div>
-                </div>
+                </div> */}
+                <Media 
+                    x={x}
+                    instagram={instagram}
+                    linkedIn={linkedIn}
+                />
             </div>
         )
     }
@@ -134,7 +148,8 @@ function TeamBody(props: Props) {
         
         if(isMobile || env==="volunteer") return
 
-        const total_cards = team_members.length - 1
+        const total_cards = Math.floor(team_members.length/2)
+        
 
         gsap.registerPlugin(ScrollTrigger, SplitText);
         ScrollTrigger.create({
@@ -218,7 +233,8 @@ function TeamBody(props: Props) {
                             enlightenment and tangible support to communities worldwide.'
                         baseText='Volunteers'
                         // dataSet={testimonal_messgaes}
-                        dataSet={volunteers_list}
+                        // dataSet={volunteers_list}
+                        dataSet={volunteer_members}
                     />
                 </>:
                 <>
@@ -234,7 +250,7 @@ function TeamBody(props: Props) {
                                             // style={{boxShadow: "rgba(0,0,0,0.16) 0px 2px 7px"}}
                                         >
                                             <Part_A item={item}/>
-                                            <Part_B item={item}/>
+                                            {/* <Part_B item={item}/> */}
                                         </div>
                                     )
                                 })
@@ -245,7 +261,7 @@ function TeamBody(props: Props) {
                                 {
                                     team_members.map((item, index)=>{
                                         if(index%2 == 0) return <Part_A key={index} item={item}/>
-                                        return <Part_B key={index} item={item}/>
+                                        return null
                                     })
                                 }
                             </div> 
@@ -254,8 +270,9 @@ function TeamBody(props: Props) {
                             <div className='w-full h-auto flex flex-col justify-end items-center team_right_preview'>
                                 {
                                     team_members.map((item, index)=>{
-                                        if(index%2 == 0) return <Part_B key={index} item={item}/>
-                                        return <Part_A key={index} item={item}/>
+                                        if(index%2 == 1) return <Part_A key={index} item={item}/>
+                                        return null
+                                    // })
                                     }).reverse()
                                 }
                             </div>

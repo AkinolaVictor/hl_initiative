@@ -87,29 +87,25 @@ function Testimonial(props: Props) {
             <div className={`flex justify-start items-start ${inner_container_class} bp10:absolute bp10:left-85`}>
                 {
                     dataSet.map((item:any, index:any)=>{
-                        const {title, description, colors, icon_name, message} = item
+                        const {title, description, colors, icon_name, message, social, image, name, role} = item
                         const {color, iconbg, bg} = colors
 
                         return (
                             <EachTestimonial 
                                 key={index}
-                                title={title}
-                                description={description}
+                                title={title || name}
+                                description={description || role}
                                 bg={bg}
+                                env={id}
                                 message={message}
                                 iconbg={iconbg}
                                 color={color}
+                                social={social}
+                                image={image}
                             />
                         )
                     })
                 }
-                {/* <EachTestimonial title={"John Doe"}/>
-                <EachTestimonial title='Jahn Doe' description='' bg='white' color='black'/>
-                <EachTestimonial title='Goel Doe' description='' color='white' iconbg='#d8bd8a' bg='#4f3130'/>
-                <EachTestimonial title='Jane Doe' description='' color='white' iconbg='#d8bd8a' bg='#999999'/>
-                <EachTestimonial title='Goel Doe' description='' color='white' iconbg='#d8bd8a' bg='#777777'/>
-                <EachTestimonial title='Goel Doe' description='' color='white' iconbg='#d8bd8a' bg='#95D5B2'/>
-                <EachTestimonial title='Goel Doe' description='' color='white' iconbg='#d8bd8a' bg='#081B15'/> */}
             </div>
 
         </div>

@@ -474,6 +474,8 @@ export const our_story = [
     },
 ]
 
+export let isBlank = (str:string) => (!str || /^\s*$/.test(str))
+
 export function call_once_avoid_the_rest(props: {working:any, timeout:any, called: any, time:number, func:any, func2: any}){
     const {called, working, timeout, time, func, func2} = props
 
@@ -517,25 +519,213 @@ export function delayer(props: {working:any, timeout:any, time:number, func:any}
 
 export const team_members = [
     {
-        name: "Oluwaseun John",
-        role: "General Manager"
+        name: "Ayooluwa Daniel Onajoko",
+        role: "Founder",
+        image: "team_9.jpg",
+        social: {
+            x: "",
+            instagram: "",
+            linkedIn: ""
+        },
+        colors: {
+            bg: 'green',
+            color: "white",
+            iconbg: 'white'
+        }
+        // image: "team_8.jpg"
     },
     {
-        name: "Ayooluwa Michael",
-        role: "Outreach Manager"
+        name: "Gloria Omogwigho Akpederi",
+        role: "Co-Founder",
+        image: "team_7.jpg",
+        social: {
+            x: "",
+            instagram: "",
+            linkedIn: "https://www.linkedin.com/in/gloria-omogwigho-akpederi-0391b0322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+        },
+        colors: {
+            bg: "#E1E7DD",
+            color: "black",
+            iconbg: null
+        }
     },
     {
-        name: "Ubong Gloria",
-        role: "Research Developer"
+        name: "Jebe-Abdullahi Fuad Temilayo",
+        role: "Programs Team Lead",
+        image: "team_1.jpg",
+        social: {
+            x: "",
+            instagram: "",
+            linkedIn: ""
+        },
+        colors: {
+            bg: '#572E0E',
+            color: "white",
+            iconbg: '#d8bd8a'
+        }
     },
     {
-        name: "Blessing Otobong",
-        role: "Facilitator Manager"
+        name: "Mustapha Oluwadare Abdulsamod",
+        role: "Research Team Lead",
+        image: "team_10.jpg",
+        social: {
+            x: "",
+            instagram: "",
+            linkedIn: ""
+        },
+        colors: {
+            bg: '#666D4B',
+            color: "white",
+            iconbg: '#d8bd8a'
+        }
     },
     {
-        name: "Sandi Paramo",
-        role: "External Supporter"
+        name: "Ahmed Hamdalat Temilayo",
+        role: "Programs Team Lead",
+        image: "team_13.jpg",
+        social: {
+            x: "",
+            instagram: "",
+            linkedIn: ""
+        },
+        colors: {
+            bg: '#C2C5AA',
+            color: "black",
+            iconbg: '#d8bd8a'
+        }
     },
+    {
+        name: "Tomiwa Ajayi",
+        role: "Programs Team Lead",
+        image: "team_12.jpg",
+        social: {
+            x: "https://x.com/theajayitomiwa",
+            instagram: "https://www.instagram.com/theajayitomiwa/",
+            linkedIn: "https://linkedin.com/in/ajayi-tomiwa"
+        },
+        colors: {
+            bg: '#A68A63',
+            color: "white",
+            iconbg: 'white'
+        }
+    },
+    {
+        name: "Evans Oleka",
+        role: "Programs Team Lead",
+        image: "team_4.jpg",
+        social: {
+            x: "",
+            instagram: "https://www.instagram.com/evans_oleks?igsh=YnJvbm80NTlrMGln&utm_source=qr",
+            linkedIn: "https://www.linkedin.com/in/evans-oleka-5643781b4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+        },
+        colors: {
+            bg: '#555555',
+            color: "white",
+            iconbg: 'white'
+        }
+    },
+    {
+        name: "Tijesunimi Moyinoluwa Adesina",
+        role: "Media Team Lead",
+        image: "team_5.jpg",
+        social: {
+            x: "",
+            instagram: "",
+            linkedIn: ""
+        },
+        colors: {
+            bg: '#95D5B2',
+            color: "black",
+            iconbg: '#d8bd8a'
+        }
+    },
+    {
+        name: "Ogunbanke Esther",
+        role: "Research Team Lead",
+        image: "team_11.jpg",
+        social: {
+            x: "",
+            instagram: "",
+            linkedIn: "https://www.linkedin.com/in/ogunbanke-esther-4162151b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+        },
+        colors: {
+            bg: '#666666',
+            color: "white",
+            iconbg: 'white'
+        }
+    },
+    // {
+    //     name: "Sandi Paramo",
+    //     role: "External Supporter"
+    // },
+]
+
+export const volunteer_members = [
+    {
+        name: "Tolani Ajisegiri",
+        role: "Research Team",
+        image: "team_6.jpg",
+        social: {
+            x: "https://x.com/tolani_aji?s=21",
+            instagram: "https://www.instagram.com/tolani_trillions1?igsh=eHF4cm4xeXRzeHU5&utm_source=qr",
+            linkedIn: "https://www.linkedin.com/in/tolan-designs-b24a4a243?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+        },
+        colors: {
+            bg: null,
+            color: null,
+            iconbg: null
+        }
+        // image: "team_8.jpg"
+    },
+    {
+        name: "Timilehin Precious Ogunjemisin",
+        role: "Media Team",
+        image: "team_3.jpg",
+        social: {
+            x: "https://x.com/timilehinp56167?s=21",
+            instagram: "",
+            linkedIn: "https://www.linkedin.com/in/timilehin-ogunjemisin-0a5091391?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+        },
+        colors: {
+            bg: "white",
+            color: "black",
+            iconbg: null
+        }
+    },
+    {
+        name: "Ibuknoluwa Folarin",
+        role: "Unknown",
+        image: "team_2.jpg",
+        social: {
+            x: "",
+            instagram: "",
+            linkedIn: "https://linkedin.com/in/ibukunoluwa-folarin-571682185"
+        },
+        colors: {
+            bg: '#572E0E',
+            color: "white",
+            iconbg: '#d8bd8a'
+        }
+    },
+    {
+        name: "Placeholder Volunteer",
+        role: "Unknown",
+        image: "team_10.jpg",
+        social: {
+            x: "",
+            instagram: "",
+            linkedIn: ""
+        },
+        colors: {
+            bg: '#666D4B',
+            color: "white",
+            iconbg: '#d8bd8a'
+        }
+    },
+    // {
+    //     name: "Sandi Paramo",
+    //     role: "External Supporter"
+    // },
 ]
 
 export function decideblog(item:{title:string, href:string}, path:any){
