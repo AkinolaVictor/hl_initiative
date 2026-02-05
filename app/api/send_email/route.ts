@@ -52,7 +52,7 @@ export async function POST(request: Request) {
         let emailTransporter = await createdTransporter();
         return await emailTransporter.sendMail(emailOptions).then((resp: any)=>{
             // return resp
-            console.log(typeof resp)
+            // console.log(typeof resp)
             console.log(resp)
             console.log("got here");
             return true
