@@ -1,9 +1,25 @@
 // const nodemailer = require('nodemailer');
 // import {google} from "googleapis"
 
-export async function test(req: any, res: any) {
+import { NextResponse } from "next/server";
+
+
+export async function GET() {
+  const users = [
+    { id: 1, name: 'Gemini' },
+    { id: 2, name: 'User' }
+  ];
+  console.log("Server Get")
+  return NextResponse.json(users);
+}
+
+
+// Handle POST requests
+export async function POST(request: Request) {
+    const body = await request.json();
     
-    console.log("correct")
-    console.log('Successfully sent email');
-    res.send({successful: true})
+    return NextResponse.json({ 
+        message: 'User created!', 
+        data: body,
+    }, { status: 200 });
 }

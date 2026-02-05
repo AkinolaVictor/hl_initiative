@@ -2,6 +2,14 @@ import { NextResponse } from "next/server";
 
 const nodemailer = require('nodemailer');
 
+export async function GET() {
+  const users = [
+    { id: 1, name: 'Gemini' },
+    { id: 2, name: 'User' }
+  ];
+  console.log("Server Get")
+  return NextResponse.json(users);
+}
 
 // Handle POST requests
 export async function POST(request: Request) {
