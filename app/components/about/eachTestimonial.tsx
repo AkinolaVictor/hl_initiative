@@ -38,8 +38,8 @@ function EachTestimonial(props: Props) {
                     >
                     </div>
 
-                    <p className='font-semibold text-[20px] mt-7'>{title}</p>
-                    <p className='mb-4 text-[13px]'>{description}</p>
+                    <p className='font-semibold text-[20px] mt-7 text-center'>{title}</p>
+                    <p className='mb-4 text-[13px] text-center'>{description}</p>
 
                     <p className='text-[14px] text-justify'>
                         <i>
@@ -63,8 +63,8 @@ function EachTestimonial(props: Props) {
                     >
                     </div>
 
-                    <p className='font-semibold text-[17px] mt-7'>{title}</p>
-                    <p className='mb-4 text-[13px]'>{description}</p>
+                    <p className='font-semibold text-[17px] mt-7 text-center'>{title}</p>
+                    <p className='mb-4 text-[13px] text-center'>{description}</p>
 
                     <Media 
                         x={x}

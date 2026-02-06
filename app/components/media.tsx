@@ -3,16 +3,16 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 
-interface Props {x:string, linkedIn: string, instagram: string}
+interface Props {x?:string, linkedIn?: string, instagram?: string, className?: string}
 
 function Media(props: Props) {
-    const {x, linkedIn, instagram} = props
+    const {x, linkedIn, instagram, className} = props
     const either_social = x || linkedIn || instagram
     const no_social = !(x || linkedIn || instagram)
     const path = usePathname()
 
     return (
-        <div className='flex m-2 cursor-pointer mb-10'>
+        <div className={`flex m-2 cursor-pointer mb-10 ${className}`}>
             {
                 x?
                 <Link href={x} target='_blank' rel='noopener noreferrer' className='w-8 h-8 flex m-2 justify-center items-center bg-white rounded-full'>

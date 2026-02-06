@@ -11,16 +11,16 @@ export const allLinks = [
         href: "/about"
     },
     {
+        title: "Blog",
+        href: "/blog"
+    },
+    {
         title: "Gallery",
         href: "/gallery"
     },
     {
         title: "Our Team",
         href: "/team"
-    },
-    {
-        title: "Blog",
-        href: "/blog"
     },
     {
         title: "Contact",
@@ -521,11 +521,11 @@ export const team_members = [
     {
         name: "Ayooluwa Daniel Onajoko",
         role: "Founder",
-        image: "team_9.jpg",
+        image: "team_14.jpg",
         social: {
-            x: "",
+            x: "https://x.com/the_ayodaniel",
             instagram: "",
-            linkedIn: ""
+            linkedIn: "https://www.linkedin.com/in/ayooluwadanielonajoko?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
         },
         colors: {
             bg: 'green',
@@ -550,21 +550,6 @@ export const team_members = [
         }
     },
     {
-        name: "Jebe-Abdullahi Fuad Temilayo",
-        role: "Programs Team Lead",
-        image: "team_1.jpg",
-        social: {
-            x: "",
-            instagram: "",
-            linkedIn: ""
-        },
-        colors: {
-            bg: '#572E0E',
-            color: "white",
-            iconbg: '#d8bd8a'
-        }
-    },
-    {
         name: "Mustapha Oluwadare Abdulsamod",
         role: "Research Team Lead",
         image: "team_10.jpg",
@@ -575,6 +560,36 @@ export const team_members = [
         },
         colors: {
             bg: '#666D4B',
+            color: "white",
+            iconbg: '#d8bd8a'
+        }
+    },
+    {
+        name: "Ogunbanke Esther",
+        role: "Research Team Lead",
+        image: "team_11.jpg",
+        social: {
+            x: "",
+            instagram: "",
+            linkedIn: "https://www.linkedin.com/in/ogunbanke-esther-4162151b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+        },
+        colors: {
+            bg: '#666666',
+            color: "white",
+            iconbg: 'white'
+        }
+    },
+    {
+        name: "Jebe-Abdullahi Fuad Temilayo",
+        role: "Programs Team Lead",
+        image: "team_1.jpg",
+        social: {
+            x: "",
+            instagram: "",
+            linkedIn: ""
+        },
+        colors: {
+            bg: '#572E0E',
             color: "white",
             iconbg: '#d8bd8a'
         }
@@ -631,27 +646,12 @@ export const team_members = [
         social: {
             x: "",
             instagram: "",
-            linkedIn: ""
+            linkedIn: "https://www.linkedin.com/in/tijesunimiadesina"
         },
         colors: {
             bg: '#95D5B2',
             color: "black",
             iconbg: '#d8bd8a'
-        }
-    },
-    {
-        name: "Ogunbanke Esther",
-        role: "Research Team Lead",
-        image: "team_11.jpg",
-        social: {
-            x: "",
-            instagram: "",
-            linkedIn: "https://www.linkedin.com/in/ogunbanke-esther-4162151b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-        },
-        colors: {
-            bg: '#666666',
-            color: "white",
-            iconbg: 'white'
         }
     },
     // {
@@ -663,7 +663,7 @@ export const team_members = [
 export const volunteer_members = [
     {
         name: "Tolani Ajisegiri",
-        role: "Research Team",
+        role: "Programs Team",
         image: "team_6.jpg",
         social: {
             x: "https://x.com/tolani_aji?s=21",
@@ -679,7 +679,7 @@ export const volunteer_members = [
     },
     {
         name: "Timilehin Precious Ogunjemisin",
-        role: "Media Team",
+        role: "Programs Team",
         image: "team_3.jpg",
         social: {
             x: "https://x.com/timilehinp56167?s=21",
@@ -694,7 +694,7 @@ export const volunteer_members = [
     },
     {
         name: "Ibuknoluwa Folarin",
-        role: "Unknown",
+        role: "Research Team",
         image: "team_2.jpg",
         social: {
             x: "",

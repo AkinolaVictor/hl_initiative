@@ -5,6 +5,7 @@ import Link from 'next/link'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/SplitText'
+import Media from '../media'
 
 interface Props {
     // startTrial: () => string,
@@ -142,9 +143,15 @@ function AboutIntro(props: Props) {
                     Join us to make a lasting impact, share your time and skills, 
                     and help build a healthier, stronger future for everyone.
                 </p>
-                <Link href={"/volunteer"} className='text-white font-semibold w-auto h-auto rounded-full bg-black py-2 px-7 text_1 cursor-pointer mt-10 home_buttn2 translate-y-37.5'>
+                {/* <Link href={"/volunteer"} className='text-white font-semibold w-auto h-auto rounded-full bg-black py-2 px-7 text_1 cursor-pointer mt-10 home_buttn2 translate-y-37.5'>
                     Join Us Today
-                </Link>
+                </Link> */}
+                <Media 
+                    className='px-7 py-2 mt-10 home_buttn2 translate-y-37.5'
+                    x= 'https://x.com/TheHLInitiative?s=20'
+                    instagram= 'https://www.instagram.com/thehlinitiative?igsh=cGxpOWd0Mm4yaTNn&utm_source=qr'
+                    linkedIn= 'https://www.linkedin.com/company/the-health-enlight-initiative/'
+                />
             </div>
         </div>
     )

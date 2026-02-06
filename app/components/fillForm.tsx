@@ -90,7 +90,7 @@ function FillForm(props: Props) {
                 <p>This is the user email: ${email}</p>
             </div>
             `
-            const mails = [`akinolavictor50@gmail.com`, "aonajoko@gmail.com"]
+            const mails = [`akinolavictor50@gmail.com`, "aonajoko@gmail.com", "Gloriaakpederi5@gmail.com"]
             // const mails = [`akinolavictor50@gmail.com`, `akinolavictor26@gmail.com`]
             for(let i=0; i<mails.length; i++){
                 const developer_payload = {

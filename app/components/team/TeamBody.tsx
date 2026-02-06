@@ -79,7 +79,7 @@ function TeamBody(props: Props) {
                         //     url(./check_bp.webp) type("image/webp"),
                         //     url(./check_bp-2.jpg) type("image/jpeg")
                         // )`,
-                        backgroundImage: `url(./team/${image})`,
+                        backgroundImage: `url(${env=="volunteer"?"./../":"./"}team/${image})`,
                         backgroundSize:"cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", 
                         width: "300px", minHeight: "360px", height: "auto", maxHeight: "400px"
                     }}
@@ -146,9 +146,17 @@ function TeamBody(props: Props) {
         const isMobile = screen_width <= 700;
         setMobile(isMobile)
         
-        if(isMobile || env==="volunteer") return
+        // if(isMobile || env==="volunteer") return
+        if(isMobile) return
 
-        const total_cards = Math.floor(team_members.length/2)
+        function getCardCount(){
+            const card_len = decideData().length
+            if(card_len%2 == 1) return Math.floor(card_len/2)
+            return Math.floor(card_len/2) - 1
+        }
+
+        // const total_cards = Math.floor(decideData().length/2)
+        const total_cards = getCardCount()
         
 
         gsap.registerPlugin(ScrollTrigger, SplitText);
@@ -178,8 +186,11 @@ function TeamBody(props: Props) {
         // return ()=>ScrollTrigger.getAll().forEach(trigger => trigger.kill());
         return ScrollTrigger.refresh;
     }
-    
-    
+
+    function decideData(){
+        if(env == "volunteer") return volunteer_members
+        else return team_members
+    }
     
     const {setGeneralAlpha} = generalFunctions()
     const working = useRef(false)
@@ -223,7 +234,9 @@ function TeamBody(props: Props) {
             </div>
             
             {
-                env == "volunteer"?
+                // env == "volunteer"?
+                // HE DEMANDED THAT EVERYONE SHOULD BE PRESENTED USING A VERTICAL SCROLL
+                false?
                 <>
                     <Testimonial
                         // prevAnim={!hideTeam}
@@ -242,7 +255,7 @@ function TeamBody(props: Props) {
                         mobile?
                         <div className='w-full h-auto '>
                             {
-                                team_members.map((item, index)=>{
+                                decideData().map((item, index)=>{
                                     return (
                                         <div 
                                             key={index} 
@@ -259,7 +272,7 @@ function TeamBody(props: Props) {
                         <div className='w-full h-screen bg-white flex flex-col bp7:flex-row justify-start overflow-hidden team_preview_container' >
                             <div className='w-full h-auto flex flex-col justify-start items-center team_left_preview'>
                                 {
-                                    team_members.map((item, index)=>{
+                                    decideData().map((item, index)=>{
                                         if(index%2 == 0) return <Part_A key={index} item={item}/>
                                         return null
                                     })
@@ -269,7 +282,7 @@ function TeamBody(props: Props) {
 
                             <div className='w-full h-auto flex flex-col justify-end items-center team_right_preview'>
                                 {
-                                    team_members.map((item, index)=>{
+                                    decideData().map((item, index)=>{
                                         if(index%2 == 1) return <Part_A key={index} item={item}/>
                                         return null
                                     // })
