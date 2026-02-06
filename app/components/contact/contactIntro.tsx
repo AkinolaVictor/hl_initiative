@@ -49,22 +49,22 @@ function ContactIntro(props: Props) {
         }, "-=1.0")
 
         // ScrollTrigger only watches visibility
-        ScrollTrigger.create({
-            trigger: `.${head}`,
-            start: "top 80%",
-            invalidateOnRefresh: true,
-            onEnter: () => tl.restart(),
-            onEnterBack: () => tl.restart(),
-        })
+        // ScrollTrigger.create({
+        //     trigger: `.${head}`,
+        //     start: "top 80%",
+        //     invalidateOnRefresh: true,
+        //     onEnter: () => tl.restart(),
+        //     onEnterBack: () => tl.restart(),
+        // })
         
-        // ScrollTrigger only watches visibility
-        ScrollTrigger.create({
-            trigger: `.${description}`,
-            start: "top 80%",
-            invalidateOnRefresh: true,
-            onEnter: () => tl.restart(),
-            onEnterBack: () => tl.restart()
-        })
+        // // ScrollTrigger only watches visibility
+        // ScrollTrigger.create({
+        //     trigger: `.${description}`,
+        //     start: "top 80%",
+        //     invalidateOnRefresh: true,
+        //     onEnter: () => tl.restart(),
+        //     onEnterBack: () => tl.restart()
+        // })
 
         // animate_home_button()
 

@@ -55,22 +55,24 @@ function AboutIntro(props: Props) {
         }, "-=1.0")
 
         // ScrollTrigger only watches visibility
-        ScrollTrigger.create({
-            trigger: ".home_title2",
-            start: "top 80%",
-            invalidateOnRefresh: true,
-            onEnter: () => tl.restart(),
-            onEnterBack: () => tl.restart(),
-        })
+        // ScrollTrigger.create({
+        //     trigger: ".home_title2",
+        //     // start: "top 80%",
+        //     start: "botttom top",
+        //     invalidateOnRefresh: true,
+        //     onEnter: () => tl.restart(),
+        //     onEnterBack: () => tl.restart(),
+        // })
         
-        // ScrollTrigger only watches visibility
-        ScrollTrigger.create({
-            trigger: ".home_description2",
-            start: "top 80%",
-            invalidateOnRefresh: true,
-            onEnter: () => tl.restart(),
-            onEnterBack: () => tl.restart()
-        })
+        // // ScrollTrigger only watches visibility
+        // ScrollTrigger.create({
+        //     trigger: ".home_description2",
+        //     // start: "top 80%",
+        //     start: "bottom top",
+        //     invalidateOnRefresh: true,
+        //     onEnter: () => tl.restart(),
+        //     onEnterBack: () => tl.restart()
+        // })
 
         animate_home_button()
 
@@ -89,13 +91,13 @@ function AboutIntro(props: Props) {
         })
         
         // ScrollTrigger only watches visibility
-        ScrollTrigger.create({
-            trigger: ".home_buttn2",
-            start: "top 80%",
-            invalidateOnRefresh: true,
-            onEnter: () => tl.restart(),
-            onEnterBack: () => tl.restart()
-        })
+        // ScrollTrigger.create({
+        //     trigger: ".home_buttn2",
+        //     start: "top top",
+        //     invalidateOnRefresh: true,
+        //     onEnter: () => tl.restart(),
+        //     onEnterBack: () => tl.restart()
+        // })
 
         return ()=>ScrollTrigger.refresh();;
     }
