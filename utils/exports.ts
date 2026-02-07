@@ -580,6 +580,36 @@ export const team_members = [
         }
     },
     {
+        name: "Ahmed Hamdalat Temilayo",
+        role: "Media Team Lead",
+        image: "team_13.jpg",
+        social: {
+            x: "",
+            instagram: "",
+            linkedIn: ""
+        },
+        colors: {
+            bg: '#C2C5AA',
+            color: "black",
+            iconbg: '#d8bd8a'
+        }
+    },
+    {
+        name: "Tijesunimi Moyinoluwa Adesina",
+        role: "Media Team Lead",
+        image: "team_15.jpg",
+        social: {
+            x: "",
+            instagram: "",
+            linkedIn: "https://www.linkedin.com/in/tijesunimiadesina"
+        },
+        colors: {
+            bg: '#95D5B2',
+            color: "black",
+            iconbg: '#d8bd8a'
+        }
+    },
+    {
         name: "Jebe-Abdullahi Fuad Temilayo",
         role: "Programs Team Lead",
         image: "team_1.jpg",
@@ -591,21 +621,6 @@ export const team_members = [
         colors: {
             bg: '#572E0E',
             color: "white",
-            iconbg: '#d8bd8a'
-        }
-    },
-    {
-        name: "Ahmed Hamdalat Temilayo",
-        role: "Programs Team Lead",
-        image: "team_13.jpg",
-        social: {
-            x: "",
-            instagram: "",
-            linkedIn: ""
-        },
-        colors: {
-            bg: '#C2C5AA',
-            color: "black",
             iconbg: '#d8bd8a'
         }
     },
@@ -637,21 +652,6 @@ export const team_members = [
             bg: '#555555',
             color: "white",
             iconbg: 'white'
-        }
-    },
-    {
-        name: "Tijesunimi Moyinoluwa Adesina",
-        role: "Media Team Lead",
-        image: "team_5.jpg",
-        social: {
-            x: "",
-            instagram: "",
-            linkedIn: "https://www.linkedin.com/in/tijesunimiadesina"
-        },
-        colors: {
-            bg: '#95D5B2',
-            color: "black",
-            iconbg: '#d8bd8a'
         }
     },
     // {
@@ -708,7 +708,7 @@ export const volunteer_members = [
         }
     },
     {
-        name: "Placeholder Volunteer",
+        name: "Tomi Adeyanju",
         role: "Unknown",
         image: "team_10.jpg",
         social: {
@@ -804,4 +804,19 @@ export function seek_path_and_ref_2(props: {name: string, path: string}): string
 
     const dots = Array(segments.length).fill("..").join("/");
     return `./${dots}/${name}`;
+}
+
+
+export function format_img_assets({name, count}:{name:string, count: number}) {
+    const data:any = []
+
+    for(let i=0; i<count; i++){
+        const each = {
+            type: "image",
+            name: `${name}_${i+1}.jpg`
+        }
+        data.push(each)
+    }
+    
+    return data
 }

@@ -6,14 +6,21 @@ import Link from 'next/link'
 import React, { Fragment, useEffect, useRef, useState } from 'react'
 import Footer from '../footer'
 import { generalFunctions } from '@/app/redux/store_controllers/generalFunctions'
-import { overlay_menu_listener } from '@/utils/exports'
-import { useRouter } from 'next/navigation'
+import { overlay_menu_listener, seek_path_and_ref } from '@/utils/exports'
+import { usePathname, useRouter } from 'next/navigation'
+import { gallery_activities } from '@/utils/gallery_data/gallery_activites'
 
 interface Props {
-    img?:string, 
+    image?:string, 
     title2?: string, 
+    title?: string, 
     description2?: string,
-    date?: string
+    description?: string,
+    id?: string,
+    colors?: any,
+    // type?: string[],
+    type?: any,
+    path?: string
 }
 
 function GalleryContent(props: Props) {
@@ -21,6 +28,10 @@ function GalleryContent(props: Props) {
     const [mobile, setMobile] = useState(false)
     const imgs = ["check_bp", "bg-white", "bg-red", "bg-white", "check_bp", "bg-red", "bg-white"]
     const router = useRouter()
+    const [where, setWhere] = useState("all")
+    const path_main = usePathname()
+
+
     function feature_animation(){
         // if(prevAnim) return
         const screen_width = window.innerWidth
@@ -32,7 +43,14 @@ function GalleryContent(props: Props) {
 
 
         // const card_size = 340
-        const total_cards = 6 - 1
+
+        function getCardCount(){
+            const card_len = gallery_activities.length
+            if(card_len%2 == 1) return Math.floor(card_len/2)
+            return Math.floor(card_len/2) - 1
+        }
+
+        const total_cards = getCardCount()
         // const total_screen_required = card_size * total_cards
         // const remaining_width_offscreen = total_screen_required - screen_width + 170
 
@@ -69,9 +87,10 @@ function GalleryContent(props: Props) {
     const {setGeneralAlpha} = generalFunctions()
     const working = useRef(false)
     const timeout = useRef(false)
-    const working2 = useRef(false)
-    const timeout2 = useRef(false)
+    // const working2 = useRef(false)
+    // const timeout2 = useRef(false)
     const called = useRef(false)
+
     useEffect(()=>{
         const ht = window.innerHeight
         gsap.registerPlugin(ScrollTrigger);
@@ -89,7 +108,7 @@ function GalleryContent(props: Props) {
     useEffect(feature_animation, [])
     
     function EachGalleryComp(props2: Props){
-        const {img, title2, description2, date} = props2
+        const {image, title2, description2} = props2
 
         return (
             <div onClick={()=>{router.push("/gallery/open-12233")}} className='w-full h-auto relative cursor-pointer'>
@@ -98,8 +117,8 @@ function GalleryContent(props: Props) {
                         className='w-full h-auto' 
                         style={{
                             backgroundImage: `image-set(
-                                url(./${img||"bg-red"}.webp) type("image/webp"),
-                                url(./${img||"bg-red"}-2.jpg) type("image/jpeg")
+                                url(./${image||"bg-red"}.webp) type("image/webp"),
+                                url(./${image||"bg-red"}-2.jpg) type("image/jpeg")
                             )`,
                             backgroundSize:"cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", 
                             height: "100vh", margin:0, padding: 0,
@@ -120,7 +139,7 @@ function GalleryContent(props: Props) {
                     }}
                 >
                     <p className='dmd text-[22px] opacity-90'>{title2 || "Medical Outreach Erin-Ijesha"}</p>
-                    <p className='text-[12px] opacity-70'>Carried out on {date||"12th September, 2025"}</p>
+                    <p className='text-[12px] opacity-70'>Carried out on {"12th September, 2025"}</p>
                     <p className='text-[13px] mt-3 opacity-70'>
                         {
                             description2||`
@@ -141,23 +160,123 @@ function GalleryContent(props: Props) {
             </div>
         )
     }
+    
+    function EachGalleryComp_2(props2: Props){
+        const {image, title, description, id, colors, type, path} = props2
+        const {bg, color} = colors
+        const image_ref = `gallery/${path}/${image}`
+        const img = seek_path_and_ref({path: path_main, name: image_ref})
+        // console.log({type})
+        return (
+            <div onClick={()=>{router.push(`/gallery/${id}`)}} 
+                className={`w-full flex flex-col min-h-screen relative cursor-pointer`}
+                style={{backgroundColor: bg||"green", color: color||"white"}}
+            >
+                <div className='w-full h-auto flex justify-center items-center'>
+                    <div
+                        // className='w-full h-85' 
+                        className={`rounded-[30px] mt-10 w-80.5 h-auto max-h-99`} 
+                        style={{
+                            // backgroundImage: `image-set(
+                            //     url(./${image||"bg-red"}.webp) type("image/webp"),
+                            //     url(./${image||"bg-red"}-2.jpg) type("image/jpeg")
+                            // )`,
+                            backgroundImage: `url(${img})`,
+                            // backgroundImage: `url(./../gallery/amr/amr_1.jpg)`,
+                            backgroundSize:"cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", 
+                            width: "300px", minHeight: "360px", height: "auto", maxHeight: "400px"
+                            // height: "100vh", margin:0, padding: 0,
+                        }}
+                    >
+
+                    </div>
+                </div>
+
+                <div 
+                    className='w-full h-full max-h-70 p-5 flex flex-col justify-center items-center text-center'
+                    style={{
+                        // background:`linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.15) 100%)`,
+                        // backdropFilter: "blur(6px)",
+                        // WebkitBackdropFilter: "blur(6px)",
+                    }}
+                >
+                    <p className='font-semibold text-[22px] opacity-90'>{title}</p>
+                    {/* <p className='text-[12px] opacity-70'>Carried out on {date||"12th September, 2025"}</p> */}
+                    <p className='text-[12px]'>({type.includes("webinar")?"Webinar":"Outreach"})</p>
+                    <p className='text-[14px] mt-3 opacity-70 text-justify max-w-125'>
+                        {description}
+                    </p>
+                    <Link
+                        href={`/gallery/${id}`}
+                        style={{backgroundColor: "white"}}
+                        className='w-35 h-8.5 text-black font-semibold rounded-full text-[13px] flex justify-center items-center  cursor-pointer mt-4'
+                    >
+                        Explore
+                    </Link>
+                </div>
+            </div>
+        )
+    }
+
+
 
     return (
         // <div className='w-full min-h-screen h-auto bg-white text-black'>
         <div className='w-full h-auto bg-white text-black gallery_content_parent_container'>
-            <div className='w-full'>
+            <div className='w-full bg-white flex flex-col items-center'>
                 <p className='text-center px-7 pt-7 font-semibold text-[17px]'>Our Programmes So Far</p>
                 <p className='text-center px-7 pb-7 text-[13px] text-[#414141]'>Explore some of the programmes we did</p>
+
+                <div className='w-full max-w-125 mt-0 h-9 bg-gray-400 rounded-full flex '>
+                    <div
+                        onClick={()=>setWhere("all")}
+                        className={`w-full font-semibold h-full cursor-pointer ${where=="all"?"bg-[#758467] text-white":"bg-[#9caf88] text-black"} flex justify-center items-center rounded-bl-full rounded-tl-full text-[13px]`}
+                    >
+                        All
+                    </div>
+
+                    <div
+                        onClick={()=>setWhere("outreaches")}
+                        className={`w-full font-semibold h-full cursor-pointer ${where=="outreaches"?"bg-[#758467] text-white":"bg-[#9caf88] text-black"} flex justify-center items-center text-[13px]`}
+                    >
+                        Outreaches
+                    </div>
+                    
+                    {/* <div
+                        onClick={()=>setWhere("clubs")}
+                        className={`w-full font-semibold h-full cursor-pointer ${where=="clubs"?"bg-[#758467] text-white":"bg-[#9caf88] text-black"} flex justify-center items-center text-[13px]`}
+                    >
+                        School Clubs
+                    </div> */}
+
+                    <div
+                        onClick={()=>setWhere("webinars")}
+                        className={`w-full font-semibold h-full ${where=="webinars"?"bg-[#758467] text-white":"bg-[#9caf88] text-black"} cursor-pointer flex justify-center items-center rounded-br-full rounded-tr-full text-[13px]`}
+                    >
+                        Webinars
+                    </div>
+                </div>
             </div>
+
             {
                 mobile?
                 // <div className=' h-screen overflow-y-auto relative'>
                 <div>
                     {
-                        imgs.map((item, index)=>{
+                        gallery_activities.map((item, index)=>{
+                            const {title, description, id, colors, type, path, image} = item
                             return (
                                 <div key={index} className='w-full h-screen flex justify-center items-center sticky top-0' >
-                                    <EachGalleryComp img={item} />
+                                    <EachGalleryComp_2 
+                                        key={index}
+                                        id={id}
+                                        title={title}
+                                        description={description}
+                                        colors={colors}
+                                        type={type}
+                                        image={image}
+                                        path={path}
+                                    />
                                 </div>
                             )
                         })
@@ -165,22 +284,50 @@ function GalleryContent(props: Props) {
                 </div>:
                 <div className='w-full h-screen bg-white flex flex-col bp8:flex-row justify-start mt-7 overflow-hidden gallery_preview_container '>
                     
-                    <div className='w-full h-auto flex flex-col justify-start items-center bg-amber-950 relative gallery_left_preview'>
-                        <EachGalleryComp img='bg-red' />
-                        <EachGalleryComp img='check_bp'/>
-                        <EachGalleryComp img='bg-white' />
-                        <EachGalleryComp img='bg-red' />
-                        <EachGalleryComp img='bg-white' />
-                        <EachGalleryComp img='check_bp'/>
+                    <div className='w-full h-auto flex flex-col justify-start items-center relative gallery_left_preview'>
+                        {
+                            gallery_activities.map((item, index)=>{
+                                if(index%2 == 1) return null
+                                
+                                const {title, description, id, colors, type, path, image} = item
+
+                                return (
+                                    <EachGalleryComp_2 
+                                        key={index}
+                                        id={id}
+                                        title={title}
+                                        description={description}
+                                        colors={colors}
+                                        type={type}
+                                        image={image}
+                                        path={path}
+                                    />
+                                )
+                            })
+                        }
                     </div>
 
-                    <div className='w-full h-auto flex flex-col justify-end items-center bg-amber-400 relative gallery_right_preview'>
-                        <EachGalleryComp img='check_bp'/>
-                        <EachGalleryComp/>
-                        <EachGalleryComp img='bg-white' />
-                        <EachGalleryComp/>
-                        <EachGalleryComp img='bg-white' />
-                        <EachGalleryComp img='check_bp'/>
+                    <div className='w-full h-auto flex flex-col justify-end items-center relative gallery_right_preview'>
+                        {
+                            gallery_activities.map((item, index)=>{
+                                if(index%2 == 0) return null
+                                
+                                const {title, description, id, colors, type, path, image} = item
+
+                                return (
+                                    <EachGalleryComp_2 
+                                        key={index}
+                                        id={id}
+                                        title={title}
+                                        description={description}
+                                        colors={colors}
+                                        type={type}
+                                        image={image}
+                                        path={path}
+                                    />
+                                )
+                            })
+                        }
                     </div>
 
                 </div>
