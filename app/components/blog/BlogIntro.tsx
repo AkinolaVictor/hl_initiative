@@ -76,7 +76,7 @@ function BlogIntro(props: Props) {
     }, [])
 
     return (
-        <div className='w-full min-h-90 h-auto  relative'>
+        <div className='w-full min-h-90 h-auto  relative bg-black'>
         {/* <div className='w-full h-screen  relative'> */}
             <div 
                 className='absolute z-1 w-full h-full' 
