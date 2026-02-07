@@ -102,11 +102,13 @@ function HomeIntro(props: Props) {
             <div 
                 className='absolute z-1 w-full h-full' 
                 style={{
-                    backgroundImage: `image-set(
-                        url(./bg-red.webp) type("image/webp"),
-                        url(./bg-red-2.jpg) type("image/jpeg")
-                    )`,
+                    // backgroundImage: `image-set(
+                    //     url(./bg-red.webp) type("image/webp"),
+                    //     url(./bg-red-2.jpg) type("image/jpeg")
+                    // )`,
+                    backgroundImage: "url(./gallery/amr/amr_4.jpg)",
                     // backgroundColor: "white",
+                    opacity: 0.35,
                     backgroundSize:"cover", backgroundPosition: "center", 
                     backgroundRepeat: "no-repeat", height: "100vh", margin:0, padding: 0
                 }}>

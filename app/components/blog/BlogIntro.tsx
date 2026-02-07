@@ -81,9 +81,12 @@ function BlogIntro(props: Props) {
             <div 
                 className='absolute z-1 w-full h-full' 
                 style={{
-                    backgroundColor: "green",
+                    // backgroundColor: "green",
+                    opacity: 0.5,
+                    // backgroundImage: "url(./gallery/school_club/school_club_1.jpg)",
+                    backgroundImage: "url(./gallery/amr/amr_4.jpg)",
                     backgroundSize:"cover", backgroundPosition: "center", 
-                    backgroundRepeat: "no-repeat", margin:0, padding: 0
+                    backgroundRepeat: "no-repeat", margin:0, padding: 0,
                 }}>
             </div>
 

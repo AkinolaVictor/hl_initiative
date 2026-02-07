@@ -95,7 +95,12 @@ function GalleryTop(props: Props) {
                     // )`,
                     // backgroundSize:"cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", 
                     // height: "100vh", margin:0, padding: 0,
-                    // backgroundColor: "green"
+                    backgroundColor: "green",
+                    backgroundImage: "url(./gallery/school_club/school_club_1.jpg)",
+                    // backgroundImage: `url(./gallery/amr/amr_4.jpg})`,
+                    opacity: 0.5,
+                    backgroundSize:"cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", 
+                    height: "360px"
                 }}
             >
             </div> */}

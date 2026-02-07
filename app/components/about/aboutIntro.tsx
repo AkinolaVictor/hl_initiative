@@ -107,17 +107,20 @@ function AboutIntro(props: Props) {
     }, [])
 
     return (
-        <div className='w-full h-screen relative bg-white text-white the_about_intro'>
+        <div className='w-full h-screen relative text-white the_about_intro'>
         {/* <div className='w-full h-screen sticky top-0'> */}
             <div 
                 className='absolute z-1 w-full h-full' 
                 style={{
-                    backgroundColor: "green"
+                    // backgroundColor: "green"
                     // backgroundImage: `image-set(
                     //     url(./bg-white.webp) type("image/webp"),
                     //     url(./bg-white-2.jpg) type("image/jpeg")
                     // )`,
-                    // backgroundSize:"cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", 
+                    backgroundImage: "url(./gallery/school_club/school_club_1.jpg)",
+                    // backgroundImage: "url(./gallery/amr/amr_4.jpg)",
+                    opacity: 0.5,
+                    backgroundSize:"cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", 
                     // height: "100vh", margin:0, padding: 0
                 }}>
             </div>

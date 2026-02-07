@@ -76,7 +76,7 @@ function TeamIntro(props: Props) {
     }, [])
 
     return (
-        <div className='w-full h-auto relative bg-white'>
+        <div className='w-full h-auto relative '>
             {/* <div 
                 className='absolute z-1 w-full h-auto' 
                 style={{
@@ -84,7 +84,11 @@ function TeamIntro(props: Props) {
                     //     url(./bg-white.webp) type("image/webp"),
                     //     url(./bg-white-2.jpg) type("image/jpeg")
                     // )`,
-                    // backgroundSize:"cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", 
+                    opacity: 0.5,
+                    // backgroundImage: "url(./gallery/school_club/school_club_1.jpg)",
+                    backgroundImage: "url(./gallery/amr/amr_4.jpg)",
+                    backgroundSize:"cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", 
+                    height: "315px",
                     // height: "100vh", margin:0, padding: 0,
                     // backgroundColor: "green"
                 }}
@@ -97,7 +101,17 @@ function TeamIntro(props: Props) {
                 />
             </div>
 
-            <div className='w-full h-auto text-center p-10 flex flex-col items-center' style={{ backgroundColor: "green"}}>
+            <div 
+                className='w-full h-auto text-center p-10 flex flex-col items-center' 
+                style={{ backgroundColor: "green"}}
+                // style={{
+                //     opacity: 0.5,
+                //     // backgroundImage: "url(./gallery/school_club/school_club_1.jpg)",
+                //     backgroundImage: "url(./gallery/amr/amr_4.jpg)",
+                //     backgroundSize:"cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", 
+                //     height: "auto",
+                // }}
+            >
                 <p className='mt-25 text-[13px] text-white'></p>
                 <p 
                     className='dmd text-white text-[32px] w-auto max-w-350 text-center opacity-90 mt-0 mb-4 home_title4'
@@ -107,7 +121,7 @@ function TeamIntro(props: Props) {
                 </p>
                 
                 <p 
-                    className='text-white w-auto opacity-75 max-w-99 text-center text-[15px] mt-1 home_description4'
+                    className='text-white w-auto opacity-100 max-w-99 text-center text-[15px] mt-1 home_description4'
                 >
                     Success is like building a mansion, each brick matters, each effort
                     effort counts, and with patience and consistency

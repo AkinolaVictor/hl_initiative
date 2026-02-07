@@ -89,7 +89,7 @@ function GalleryOpenedBody(props: Props) {
             <div className='h-screen min-w-90 flex flex-col justify-center text-center items-center bg-amber-400d px-6 py-10 bp10:absolute bp10:z-2 bg-white'>
                 <p className='font-semibold text-[16px]'>{data.title}</p>
                 <p className='mt-5'>{data.theme}</p>
-                <p className='mt-0'>{"Date: 12th September, 2025"}</p>
+                {/* <p className='mt-0'>{"Date: 12th September, 2025"}</p> */}
                 <p>{`Venue: ${data.venue}`}</p>
             </div>
 
