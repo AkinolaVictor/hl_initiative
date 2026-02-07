@@ -97,7 +97,7 @@ function HomeIntro(props: Props) {
     }, [])
 
     return (
-        <div className='w-full h-screen relative'>
+        <div className='w-full h-screen relative bg-black'>
         {/* <div className='w-full h-screen sticky top-0'> */}
             <div 
                 className='absolute z-1 w-full h-full' 

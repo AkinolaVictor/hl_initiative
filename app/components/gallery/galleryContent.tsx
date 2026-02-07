@@ -175,7 +175,7 @@ function GalleryContent(props: Props) {
                 <div className='w-full h-auto flex justify-center items-center'>
                     <div
                         // className='w-full h-85' 
-                        className={`rounded-[30px] mt-10 w-80.5 h-auto max-h-99`} 
+                        className={` mt-10 w-80.5 h-auto max-h-99`} 
                         style={{
                             // backgroundImage: `image-set(
                             //     url(./${image||"bg-red"}.webp) type("image/webp"),
@@ -227,7 +227,7 @@ function GalleryContent(props: Props) {
                 <p className='text-center px-7 pt-7 font-semibold text-[17px]'>Our Programmes So Far</p>
                 <p className='text-center px-7 pb-7 text-[13px] text-[#414141]'>Explore some of the programmes we did</p>
 
-                <div className='w-full max-w-125 mt-0 h-9 bg-gray-400 rounded-full flex '>
+                <div className='w-full max-w-125 my-5 h-9 bg-gray-400 rounded-full flex '>
                     <div
                         onClick={()=>setWhere("all")}
                         className={`w-full font-semibold h-full cursor-pointer ${where=="all"?"bg-[#758467] text-white":"bg-[#9caf88] text-black"} flex justify-center items-center rounded-bl-full rounded-tl-full text-[13px]`}
@@ -261,7 +261,7 @@ function GalleryContent(props: Props) {
             {
                 mobile?
                 // <div className=' h-screen overflow-y-auto relative'>
-                <div>
+                <div className='mt-5'>
                     {
                         gallery_activities.map((item, index)=>{
                             const {title, description, id, colors, type, path, image} = item
