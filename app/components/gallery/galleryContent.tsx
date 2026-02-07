@@ -175,7 +175,7 @@ function GalleryContent(props: Props) {
                 <div className='w-full h-auto flex justify-center items-center'>
                     <div
                         // className='w-full h-85' 
-                        className={` mt-10 w-80.5 h-auto max-h-99`} 
+                        className={`rounded-[20px] mt-10 w-80.5 h-auto max-h-99`} 
                         style={{
                             // backgroundImage: `image-set(
                             //     url(./${image||"bg-red"}.webp) type("image/webp"),
@@ -184,7 +184,7 @@ function GalleryContent(props: Props) {
                             backgroundImage: `url(${img})`,
                             // backgroundImage: `url(./../gallery/amr/amr_1.jpg)`,
                             backgroundSize:"cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", 
-                            width: "300px", minHeight: "360px", height: "auto", maxHeight: "400px"
+                            width: "300px", minHeight: "360px", height: "auto", maxHeight: "450px"
                             // height: "100vh", margin:0, padding: 0,
                         }}
                     >

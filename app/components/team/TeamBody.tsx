@@ -73,7 +73,7 @@ function TeamBody(props: Props) {
             >
                 <div 
                     // className={`w-full bp9:w-[80%] h-auto bp7:rounded-[25px] mt-12.5`} 
-                    className={`rounded-[0px] mt-10 w-80.5 h-auto max-h-99`} 
+                    className={`rounded-[30px] mt-10 w-80.5 h-auto max-h-99`} 
                     style={{
                         // backgroundImage: `image-set(
                         //     url(./check_bp.webp) type("image/webp"),
