@@ -229,7 +229,7 @@ function GalleryContent(props: Props) {
                 <p className='text-center px-7 pt-7 font-semibold text-[17px]'>Our Programmes So Far</p>
                 <p className='text-center px-7 pb-7 text-[13px] text-[#414141]'>Explore some of the programmes we did</p>
 
-                <div className='w-full max-w-90 my-5 h-9 bg-gray-400 rounded-full flex '>
+                <div className='w-full max-w-67 my-5 h-9 bg-gray-400 rounded-full flex '>
                     <Link href={"/gallery"}
                         // onClick={()=>setWhere("all")}
                         className={`w-full font-semibold h-full cursor-pointer ${where=="all"?"bg-[#758467] text-white":"bg-[#9caf88] text-black"} flex justify-center items-center rounded-bl-full rounded-tl-full text-[13px]`}
