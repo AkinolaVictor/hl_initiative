@@ -110,7 +110,7 @@ function GalleryTop(props: Props) {
     }, [])
 
     return (
-        <div className='w-full h-110 relative bg-white'>
+        <div className='w-full h-125 relative bg-white'>
             {/* <div 
                 className='absolute z-1 w-full h-auto' 
                 style={{
@@ -137,14 +137,14 @@ function GalleryTop(props: Props) {
             </div>
 
             <div className='w-full h-auto text-center flex flex-col items-center relative'>
-                <div style={{ backgroundColor: "black"}} className='w-full h-110 absolute top-0 left-0 z-1'>
+                <div style={{ backgroundColor: "black"}} className='w-full h-125 absolute top-0 left-0 z-1'>
                     <img
-                        // width={window?.innerWidth??"700px"} 
+                        // width={innerWidth} 
                         // height={window?.innerHeight??"500px"}
                         // height={500}
                         src={"/gallery/school_club/school_club_1.jpg"}
                         alt='"background image'
-                        className='object-cover object-center w-screen h-auto max-h-110 opacity-30'
+                        className='object-cover object-center w-screen h-auto max-h-125 opacity-30'
                     />
                 </div>
                 <div className='w-full h-auto text-center p-10 py-20 flex flex-col items-center absolute top-0 left-0 z-2'>
