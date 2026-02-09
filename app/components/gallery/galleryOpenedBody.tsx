@@ -204,7 +204,6 @@ function GalleryOpenedBody(props: Props) {
                             const image_ref = `gallery/${data.path}/${name}`
                             const img = seek_path_and_ref({path: path, name: image_ref})
                             return (
-                                // <div key={index} className='w-screen max-w-200 h-screen flex justify-center items-center bg-black'>
                                 <div key={index} className='w-screen max-w-200 h-auto max-h-full flex justify-center items-center bg-black'>
                                     <img src={img} alt="" className='w-auto max-w-[90%] h-auto max-h-[90%] rounded-[15px]' />
                                 </div>
