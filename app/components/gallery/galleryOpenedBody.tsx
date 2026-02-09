@@ -206,7 +206,6 @@ function GalleryOpenedBody(props: Props) {
                             return (
                                 // <div key={index} className='w-screen max-w-200 h-screen flex justify-center items-center bg-black'>
                                 <div key={index} className='w-screen max-w-200 h-auto max-h-full flex justify-center items-center bg-black'>
-                                    {/* <img src={img} alt="" className='w-full h-auto' /> */}
                                     <img src={img} alt="" className='w-auto max-w-[90%] h-auto max-h-[90%] rounded-[15px]' />
                                 </div>
                             )
