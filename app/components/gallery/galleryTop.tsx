@@ -139,7 +139,7 @@ function GalleryTop(props: Props) {
             <div className='w-full h-auto text-center flex flex-col items-center relative'>
                 <div style={{ backgroundColor: "black"}} className='w-full h-110 absolute top-0 left-0 z-1'>
                     <img
-                        width={window?.innerWidth??"700px"} 
+                        // width={window?.innerWidth??"700px"} 
                         // height={window?.innerHeight??"500px"}
                         // height={500}
                         src={"/gallery/school_club/school_club_1.jpg"}
