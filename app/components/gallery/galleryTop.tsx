@@ -7,6 +7,7 @@ import { SplitText } from 'gsap/SplitText';
 // import axios from 'axios';
 import { gallery_activities } from '@/utils/gallery_data/gallery_activites';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 interface Props {title?: string, date?: string}
 
@@ -109,7 +110,7 @@ function GalleryTop(props: Props) {
     }, [])
 
     return (
-        <div className='w-full h-auto relative bg-white'>
+        <div className='w-full h-110 relative bg-white'>
             {/* <div 
                 className='absolute z-1 w-full h-auto' 
                 style={{
@@ -129,31 +130,43 @@ function GalleryTop(props: Props) {
             >
             </div> */}
 
-            <div className='absolute top-0 left-0 w-full'>
+            <div className='absolute z-100 top-0 left-0 w-full'>
                 <Header
                     env='s'
                 />
             </div>
 
-            <div className='w-full h-auto text-center p-10 flex flex-col items-center ' style={{ backgroundColor: "green"}}>
-                <p className='mt-25 text-[13px] text-white'></p>
-                <p 
-                    className='dmd text-white text-[38px] w-auto max-w-350 text-center opacity-90 mt-0 mb-4 home_title3'
-                    style={{textShadow:"2px 2px 8px rgba(0,0,0,0.5)"}}
-                >
-                    {data?.title||"The Way We Impact"}
-                </p>
-                
-                <p 
-                    className='text-white w-auto opacity-75 max-w-99 text-center text-[15px] mt-1 home_description3'
-                >
-                    {
-                        data?.theme||`
-                            To us, impact is not just about touching live,
-                            we stay connected to our beneficiaries lifelong.
-                        `
-                    }
-                </p>
+            <div className='w-full h-auto text-center flex flex-col items-center relative'>
+                <div style={{ backgroundColor: "black"}} className='w-full h-110 absolute top-0 left-0 z-1'>
+                    <img
+                        width={window?.innerWidth??"700px"} 
+                        // height={window?.innerHeight??"500px"}
+                        // height={500}
+                        src={"/gallery/school_club/school_club_1.jpg"}
+                        alt='"background image'
+                        className='object-cover object-center w-screen h-auto max-h-110 opacity-30'
+                    />
+                </div>
+                <div className='w-full h-auto text-center p-10 py-20 flex flex-col items-center absolute top-0 left-0 z-2'>
+                    <p className='mt-25 text-[13px] text-white'></p>
+                    <p 
+                        className='dmd text-white text-[38px] w-auto max-w-350 text-center opacity-90 mt-0 mb-4 home_title3'
+                        style={{textShadow:"2px 2px 8px rgba(0,0,0,0.5)"}}
+                    >
+                        {data?.title||"The Way We Impact"}
+                    </p>
+                    
+                    <p 
+                        className='text-white w-auto opacity-75 max-w-99 text-center text-[15px] mt-1 home_description3'
+                    >
+                        {
+                            data?.theme||`
+                                To us, impact is not just about touching live,
+                                we stay connected to our beneficiaries lifelong.
+                            `
+                        }
+                    </p>
+                </div>
             </div>
         </div>
     )
