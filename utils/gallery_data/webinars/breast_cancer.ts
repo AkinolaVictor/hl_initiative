@@ -1,7 +1,8 @@
 import { v4 as uuidv4 } from 'uuid';
 // uuidv4()
 export const breast_cancer = {
-    id: uuidv4(),
+    // id: uuidv4(),
+    id: "98da22be-e380-406b-9b7a-3d842486ew1",
     type: ["webinar"],
     path: "webinar",
     title: "Breast Cancer",

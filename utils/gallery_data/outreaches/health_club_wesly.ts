@@ -2,7 +2,8 @@ import { format_img_assets } from '@/utils/exports';
 import { v4 as uuidv4 } from 'uuid';
 // uuidv4()
 export const health_club_wesly = {
-    id: uuidv4(),
+    // id: uuidv4(),
+    id: "78ba22be-e380-406b-9b7a-3d8424861001",
     type: ["outreach", "clubs"],
     title: "School Health Club",
     path: "school_club",

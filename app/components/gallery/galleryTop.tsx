@@ -1,15 +1,39 @@
 "use client"
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../header'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
-import axios from 'axios';
+// import axios from 'axios';
+import { gallery_activities } from '@/utils/gallery_data/gallery_activites';
+import { usePathname } from 'next/navigation';
 
 interface Props {title?: string, date?: string}
 
 function GalleryTop(props: Props) {
     const {title, date} = props
+    const path = usePathname()
+    const [data, setData] = useState<any>({})
+    
+
+    function get_gallery_data(){
+        const path_split = path?.split("/").reverse() ?? []
+        const id = path_split[0]
+
+        for(let i=0; i<gallery_activities.length; i++){
+            const each = gallery_activities[i]
+            if(id === each.id){
+                return each
+            }
+        }
+
+        return {}
+    }
+    
+    useEffect(()=>{
+        const datum = get_gallery_data()
+        setData(datum)
+    }, [])
 
 
     function animate_home_title(elem: {head:string, description: string}) {
@@ -117,14 +141,14 @@ function GalleryTop(props: Props) {
                     className='dmd text-white text-[38px] w-auto max-w-350 text-center opacity-90 mt-0 mb-4 home_title3'
                     style={{textShadow:"2px 2px 8px rgba(0,0,0,0.5)"}}
                 >
-                    {title||"The Way We Impact"}
+                    {data?.title||"The Way We Impact"}
                 </p>
                 
                 <p 
                     className='text-white w-auto opacity-75 max-w-99 text-center text-[15px] mt-1 home_description3'
                 >
                     {
-                        date||`
+                        data?.theme||`
                             To us, impact is not just about touching live,
                             we stay connected to our beneficiaries lifelong.
                         `

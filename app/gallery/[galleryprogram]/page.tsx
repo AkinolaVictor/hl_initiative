@@ -1,8 +1,12 @@
 import Footer from '@/app/components/footer'
+import GalleryContent from '@/app/components/gallery/galleryContent';
 import GalleryOpenedBody from '@/app/components/gallery/galleryOpenedBody'
 import GalleryTop from '@/app/components/gallery/galleryTop'
+// import { gallery_activities } from '@/utils/gallery_data/gallery_activites';
 import { Metadata } from 'next';
+// import { usePathname } from 'next/navigation';
 import React from 'react'
+import GalleryNavigator from './GalleryNavigator';
 
 interface Props {}
 
@@ -21,7 +25,7 @@ function Page(props: Props) {
                 title='Medical Outreach Erin-Ijesha'
                 date='Carried Out On 12th September, 2025'
             />
-            <GalleryOpenedBody />
+            <GalleryNavigator />
             <Footer />
         </div>
     )

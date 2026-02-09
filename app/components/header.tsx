@@ -63,10 +63,10 @@ function Header(props: Props) {
             // reversed,
             // repeat,
             onStart: ()=> {
-                console.log("started")
+                // console.log("started")
             },
             onComplete: ()=> {
-                console.log("completed")
+                // console.log("completed")
             },
         })
 

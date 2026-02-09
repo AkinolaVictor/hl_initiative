@@ -84,3 +84,9 @@ https://www.linkedin.com/company/the-health-enlight-initiative/
 https://x.com/TheHLInitiative?s=20q
 https://x.com/TheHLInitiative?s=20
 https://x.com/TheHLInitiative?s=20
+
+
+
+i am using the next.js app router for my project. 
+I already a page.tsx in a folder called gallery which gives me access to a "/gallery" route on the web browser
+in the

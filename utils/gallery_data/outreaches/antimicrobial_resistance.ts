@@ -2,7 +2,8 @@ import { format_img_assets } from '@/utils/exports';
 import { v4 as uuidv4 } from 'uuid';
 // uuidv4()
 export const antimicrobial_resistance = {
-    id: uuidv4(),
+    // id: uuidv4(),
+    id: "68ca22be-e380-406b-9b7a-3d8424861001",
     type: ["outreach"],
     path: "amr",
     title: "AMR Campaign",

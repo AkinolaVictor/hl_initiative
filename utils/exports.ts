@@ -487,7 +487,7 @@ export function call_once_avoid_the_rest(props: {working:any, timeout:any, calle
             func: ()=>{
                 called.current = false
                 if(func2) func2()
-                console.log("Ended Call")
+                // console.log("Ended Call")
             }
         })
 
@@ -496,7 +496,7 @@ export function call_once_avoid_the_rest(props: {working:any, timeout:any, calle
 
     func()
     called.current = true
-    console.log("Called Once")
+    // console.log("Called Once")
 }
 
 
@@ -817,6 +817,6 @@ export function format_img_assets({name, count}:{name:string, count: number}) {
         }
         data.push(each)
     }
-    
+
     return data
 }

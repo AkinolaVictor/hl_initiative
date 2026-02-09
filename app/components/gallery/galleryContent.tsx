@@ -8,7 +8,7 @@ import Footer from '../footer'
 import { generalFunctions } from '@/app/redux/store_controllers/generalFunctions'
 import { overlay_menu_listener, seek_path_and_ref } from '@/utils/exports'
 import { usePathname, useRouter } from 'next/navigation'
-import { gallery_activities } from '@/utils/gallery_data/gallery_activites'
+// import { gallery_activities } from '@/utils/gallery_data/gallery_activites'
 
 interface Props {
     image?:string, 
@@ -20,17 +20,19 @@ interface Props {
     colors?: any,
     // type?: string[],
     type?: any,
-    path?: string
+    path?: string,
+    preload_data?: any,
+    where?: string
 }
 
 function GalleryContent(props: Props) {
-    const {} = props
+    const {preload_data, where} = props
+    const gallery_activities = preload_data || []
     const [mobile, setMobile] = useState(false)
     const imgs = ["check_bp", "bg-white", "bg-red", "bg-white", "check_bp", "bg-red", "bg-white"]
     const router = useRouter()
-    const [where, setWhere] = useState("all")
+    // const [where, setWhere] = useState("all")
     const path_main = usePathname()
-
 
     function feature_animation(){
         // if(prevAnim) return
@@ -227,34 +229,27 @@ function GalleryContent(props: Props) {
                 <p className='text-center px-7 pt-7 font-semibold text-[17px]'>Our Programmes So Far</p>
                 <p className='text-center px-7 pb-7 text-[13px] text-[#414141]'>Explore some of the programmes we did</p>
 
-                <div className='w-full max-w-125 my-5 h-9 bg-gray-400 rounded-full flex '>
-                    <div
-                        onClick={()=>setWhere("all")}
+                <div className='w-full max-w-90 my-5 h-9 bg-gray-400 rounded-full flex '>
+                    <Link href={"/gallery"}
+                        // onClick={()=>setWhere("all")}
                         className={`w-full font-semibold h-full cursor-pointer ${where=="all"?"bg-[#758467] text-white":"bg-[#9caf88] text-black"} flex justify-center items-center rounded-bl-full rounded-tl-full text-[13px]`}
                     >
                         All
-                    </div>
+                    </Link>
 
-                    <div
-                        onClick={()=>setWhere("outreaches")}
-                        className={`w-full font-semibold h-full cursor-pointer ${where=="outreaches"?"bg-[#758467] text-white":"bg-[#9caf88] text-black"} flex justify-center items-center text-[13px]`}
+                    <Link href={"/gallery/outreach"}
+                        // onClick={()=>setWhere("outreaches")}
+                        className={`w-full font-semibold h-full cursor-pointer ${where=="outreach"?"bg-[#758467] text-white":"bg-[#9caf88] text-black"} flex justify-center items-center text-[13px]`}
                     >
                         Outreaches
-                    </div>
-                    
-                    {/* <div
-                        onClick={()=>setWhere("clubs")}
-                        className={`w-full font-semibold h-full cursor-pointer ${where=="clubs"?"bg-[#758467] text-white":"bg-[#9caf88] text-black"} flex justify-center items-center text-[13px]`}
-                    >
-                        School Clubs
-                    </div> */}
+                    </Link>
 
-                    <div
-                        onClick={()=>setWhere("webinars")}
-                        className={`w-full font-semibold h-full ${where=="webinars"?"bg-[#758467] text-white":"bg-[#9caf88] text-black"} cursor-pointer flex justify-center items-center rounded-br-full rounded-tr-full text-[13px]`}
+                    <Link href={"/gallery/webinar"}
+                        // onClick={()=>setWhere("webinars")}
+                        className={`w-full font-semibold h-full ${where=="webinar"?"bg-[#758467] text-white":"bg-[#9caf88] text-black"} cursor-pointer flex justify-center items-center rounded-br-full rounded-tr-full text-[13px]`}
                     >
                         Webinars
-                    </div>
+                    </Link>
                 </div>
             </div>
 
@@ -263,7 +258,7 @@ function GalleryContent(props: Props) {
                 // <div className=' h-screen overflow-y-auto relative'>
                 <div className='mt-5'>
                     {
-                        gallery_activities.map((item, index)=>{
+                        gallery_activities.map((item:any, index:number)=>{
                             const {title, description, id, colors, type, path, image} = item
                             return (
                                 <div key={index} className='w-full h-screen flex justify-center items-center sticky top-0' >
@@ -286,7 +281,7 @@ function GalleryContent(props: Props) {
                     
                     <div className='w-full h-auto flex flex-col justify-start items-center relative gallery_left_preview'>
                         {
-                            gallery_activities.map((item, index)=>{
+                            gallery_activities.map((item:any, index:number)=>{
                                 if(index%2 == 1) return null
                                 
                                 const {title, description, id, colors, type, path, image} = item
@@ -309,7 +304,7 @@ function GalleryContent(props: Props) {
 
                     <div className='w-full h-auto flex flex-col justify-end items-center relative gallery_right_preview'>
                         {
-                            gallery_activities.map((item, index)=>{
+                            gallery_activities.map((item: any, index: number)=>{
                                 if(index%2 == 0) return null
                                 
                                 const {title, description, id, colors, type, path, image} = item
