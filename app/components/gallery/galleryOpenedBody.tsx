@@ -229,7 +229,6 @@ function GalleryOpenedBody(props: Props) {
                                         // <NextVideo 
                                         //     src={img}
                                         //     // width={new_width}
-                                        //     // width={new_width}
                                         //     style={{
                                         //         maxHeight: innerHeight - 60,
                                         //         maxWidth: "800px",
