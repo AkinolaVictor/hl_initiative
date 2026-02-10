@@ -11,6 +11,7 @@ export const antimicrobial_resistance = {
     venue: "Wesley Girls Junior Secondary School, Lagos",
     date: "",
     image: "amr_1.jpg",
+    image_alt: "amr_4.jpg",
     description: `
         A health outreach at Wesley Girls Junior Secondary School focused on educating 
         students about antimicrobial resistance, its prevention, and responsible practices 

@@ -147,7 +147,7 @@ function GalleryOpenedBody(props: Props) {
                 </div>
 
                 <div 
-                    className={`rounded-full py-1.5 px-4 bg-white text-black text-[13px] font-semibold block bp10:hidden absolute bottom-5 left-[50%] translate-x-[-50%] z-10`}
+                    className={`rounded-full py-1.5 px-4 bg-white text-center text-black text-[13px] font-semibold block bp10:hidden absolute bottom-5 left-[50%] translate-x-[-50%] z-10`}
                     style={{boxShadow: "rgba(0,0,0,0.16) 0px 2px 7px"}}
                 >
                     <p>{data.title}</p>
@@ -212,13 +212,13 @@ function GalleryOpenedBody(props: Props) {
                             const image_ref = `gallery/${data.path}/${name}`
                             const img = seek_path_and_ref({path: path, name: image_ref})
                             // const ratio = type==="video"?vid_height/vid_width:1
-                            const ratio = 464/820
-                            if(ratio<1){
+                            // const ratio = 464/820
+                            // if(ratio<1){
 
-                            }
-                            const new_width = innerWidth>800? 800 : innerWidth - 60
-                            const new_height = new_width * ratio
-                            console.log({new_height, new_width, ratio, vid_width, vid_height})
+                            // }
+                            // const new_width = innerWidth>800? 800 : innerWidth - 60
+                            // const new_height = new_width * ratio
+                            // console.log({new_height, new_width, ratio, vid_width, vid_height})
                             return (
                                 <div key={index} className='w-screen max-w-200 h-auto max-h-full flex justify-center items-center bg-black'>
                                     {

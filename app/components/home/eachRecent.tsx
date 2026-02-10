@@ -11,11 +11,12 @@ interface Props {
     index?:number, 
     description?: string, 
     id?: string, 
-    date?: string
+    date?: string,
+    image?: string
 }
 
 function EachRecent(props: Props) {
-    const {reverse, title, description, index, id, date} = props
+    const {reverse, title, description, index, id, date, image} = props
     const [mobile, setMobile] = useState(false)
     const img_class = `about-image2_${index}`
     const text_class = `description_container2_${index}`
@@ -125,8 +126,8 @@ function EachRecent(props: Props) {
                     className='rounded-[20px]'
                 /> */}
                 <picture>
-                    <source srcSet="check_bp.webp" type="image/webp" className='rounded-[15px]'/>
-                    <img src="check_bp_2.jpg" alt="image" className='rounded-[15px]'/>
+                    {/* <source srcSet="check_bp.webp" type="image/webp" className='rounded-[15px]'/> */}
+                    <img src={image} alt="image" className='rounded-[15px]'/>
                 </picture>
             </div>
             {/* {isLast?null:<div className='w-full h-px bg-black bp8:hidden mt-5 opacity-50'/>} */}

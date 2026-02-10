@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "utils/exports.js"  ],
+, "utils/exports.js", "utils/blog_data/posts/polycystic_ovary_syndrome.js"  ],
   "exclude": ["node_modules"]
 }
