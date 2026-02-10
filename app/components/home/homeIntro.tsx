@@ -123,17 +123,16 @@ function HomeIntro(props: Props) {
                     style={{textShadow:"2px 2px 8px rgba(0,0,0,0.5)"}}
                     // onClick={()=>{setImg(!img)}}
                 >
-                    Empowering Lives To Care For Health
+                    Enlightening Communities, Transforming Health
                 </p>
                 
                 <p 
                     className='text-white w-auto max-w-150 text-center opacity-0 text-[15px] mt-3 p-4 home_description'
                     style={{textShadow:"2px 2px 8px rgba(0,0,0,0.5)"}}
                 >
-                    We inspire and equip individuals with the knowledge, tools, 
-                    and confidence they need to take charge of their well-being, 
-                    make informed health decisions, and build healthier lives 
-                    for themselves and their communities
+                    We believe that the world would be a better place if everyone had access 
+                    to knowledge and resources to make informed decisions about their health. 
+                    We are on a mission to make that happen.
                 </p>
                 {/* <Link 
                     href={"/about"} 

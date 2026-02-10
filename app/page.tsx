@@ -36,9 +36,9 @@ export default function Home() {
       <HomeIntro />
       <Features />
       <Purpose iconbg="#999999" bg="green"/>
-      <RecentPrograms />
-      <VoiceinNumbers />
       <LatestBlogs />
+      <VoiceinNumbers />
+      <RecentPrograms />
       <Footer />
     </div>
   );

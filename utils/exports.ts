@@ -31,12 +31,19 @@ export const allLinks = [
 
 export const cares = [
     {
-        title: "Health Awareness",
-        description: `Empowering the public with life-saving knowledge to dismantle myths, 
-            prevent disease, and foster a proactive culture of wellness.
+        title: "Research & Advocacy",
+        description: `
+            Improving health seeking behaviors within communities through evidence-based research and strong advocacy for policies that prioritize health equity and inclusivity
         `,
-        icon: "public_rel.png",
-        background: "#4f3130"
+        icon: "search.png",
+        background: "#aa5042"
+    },
+    {
+        title: "School-Based Health Clubs",
+        description: `Building a healthier future generation by training students with practical health knowledge to champion positive practices amongst peers and within communities
+        `,
+        icon: "medical.png",
+        background: "#d8bd8a"
     },
     {
         title: "Community Outreaches",
@@ -47,45 +54,35 @@ export const cares = [
         background: "#753742"
     },
     {
-        title: "Research & Advocacy",
-        description: `
-            Driving systemic changes through data-driven insights and vocal advocacy for policies 
-            that prioritize public health and equity. 
-        `,
-        icon: "search.png",
-        background: "#aa5042"
-    },
-    {
-        title: "School-Based Health Clubs",
-        description: `Cultivating a healthier generation by equipping students with the tools to lead 
-            peer-to-peer wellness initiatives and lifelong habits.
-        `,
-        icon: "medical.png",
-        background: "#d8bd8a"
-    },
-    {
-        title: "Evidence-Based Webinars",
-        description: `Connecting a global audience with medical experts to provide clear, scientific 
-            truths that combat digital health misinformation.
+        title: "Informative Webinars",
+        description: `Connecting a global audience with qualified health professionals to provide clear, scientific truths that improve health community outcomes through interactive and insightful discussions.
         `,
         icon: "o_education.png",
         background: "#4f3130"
     },
     {
-        title: "Strategic Trainings",
-        description: `Empowering community leaders and volunteers with professional health-communication 
-            skills to multiply our impact across diverse populations.
+        title: "Combating Misinformation",
+        description: `Empowering the public with evidence-based health knowledge to prevent diseases, promote wellness and eliminate the spread of health misinformation
         `,
-        icon: "training.png",
-        background: "#926639"
+        icon: "public_rel.png",
+        background: "#926639",
+        // background: "#4f3130"
     },
+    // {
+    //     title: "Strategic Trainings",
+    //     description: `Empowering community leaders and volunteers with professional health-communication 
+    //         skills to multiply our impact across diverse populations.
+    //     `,
+    //     icon: "training.png",
+    //     background: "#926639"
+    // },
 ]
 
 export const about_foundation = [
     {
         title: "About Our Foundation",
         sub_title: "Our Vision: A Society Empowered by Health Literacy",
-        img: "something.smt",
+        img: "/gallery/school_club/school_club_10.jpg",
         text: {
             p_1: `
                 Driven by a commitment to scientific truth and community empowerment, we are a health enlightenment NGO
@@ -105,7 +102,7 @@ export const about_foundation = [
     {
         title: "Research First Approach",
         sub_title: "From Data to Lives: Our Research-First Philosophy",
-        img: "something.smt",
+        img: "/gallery/amr/amr_4.jpg",
         text: {
             p_1: `
                 Our strategy begins with a Research First Approach, ensuring every health claim we share is anchored in rigorous 
@@ -125,7 +122,7 @@ export const about_foundation = [
     {
         title: "Valuing Human Health",
         sub_title: "Compassion in Action: Protecting Lives Beyond Education",
-        img: "something.smt",
+        img: "/gallery/school_club/school_club_2.jpg",
         text: {
             p_1: `
                 At the heart of our mission is an unwavering reverence for human life. We recognize that education is most effective when basic 
@@ -142,7 +139,7 @@ export const about_foundation = [
     {
         title: "Knowledge Dispensation Approach",
         sub_title: "Making Vital Health Information Simple and Accessible",
-        img: "something.smt",
+        img: "/gallery/school_club/school_club_7.jpg",
         text: {
             p_1: `
                 Our approach to knowledge dispensation is rooted in the belief that information is only powerful when it is understood and applied. 
@@ -161,7 +158,7 @@ export const about_foundation = [
     {
         title: "Community Engagement Activities",
         sub_title: "Healing Societies Through Active Grassroots Partnerships",
-        img: "something.smt",
+        img: "/gallery/school_club/school_club_3.jpg",
         text: {
             p_1: `
                 Our community engagement is built on the principle of "presence over pretense." We believe that sustainable health outcomes are 
@@ -499,8 +496,6 @@ export function call_once_avoid_the_rest(props: {working:any, timeout:any, calle
     // console.log("Called Once")
 }
 
-
-
 export function delayer(props: {working:any, timeout:any, time:number, func:any}){
     const {working, timeout, time, func} = props
 
@@ -709,8 +704,8 @@ export const volunteer_members = [
     },
     {
         name: "Tomi Adeyanju",
-        role: "Unknown",
-        image: "team_10.jpg",
+        role: "Media Team",
+        image: "team_16.jpg",
         social: {
             x: "",
             instagram: "",
@@ -744,8 +739,6 @@ export function decideblog(item:{title:string, href:string}, path:any){
     }
 }
 
-
-
 export function overlay_menu_listener(data:{ScrollTrigger: any, working: any, timeout: any, setGeneralAlpha: any, called?:any, threshold?:number}){
     const {ScrollTrigger, working, timeout, setGeneralAlpha, called, threshold} = data
     const cap = threshold || 130
@@ -778,7 +771,6 @@ export function overlay_menu_listener(data:{ScrollTrigger: any, working: any, ti
     })
 }
 
-
 export function seek_path_and_ref(props: {name: string, path: string}): string{
     const {name, path} = props
 
@@ -805,7 +797,6 @@ export function seek_path_and_ref_2(props: {name: string, path: string}): string
     const dots = Array(segments.length).fill("..").join("/");
     return `./${dots}/${name}`;
 }
-
 
 export function format_img_assets({name, count}:{name:string, count: number}) {
     const data:any = []

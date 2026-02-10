@@ -4,13 +4,14 @@ import { overlay_menu_listener, seek_path_and_ref } from '@/utils/exports';
 import { gallery_activities } from '@/utils/gallery_data/gallery_activites';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import NextVideo from 'next-video';
 import { usePathname } from 'next/navigation';
 import React, { useEffect, useRef, useState } from 'react'
 
-interface Props {}
+interface Props {updater: any}
 
 function GalleryOpenedBody(props: Props) {
-    const {} = props
+    const {updater} = props
     const path = usePathname()
     const [data, setData] = useState<any>({})
     const [isMobile, setIsMobile] = useState(false)
@@ -21,6 +22,9 @@ function GalleryOpenedBody(props: Props) {
         for(let i=0; i<gallery_activities.length; i++){
             const each = gallery_activities[i]
             if(id === each.id){
+                const image_ref = `gallery/${each.path}/${each.image}`
+                const img = seek_path_and_ref({path: path, name: image_ref})
+                updater(img)
                 return each
             }
         }
@@ -86,7 +90,7 @@ function GalleryOpenedBody(props: Props) {
     return (
         <div className='w-full h-auto'>
             {
-                isMobile?
+                isMobile? // mobile view
                 <div className='w-full h-auto flex flex-col justify-center items-start bg-white text-black text-[13px]'>
                     <div className='min-h-101 h-auto w-auto max-w-190  flex flex-col justify-center items-start bg-[#cbd5c0] px-6 py-10'>
                         <p className='font-semibold text-[16px] text-center w-full'>Introduction</p>
@@ -135,10 +139,10 @@ function GalleryOpenedBody(props: Props) {
 
             <div className='w-full h-screen bg-white text-black text-[13px] flex programme_body relative'>
 
-                <div className='h-screen min-w-90 flex flex-col justify-center text-center items-center bg-amber-400d px-6 py-10 bp10:absolute bp10:z-2 bg-white'>
+                <div className='h-screen min-w-90 max-w-90 flex flex-col justify-center text-center items-center bg-amber-400d px-6 py-10 bp10:absolute bp10:z-2 bg-white'>
                     <p className='font-semibold text-[16px]'>{data.title}</p>
                     <p className='mt-5'>{data.theme}</p>
-                    {/* <p className='mt-0'>{"Date: 12th September, 2025"}</p> */}
+                    <p className='mt-0'>{data.date}</p>
                     <p>{`Venue: ${data.venue}`}</p>
                 </div>
 
@@ -150,6 +154,10 @@ function GalleryOpenedBody(props: Props) {
                 </div>
 
                 <div className='w-auto h-screen flex programme_body_inner bp10:absolute  bp10:left-90'>
+                    {/* <div className='ml-90'>
+                        <NextVideo src={"/gallery/amr/amr_10.mp4"} className='w-125 max-h-95 h-90' height={400}/>
+                    </div> */}
+
 
                     {
                         isMobile?
@@ -200,12 +208,39 @@ function GalleryOpenedBody(props: Props) {
                     
                     {
                         (data.assets||[]).map((item:any, index:number)=>{
-                            const {name} = item
+                            const {name, type, vid_width, vid_height} = item
                             const image_ref = `gallery/${data.path}/${name}`
                             const img = seek_path_and_ref({path: path, name: image_ref})
+                            // const ratio = type==="video"?vid_height/vid_width:1
+                            const ratio = 464/820
+                            if(ratio<1){
+
+                            }
+                            const new_width = innerWidth>800? 800 : innerWidth - 60
+                            const new_height = new_width * ratio
+                            console.log({new_height, new_width, ratio, vid_width, vid_height})
                             return (
                                 <div key={index} className='w-screen max-w-200 h-auto max-h-full flex justify-center items-center bg-black'>
-                                    <img src={img} alt="" className='w-auto max-w-[90%] h-auto max-h-[90%] rounded-[15px]' />
+                                    {
+                                        type==="video"?
+                                        <video controls className='w-auto max-w-[90%] h-auto max-h-[90%] rounded-[15px]'>
+                                            <source src={img} type="video/mp4" />
+                                        </video>:
+                                        // <NextVideo 
+                                        //     src={img}
+                                        //     // width={new_width}
+                                        //     style={{
+                                        //         maxHeight: innerHeight - 60,
+                                        //         maxWidth: "800px",
+                                        //         width: "auto",
+                                        //         height: "auto",
+                                        //         aspectRatio: ratio
+                                        //     }}
+                                        //     // height={new_height}
+                                        //     // className='w-111 max-w-[90%] h-auto max-h-[90%] rounded-[15px]'
+                                        // />:
+                                        <img src={img} alt="" className='w-auto max-w-[90%] h-auto max-h-[90%] rounded-[15px]' />
+                                    }
                                 </div>
                             )
                         })

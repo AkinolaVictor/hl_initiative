@@ -15,15 +15,15 @@ export const diabetes_the_old_and_young = {
         diverse populations.
     `,
     introduction: [
-        `Our foundation recently hosted an impactful webinar titled <b>"Diabetes: The Old and Young,"</b> addressing the misconception that age provides immunity against this chronic condition.`,
+        `Our foundation recently hosted an impactful webinar titled "Diabetes: The Old and Young," addressing the misconception that age provides immunity against this chronic condition.`,
         "The session highlighted the shifting landscape of metabolic health, where Type 2 diabetes is increasingly diagnosed in younger demographics. This virtual gathering served as a vital forum for experts and participants to discuss life-saving preventative measures and management strategies.",
         "Participants were educated on risk factors, early symptoms, and lifestyle habits that contribute to diabetes in both young and older individuals.",
     ],
     objective: [
-        "<b>Demographic Awareness:</b> To clarify the differences between Type 1 and Type 2 diabetes and explain why both increasingly affect children and adults.",
-        "<b>Risk Factor Education:</b> To identify genetic, environmental, and lifestyle triggers that contribute to insulin resistance across different life stages.",
-        "<b>Preventative Advocacy:</b> To provide actionable guidance on nutrition and physical activity to mitigate early-onset risks.",
-        "<b>Management Support:</b> To offer digital resources for monitoring blood glucose levels and maintaining long-term wellness."
+        "Demographic Awareness: To clarify the differences between Type 1 and Type 2 diabetes and explain why both increasingly affect children and adults.",
+        "Risk Factor Education: To identify genetic, environmental, and lifestyle triggers that contribute to insulin resistance across different life stages.",
+        "Preventative Advocacy: To provide actionable guidance on nutrition and physical activity to mitigate early-onset risks.",
+        "Management Support: To offer digital resources for monitoring blood glucose levels and maintaining long-term wellness."
     ],
     impact: [
         `The virtual format facilitated a dynamic exchange, with a wide bandwidth of participants sharing personal stories from various regions. The live Q&A session revealed a high demand for clarity on early symptoms in children, successfully dismantling the "old person’s disease" stigma in real-time.`,
@@ -33,7 +33,13 @@ export const diabetes_the_old_and_young = {
         {
             name: "diabetes.jpg",
             type: "image"
-        }
+        },
+        {
+            type: "video",
+            name: "diabetes_2.mp4",
+            vid_width: 480,
+            vid_height: 832
+        },
     ],
     colors: {
         bg: '#572E0E',

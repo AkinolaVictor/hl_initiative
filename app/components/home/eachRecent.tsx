@@ -4,10 +4,18 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 
-interface Props {reverse?: boolean, title: string, isLast?:boolean, index?:number}
+interface Props {
+    reverse?: boolean, 
+    title: string, 
+    isLast?:boolean, 
+    index?:number, 
+    description?: string, 
+    id?: string, 
+    date?: string
+}
 
 function EachRecent(props: Props) {
-    const {reverse, title, isLast, index} = props
+    const {reverse, title, description, index, id, date} = props
     const [mobile, setMobile] = useState(false)
     const img_class = `about-image2_${index}`
     const text_class = `description_container2_${index}`
@@ -84,10 +92,11 @@ function EachRecent(props: Props) {
                 style={{transform: reverse?"translateX(400px)":"translateX(-400px)"}}
             >
                 <p className='dmd text-[22px]'>{title}</p>
-                <p className='text-[12px] opacity-70'>Date: 24th November, 2025</p>
+                <p className='text-[12px] opacity-70'>{date}</p>
                 <br />
                 <p className='text-[14px] text-justify mb-5'>
-                    An epitome of momentous impact 
+                    {description}
+                    {/* An epitome of momentous impact 
                     <br />
                     <br />
 
@@ -100,9 +109,9 @@ function EachRecent(props: Props) {
 
                     We distributed over 1,000 love box’s which contains , 
                     Rice , Beans, Garri , Spaghetti , Noodles, Salt, 
-                    Vegetable oil  & of course our Season’s greetings card.
+                    Vegetable oil  & of course our Season’s greetings card. */}
                 </p>
-                <Link href={"/gallery/open-12233"} className='text-white font-semibold w-auto max-w-25 h-auto rounded-full bg-[#111111] py-2 px-7 text_1 cursor-pointer mt-0'>
+                <Link href={`/gallery/${id}`} className='text-white font-semibold w-auto max-w-25 h-auto rounded-full bg-[#111111] py-2 px-7 text_1 cursor-pointer mt-0'>
                     Explore
                 </Link >
             </div>

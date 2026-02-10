@@ -135,7 +135,7 @@ function AboutIntro(props: Props) {
                     className='dmd text-[42px] w-auto max-w-150 text-center opacity-90 mt-15 p-4 home_title2'
                     style={{textShadow:"2px 2px 8px rgba(0,0,0,0.5)"}}
                     >
-                    Let’s Change The World Together
+                    Changing The World Begins With Good Health
                 </p>
                 
                 <p 
@@ -143,10 +143,8 @@ function AboutIntro(props: Props) {
                     className='w-auto max-w-150 text-center text-[15px] mt-3 p-4 home_description2'
                     // style={{textShadow:"2px 2px 8px rgba(0,0,0,0.5)"}}
                 >
-                    Together, we can improve lives by promoting better health, 
-                    raising awareness, and supporting communities in need. 
-                    Join us to make a lasting impact, share your time and skills, 
-                    and help build a healthier, stronger future for everyone.
+                    We are building a healthier and more informed society by equipping individuals 
+                    with the knowledge and tools to prevent diseases and promote wellbeing
                 </p>
                 {/* <Link href={"/volunteer"} className='text-white font-semibold w-auto h-auto rounded-full bg-black py-2 px-7 text_1 cursor-pointer mt-10 home_buttn2 translate-y-37.5'>
                     Join Us Today

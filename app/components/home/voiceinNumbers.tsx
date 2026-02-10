@@ -9,24 +9,24 @@ function VoiceinNumbers(props: Props) {
 
     const achievements = [
         {
-            number: "33",
-            title: "Outreaches",
-            description: "We have impacted lives through several webinar sessions, we are unto much more to get done"
+            number: "2",
+            title: "School Health Clubs",
+            description: "We have carried out outreaches and school events that are transformative truly enlightening."
         },
         {
-            number: "103",
+            number: "5",
             title: "Webinars",
-            description: "We have impacted lives through several webinar sessions, we are unto much more to get done"
+            description: "We have impacted lives through several webinar sessions, we are unto much more to get done."
         },
         {
-            number: "10,023",
-            title: "Students",
-            description: "We have impacted lives through several webinar sessions, we are unto much more to get done"
+            number: "250",
+            title: "Attendees",
+            description: "We have impacted lives through several webinar sessions and outreaches, we are unto much more to get done"
         },
         {
-            number: "26",
-            title: "Researches",
-            description: "We have impacted lives through several webinar sessions, we are unto much more to get done"
+            number: "13",
+            title: "Researches/posts",
+            description: "We have successfully completed 13 comprehensive research studies to drive impactful, evidence-based change."
         },
     ]
 

@@ -9,10 +9,10 @@ import { gallery_activities } from '@/utils/gallery_data/gallery_activites';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 
-interface Props {title?: string, date?: string}
+interface Props {title?: string, date?: string, bgImage?: string}
 
 function GalleryTop(props: Props) {
-    const {title, date} = props
+    const {title, date, bgImage} = props
     const path = usePathname()
     const [data, setData] = useState<any>({})
     
@@ -142,9 +142,10 @@ function GalleryTop(props: Props) {
                         // width={innerWidth} 
                         // height={window?.innerHeight??"500px"}
                         // height={500}
-                        src={"/gallery/school_club/school_club_1.jpg"}
+                        // src={"/gallery/school_club/school_club_2.jpg"}
+                        src={bgImage}
                         alt='"background image'
-                        className='object-cover object-center w-screen h-auto max-h-125 opacity-30'
+                        className='object-cover object-center w-screen h-auto min-h-125 max-h-125 opacity-30'
                     />
                 </div>
                 <div className='w-full h-auto text-center p-10 py-20 flex flex-col items-center absolute top-0 left-0 z-2'>

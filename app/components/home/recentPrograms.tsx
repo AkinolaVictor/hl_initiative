@@ -1,7 +1,9 @@
 // "use client"
 // import Link from 'next/link'
 // import React from 'react'
+import { health_club_wesly } from '@/utils/gallery_data/outreaches/health_club_wesly'
 import EachRecent from './eachRecent'
+import { antimicrobial_resistance } from '@/utils/gallery_data/outreaches/antimicrobial_resistance'
 // import { motion } from 'framer-motion'
 
 interface Props {}
@@ -19,9 +21,23 @@ function RecentPrograms(props: Props) {
             <p className='dmd text-[22px] text-center'>Our recent Programmes</p>
             <p className='opacity-70 text-center text-[14px]'>The last few programs we carried out</p>
             {
-                arr.map((item, index)=>{
+                // arr.map((item, index)=>{
+                [
+                    {...health_club_wesly, title: "School Health Club at Wesley Girls High School Lagos"}, 
+                    {...antimicrobial_resistance}
+                ].map((item, index)=>{
+                    const {title, description, id, date} = item
                     return (
-                        <EachRecent key={index} title={item} index={index} reverse={index%2==1} isLast={index==arr.length-1}/>
+                        <EachRecent 
+                            key={index} 
+                            id={id}
+                            description={description} 
+                            title={title} 
+                            index={index} 
+                            reverse={index%2==1} 
+                            date={date}
+                            // isLast={index==arr.length-1}
+                        />
                     )
                 })
             }

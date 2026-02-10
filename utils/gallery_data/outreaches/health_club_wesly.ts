@@ -6,10 +6,10 @@ export const health_club_wesly = {
     id: "78ba22be-e380-406b-9b7a-3d8424861001",
     type: ["outreach", "clubs"],
     title: "School Health Club",
+    date: "September - November 2025",
     path: "school_club",
     theme: "Prevention of infecteous diseases like typhoid",
     venue: "Wesley Girls Junior Secondary School, Lagos",
-    date: "",
     image: "school_club_1.jpg",
     description: `
         A school health outreach aimed at educating secondary school 

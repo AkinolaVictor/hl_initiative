@@ -8,9 +8,10 @@ function Page(props: Props) {
     return (
         <div className='w-full h-auto flex flex-col bg-white text-black p-10'>
             <p className='dmd text-[23px] text-center'>Praise Chimchetam</p>
-            <div className='w-full h-px bg-black my-10'/>
+            <div className='w-full h-1 bg-black my-10'/>
             <p className='text-center'>+2348104576492 || onwueyikpepraise6@gmail.com</p>
             <p className='text-center mt-2'>Uquo, Esit Eket LGA, Akwa Ibom, Nigeria.</p>
+            <div className='w-full h-1 bg-black my-10'/>
 
             <div className='mt-15'>
                 <p className=' text-center mx-10 font-semibold text-[22px] mb-6'>PROFESSIONAL SUMMARY</p>
@@ -126,6 +127,17 @@ function Page(props: Props) {
                     <p>Eket, Akwa Ibom, Nigeria</p>
                 </div>
             </div>
+            <div className='w-full h-1 bg-black my-10'/>
+            <div className='mt-5 flex justify-start items-start flex-wrap'>
+                <p className='w-full text-center mx-10 font-semibold text-[22px] mb-6'>PERSONAL INFORMATION</p>
+
+                <p className='text-left my-3 mr-10'>(1) Gender: Female</p>
+                <p className='text-left my-3 mr-10'>(2) Date of Birth: 23rd November, 1997</p>
+                <p className='text-left my-3 mr-10'>(3) Marital Status: Single</p>
+                <p className='text-left my-3 mr-10'>(4) State of Origin: Imo State</p>
+                <p className='text-left my-3 mr-10'>(5) Local Government Area: Aboh Mbaise LGA</p>
+            </div>
+            
         </div>
     )
 }

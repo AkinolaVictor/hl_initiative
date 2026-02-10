@@ -89,8 +89,8 @@ function Purpose(props: Props) {
                             url(./bg-white-2.jpg) type("image/jpeg")
                         )`, 
                         // backgroundImage: "url(./bg-green.jpg)", 
-                        backgroundSize:"cover", backgroundPosition: "center", 
-                        backgroundRepeat: "no-repeat", height: "100vh", margin:0, padding: 0
+                        backgroundSize:"cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", 
+                        height: "100vh", margin:0, padding: 0
                     }}>
                 </div>
                 

@@ -76,8 +76,19 @@ function VolunteerMain(props: Props) {
     }, [])
 
     return (
-        <div className='w-full h-auto relative'>
-            <div className={`h-auto w-full flex flex-col justify-center items-center `} style={{background: "green"}}>
+        <div className='w-full h-80 relative'>
+            <div style={{ backgroundColor: "black"}} className='w-full h-80 absolute top-0 left-0 z-1'>
+                <img
+                    src={"/gallery/amr/amr_5.jpg"}
+                    alt='"background image'
+                    className='object-cover object-center w-screen h-auto min-h-80 max-h-80 opacity-30'
+                />
+            </div>
+            
+            <div 
+                className={`h-auto w-full flex flex-col justify-center items-center absolute top-0 left-0 z-2`} 
+                // style={{background: "green"}}
+            >
                 <div className='absolute top-0 left-0 w-full'>
                     <Header />
                 </div>

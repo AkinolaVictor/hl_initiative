@@ -21,10 +21,11 @@ function Page(props: Props) {
     return (
         // <div>
         <div className="flex-col min-h-screen h-auto items-start justify-start bg-zinc-50 font-sans dark:bg-black overflow-y-auto overflow-x-hidden">
-            <GalleryTop 
+            {/* <GalleryTop 
                 title='Medical Outreach Erin-Ijesha'
                 date='Carried Out On 12th September, 2025'
-            />
+                bgImage="/gallery/school_club/school_club_2.jpg"
+            /> */}
             <GalleryNavigator />
             <Footer />
         </div>

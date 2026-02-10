@@ -9,11 +9,11 @@ interface Props {
     index?: number, 
     subTitle?: string, 
     text?: {p_1: string, p_2: string}, 
-    imgs?: string
+    img?: string
 }
 
 function EachAboutFoundation(props: Props) {
-    const {reverse, title, index, subTitle, text, imgs} = props
+    const {reverse, title, index, subTitle, text, img} = props
     const [mobile, setMobile] = useState(false)
     const img_class = `about-image2_${index}`
     const text_class = `description_container2_${index}`
@@ -102,12 +102,14 @@ function EachAboutFoundation(props: Props) {
             </div>
 
             <div 
-                className={`w-full h-auto max-h-screen ${img_class}`}
+                className={`w-[85%] h-auto max-h-screen ${img_class}`}
                 style={{transform: reverse?"translateX(-500px)":"translateX(500px)"}}
             >
                 <picture>
-                    <source srcSet="check_bp.webp" type="image/webp" />
-                    <img src="check_bp_2.jpg" alt="image"/>
+                    {/* <source srcSet="check_bp.webp" type="image/webp" /> */}
+                    {/* <img src="check_bp_2.jpg" alt="image"/> */}
+                    {/* <img src="/gallery/school_club/school_club_10.jpg" alt="image"/> */}
+                    <img src={img} alt="image"/>
                 </picture>
             </div>
         </div>

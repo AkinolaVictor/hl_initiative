@@ -37,6 +37,7 @@ function AboutFoundation(props: Props) {
                             title={title} 
                             key={index} 
                             text={text}
+                            img={img}
                             subTitle={sub_title}
                             index={index}
                             reverse={index%2==1}

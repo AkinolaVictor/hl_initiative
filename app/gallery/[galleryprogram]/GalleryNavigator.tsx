@@ -1,15 +1,17 @@
 "use client"
 import GalleryContent from '@/app/components/gallery/galleryContent'
 import GalleryOpenedBody from '@/app/components/gallery/galleryOpenedBody'
+import GalleryTop from '@/app/components/gallery/galleryTop'
 import { gallery_activities } from '@/utils/gallery_data/gallery_activites'
 import { usePathname } from 'next/navigation'
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 
 interface Props {}
 
 function GalleryNavigator(props: Props) {
     const {} = props
     const path = usePathname()
+    const [imageUrl, setImageUrl] = useState("/gallery/school_club/school_club_2.jpg")
 
     function get_where(){
         const path_split = path?.split("/").reverse() ?? []
@@ -33,14 +35,21 @@ function GalleryNavigator(props: Props) {
         return pack
 
     }
-    
+
+    function getImage(){
+        const data = get_gallery_data()
+    }
 
     return (
         <Fragment>
+            <GalleryTop
+                // bgImage="/gallery/school_club/school_club_2.jpg"
+                bgImage={imageUrl}
+            />
             {
                 get_gallery_data()?
                 <GalleryContent preload_data={get_gallery_data()} where={get_where()}/>:
-                <GalleryOpenedBody />
+                <GalleryOpenedBody updater={setImageUrl}/>
             }
         </Fragment>
     )

@@ -148,7 +148,7 @@ function Features(props: Props) {
                 // console.log("dir2", self.progress);
                 // console.log("prog", self.progress);
                 gsap.to(".feature_container", {
-                    x: `${-(352*6)*self.progress}`, // multiplied by the number of the total widths additional cards to be scrolled to view
+                    x: `${-(352*5)*self.progress}`, // multiplied by the number of the total widths additional cards to be scrolled to view
                     duration: 0.5,
                     ease: "power3.out"
                 })
@@ -199,8 +199,14 @@ function Features(props: Props) {
                             className={`rounded-[20px] w-auto h-auto max-h-99 bp9:max-h-full ml-auto mr-auto bp9:ml-0 bp9:mr-0`}
                         /> */}
                         <picture>
-                            <source srcSet="check_bp.webp" type="image/webp" className={`rounded-[20px] w-auto h-auto max-h-99 bp9:max-h-full ml-auto mr-auto bp9:ml-0 bp9:mr-0`}/>
-                            <img src="check_bp_2.jpg" alt="image" className={`rounded-[20px] w-auto h-auto max-h-99 bp9:max-h-full ml-auto mr-auto bp9:ml-0 bp9:mr-0`}/>
+                            {/* <source srcSet="check_bp.webp" type="image/webp" className={`rounded-[20px] w-auto h-auto max-h-99 bp9:max-h-full ml-auto mr-auto bp9:ml-0 bp9:mr-0`}/>
+                            <img src="check_bp-2.jpg" alt="image" className={`rounded-[20px] w-auto h-auto max-h-99 bp9:max-h-full ml-auto mr-auto bp9:ml-0 bp9:mr-0`}/> */}
+                            
+                            <img 
+                                src="/gallery/school_club/school_club_6.jpg" 
+                                alt="image" 
+                                className={`rounded-[20px] w-auto h-auto max-h-99 bp9:max-h-full ml-auto mr-auto bp9:ml-0 bp9:mr-0`}
+                            />
                         </picture>
                     </div>
                 </div>
