@@ -1,5 +1,5 @@
 "use client"
-import { seek_path_and_ref } from '@/utils/exports'
+import { format_by_count, seek_path_and_ref } from '@/utils/exports'
 import { motion } from 'framer-motion'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -74,20 +74,6 @@ function BlogPreview(props: Props) {
         return ScrollTrigger.refresh;
     }
 
-    function format_description(word: any, count: number){
-        const words = word.split(" ")
-        if (words.length<count) return word
-
-        let build = ""
-        for(let i=0; i<count; i++){
-            build = build + " " + words[i]
-        }
-
-        build = build + "..."
-
-        return build
-    }
-
     useEffect(()=>{
         return feature_animation()
     }, [])
@@ -106,7 +92,7 @@ function BlogPreview(props: Props) {
                 <p className='text-justify mt-3'>
                     {
                         // description
-                        format_description(description, 80)
+                        format_by_count(description, 80)
                     }
                 </p>
                 <Link

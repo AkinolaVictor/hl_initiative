@@ -28,7 +28,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
+    // "**/*.js",
     "**/*.mts"
-, "utils/exports.js", "utils/blog_data/posts/polycystic_ovary_syndrome.js"  ],
+, "utils/exports.js", "utils/blog_data/posts/polycystic_ovary_syndrome.js", "utils/blog_data/posts/rethink_obesity.js"  ],
   "exclude": ["node_modules"]
 }

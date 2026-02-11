@@ -102,7 +102,7 @@ export const polycystic_ovary_syndrome = {
                 </p>
 
 
-                <p className="font-semibold mt-5">Lifestyle & Self-care Tips:</p>
+                <p className="font-semibold mt-5 mb-3">Lifestyle & Self-care Tips:</p>
                 <p className="">
                     Healthy diet – Focus on high-fiber foods, lean protein, and plenty of fruits and vegetables.
                     Reduce processed sugar and avoid excessive alcohol.

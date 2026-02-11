@@ -811,3 +811,19 @@ export function format_img_assets({name, count}:{name:string, count: number}) {
 
     return data
 }
+
+
+
+export function format_by_count(word: any, count: number){
+    const words = word.split(" ")
+    if (words.length<count) return word
+
+    let build = ""
+    for(let i=0; i<count; i++){
+        build = build + " " + words[i]
+    }
+
+    build = build + "..."
+
+    return build
+}
