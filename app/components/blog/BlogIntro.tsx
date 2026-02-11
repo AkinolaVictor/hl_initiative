@@ -4,7 +4,7 @@ import Header from '../header'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/SplitText'
-import { seek_path_and_ref_2 } from '@/utils/exports'
+import { format_by_count, seek_path_and_ref_2 } from '@/utils/exports'
 import { usePathname } from 'next/navigation'
 
 interface Props {title: string, description: string, env?: string, image?: string}
@@ -109,7 +109,8 @@ function BlogIntro(props: Props) {
                     className={`text-white w-auto max-w-150 text-center opacity-90 text-[15px] ${env?"mt-0 p-1":"mt-3 p-4"} home_description5`}
                     style={{textShadow:"2px 2px 8px rgba(0,0,0,0.5)"}}
                 >
-                    {description}
+                    {/* {description} */}
+                    {format_by_count(description, 30)}
                 </p>
                 
                 {
