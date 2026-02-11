@@ -1,17 +1,24 @@
 "use client"
 import { generalFunctions } from '@/app/redux/store_controllers/generalFunctions'
-import { overlay_menu_listener } from '@/utils/exports'
+import { overlay_menu_listener, seek_path_and_ref } from '@/utils/exports'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { usePathname } from 'next/navigation'
 import React, { Fragment, useEffect, useRef } from 'react'
-interface Props {}
+interface Props {data?: any}
 
 function BlogContent(props: Props) {
-    const {} = props
+    const {data} = props
+    const {image, Content} = data || {}
+
     const {setGeneralAlpha} = generalFunctions()
     const working = useRef(false)
     const timeout = useRef(false)
     const called = useRef(false)
+    const path = usePathname()
+    const get_img_path = image?seek_path_and_ref({path, name: image}):"./../bg-red_2.jpg"
+
+
     useEffect(()=>{
         gsap.registerPlugin(ScrollTrigger);
         overlay_menu_listener({ScrollTrigger, working, timeout, called, setGeneralAlpha})
@@ -23,10 +30,11 @@ function BlogContent(props: Props) {
                 className='h-90 min-w-80 w-full max-w-250 rounded-xl' 
                 style={{
                     backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat",
-                    backgroundImage: `image-set(
-                        url(./../bg-red.webp) type("image/webp"),
-                        url(./../bg-red_2.jpg) type("image/jpeg")
-                    )`,
+                    // backgroundImage: `image-set(
+                    //     url(./../bg-red.webp) type("image/webp"),
+                    //     url(./../bg-red_2.jpg) type("image/jpeg")
+                    // )`,
+                    backgroundImage: `url(${get_img_path})`,
                 }}
             >
                 {/* <picture>
@@ -40,8 +48,9 @@ function BlogContent(props: Props) {
             </div> */}
             
             <div className='min-w-80 w-full max-w-250 mt-10 text-[14px]'>
-                {
-                    [1,1,1,1,1,1].map((item, index)=>{
+                {<Content />}
+                {/* {
+                    [1,1,1,1].map((item, index)=>{
                         return (
                             <Fragment key={index}>
                                 <p className='text-justify'>
@@ -62,7 +71,7 @@ function BlogContent(props: Props) {
                             </Fragment>
                         )
                     })
-                }
+                } */}
             </div>
 
         </div>

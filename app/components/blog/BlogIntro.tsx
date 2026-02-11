@@ -4,11 +4,14 @@ import Header from '../header'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/SplitText'
+import { seek_path_and_ref_2 } from '@/utils/exports'
+import { usePathname } from 'next/navigation'
 
-interface Props {title: string, description: string, env?: string}
+interface Props {title: string, description: string, env?: string, image?: string}
 
 function BlogIntro(props: Props) {
-    const {title, description, env} = props
+    const {title, description, env, image} = props
+    const path = usePathname()
     
 
     function animate_home_title(elem: {head:string, description: string}) {
@@ -84,7 +87,8 @@ function BlogIntro(props: Props) {
                     // backgroundColor: "green",
                     opacity: 0.5,
                     // backgroundImage: "url(./gallery/school_club/school_club_1.jpg)",
-                    backgroundImage: "url(./gallery/amr/amr_2.jpg)",
+                    // backgroundImage: `url(${image??"./gallery/amr/amr_2.jpg"})`,
+                    backgroundImage: `url(${seek_path_and_ref_2({path, name: "gallery/amr/amr_2.jpg"})})`,
                     backgroundSize:"cover", backgroundPosition: "center", 
                     backgroundRepeat: "no-repeat", margin:0, padding: 0,
                 }}>

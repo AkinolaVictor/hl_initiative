@@ -1,18 +1,22 @@
 "use client"
+import { seek_path_and_ref } from '@/utils/exports'
 import { motion } from 'framer-motion'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 
-interface Props {index?:number}
+interface Props {index?:number, title?: string, description?: string, id?: string, date?: string, image?: string}
 
 function BlogPreview(props: Props) {
-    const {index} = props
+    const {index, title, description, id, date, image} = props
     const [mobile, setMobile] = useState(false)
+    const path = usePathname()
     const img_class = `about-image2_${index}`
     const text_class = `description_container2_${index}`
-
+    const get_img_path = image?seek_path_and_ref({path, name: image}):"./check_bp_2.jpg"
+    // console.log({image, get_img_path})
     
     function feature_animation(){
         const isMobile = window.innerWidth < 768;
@@ -70,6 +74,20 @@ function BlogPreview(props: Props) {
         return ScrollTrigger.refresh;
     }
 
+    function format_description(word: any, count: number){
+        const words = word.split(" ")
+        if (words.length<count) return word
+
+        let build = ""
+        for(let i=0; i<count; i++){
+            build = build + " " + words[i]
+        }
+
+        build = build + "..."
+
+        return build
+    }
+
     useEffect(()=>{
         return feature_animation()
     }, [])
@@ -83,18 +101,16 @@ function BlogPreview(props: Props) {
                 className={`text-[13px] w-full p-6 bp7:p-10 ${text_class} ${mobile?"scale-0.5":""}`}
                 style={{transform: "translateX(-400px)"}}
             >
-                <p className='font-semibold text-[15px]'>How to Strengthen Your Immune System Naturally</p>
-                <p className='opacity-80 text-[12px]'>posted on June 2, 2025</p>
+                <p className='font-semibold text-[15px]'>{title ?? "How to Strengthen Your Immune System Naturally"}</p>
+                <p className='opacity-80 text-[12px]'>{date}</p>
                 <p className='text-justify mt-3'>
-                    Your immune system is your body’s first line of defense against 
-                    infections and diseases. While genetics play a role, your daily 
-                    habits significantly imwpact how well your immune system functions.  
-                    How the Immune System Works The immune system is a complex network 
-                    of cells, tissues, and organs that work together to fight harmful 
-                    pathogens
+                    {
+                        // description
+                        format_description(description, 80)
+                    }
                 </p>
                 <Link
-                    href={"/blog/open-12233"}
+                    href={`/blog/${id}`}
                     className='w-40 h-10 text-black font-semibold rounded-full flex justify-center items-center bg-white cursor-pointer mt-8'
                 >
                     Read More
@@ -109,8 +125,12 @@ function BlogPreview(props: Props) {
                     className='min-w-60 w-full h-auto rounded-xl ' 
                 >
                     <picture>
-                        <source srcSet="./bg-red.webp" type="image/webp" className='rounded-[20px]'/>
-                        <img src="./bg-red_2.jpg" alt="image" className='rounded-[20px]'/>
+                        {/* <source srcSet="./bg-red.webp" type="image/webp" className='rounded-[20px]'/> */}
+                        <img 
+                            src={get_img_path} 
+                            alt="image" 
+                            className='rounded-[20px]' 
+                        />
                     </picture>
                 </div>
             </div>
