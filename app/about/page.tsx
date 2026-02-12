@@ -35,6 +35,7 @@ function About(props: Props) {
                 dataSet={testimonal_messgaes}
                 description='Real stories of transformation from the individuals, schools, 
                 and communities whose lives have been changed by our work.'
+                // and communities whose lives have been changed by our work.'
             />
             <LatestBlogs />
             <Footer />
