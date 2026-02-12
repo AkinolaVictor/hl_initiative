@@ -20,95 +20,98 @@ export const health_essential_checks = {
                 the development of severe conditions by identifying risk factors before symptoms appear.
                 <br />
                 <br />
-                *1. Basic Checks Everyone Should Do*
+                <span className="fsb">1. Basic Checks Everyone Should Do</span>
                 <br />
-                * *Blood Pressure:* High blood pressure is often called a “silent killer” because it usually has no
+                <span className="fsb">-Blood Pressure:</span> High blood pressure is often called a “silent killer” because it usually has no
                 symptoms. Regular monitoring helps prevent heart disease, stroke, and kidney problems.
                 <br />
-                * *Blood Sugar (Glucose Test):* Checking fasting blood sugar or HbA1c levels helps detect
+                <span className="fsb">-Blood Sugar (Glucose Test):</span> Checking fasting blood sugar or HbA1c levels helps detect
                 diabetes or prediabetes early, reducing the risk of complications.
                 <br />
-                * *Cholesterol (Lipid Profile):* Measuring total cholesterol, HDL, LDL, and triglycerides helps
+                <span className="fsb">-Cholesterol (Lipid Profile):</span> Measuring total cholesterol, HDL, LDL, and triglycerides helps
                 assess your risk for heart disease.
                 <br />
-                * *Body Mass Index (BMI) and Waist Circumference:* These simple checks identify obesity and
+                <span className="fsb">-Body Mass Index (BMI) and Waist Circumference:</span> These simple checks identify obesity and
                 related risks such as diabetes and hypertension.
                 <br />
                 <br />
-                *2. Infectious Disease and Immunisation Checks*
+                <span className="fsb">2. Infectious Disease and Immunisation Checks</span>
                 <br />
-                * *Hepatitis B and C Screening:* Many people live with these infections unknowingly. Early
+                <span className="fsb">-Hepatitis B and C Screening:</span> Many people live with these infections unknowingly. Early
                 diagnosis and vaccination (for hepatitis B) can prevent liver damage and cancer.
                 <br />
-                * *HIV Test:* Knowing your status allows early treatment and helps prevent transmission.
+                <span className="fsb">-HIV Test:</span> Knowing your status allows early treatment and helps prevent transmission.
                 Everyone who is sexually active should test regularly.
                 <br />
-                * *Routine Immunisations:* Staying up to date with vaccinations is essential for disease
+                <span className="fsb">-Routine Immunisations:</span> Staying up to date with vaccinations is essential for disease
                 prevention across all age groups.
                 <br />
                 <br />
-                *3. Gender-Specific Health Checks*
+                <span className="fsb">3. Gender-Specific Health Checks</span>
                 <br />
-                *For Women*
                 <br />
-                * *Cervical Screening (Pap Smear and/or HPV Test):* This test detects abnormal cervical cells
+                For Women
+                <br />
+                <br />
+                <span className="fsb">-Cervical Screening (Pap Smear and/or HPV Test):</span> This test detects abnormal cervical cells
                 before they become cancerous.
                 <br />
-                * *Breast Examination and Mammogram:* Early detection through clinical breast exams or
+                <span className="fsb">-Breast Examination and Mammogram:</span> Early detection through clinical breast exams or
                 mammography significantly improves treatment outcomes.
                 <br />
-                * *Bone Density Test:* Especially important for post-menopausal women to detect osteoporosis.
+                <span className="fsb">-Bone Density Test:</span> Especially important for post-menopausal women to detect osteoporosis.
                 <br />
                 <br />
-                *For Men*
+                For Men
                 <br />
-                * *Prostate Health Check:* Men above 40 or those with a family history of prostate disease
+                <br />
+                <span className="fsb">-Prostate Health Check:</span> Men above 40 or those with a family history of prostate disease
                 should discuss PSA testing and prostate examinations with their doctor.
                 <br />
-                * *Testicular Self-Exam:* Regular self-checks help detect lumps or abnormalities early.
+                <span className="fsb">-Testicular Self-Exam:</span> Regular self-checks help detect lumps or abnormalities early.
                 <br />
-                * *Hormonal and Sexual Health Screening:* Helps identify low testosterone levels, fertility
+                <span className="fsb">-Hormonal and Sexual Health Screening:</span> Helps identify low testosterone levels, fertility
                 issues, and sexually transmitted infections.
                 <br />
                 <br />
-                *4. Other Important Routine Checks** 
+                <span className="fsb">4. Other Important Routine Checks</span>
                 <br />
-                *Eye Examination:* Detects glaucoma, cataracts, and diabetic eye disease early.
+                <span className="fsb">-Eye Examination:</span> Detects glaucoma, cataracts, and diabetic eye disease early.
                 <br />
-                * *Dental Check-Up:* Prevents tooth decay, gum disease, and detects early signs of oral
+                <span className="fsb">-Dental Check-Up:</span> Prevents tooth decay, gum disease, and detects early signs of oral
                 cancers.
                 <br />
-                * *Hearing Test:* Particularly for older adults or those exposed to loud environments.
+                <span className="fsb">-Hearing Test:</span> Particularly for older adults or those exposed to loud environments.
                 <br />
-                * *Mental Health Screening:* Discussing mood, stress, or sleep issues with a clinician is just as
+                <span className="fsb">-Mental Health Screening:</span> Discussing mood, stress, or sleep issues with a clinician is just as
                 important as physical health checks.
                 <br />
                 <br />
-                *5. How Often Should You Get Checked?*
+                <span className="fsb">5. How Often Should You Get Checked?</span>
                 <br />
                 The frequency of health checks depends on your age, gender, medical history, and lifestyle.
                 <br />
-                * Blood pressure, blood sugar, and weight should be checked at least once a year.
+                -Blood pressure, blood sugar, and weight should be checked at least once a year.
                 <br />
-                * Cholesterol tests are recommended every four to six years for low-risk adults, or more often for
+                -Cholesterol tests are recommended every four to six years for low-risk adults, or more often for
                 those with risk factors.
                 <br />
-                * Women should begin cervical screening from their early 20s (or as advised) and continue at
+                -Women should begin cervical screening from their early 20s (or as advised) and continue at
                 recommended intervals.
                 <br />
-                * Men over 40 should discuss prostate checks with a healthcare professional.
+                -Men over 40 should discuss prostate checks with a healthcare professional.
                 <br />
-                * Eye and dental exams are ideally done once a year.
+                -Eye and dental exams are ideally done once a year.
                 <br />
                 <br />
-                *6. Preparing for Your Health Check*
+                <span className="fsb">6. Preparing for Your Health Check</span>
                 <br />
                 Before your appointment, note your medications, family history, and any recent symptoms. Be
                 honest about your lifestyle,including diet, alcohol, smoking, and sexual activity, so your doctor
                 can give appropriate advice.
                 <br />
                 <br />
-                *Conclusion*
+                <span className="fsb">Conclusion</span>
                 <br />
                 Regular health checks are an investment in your well-being. They help you understand your
                 body, detect silent diseases early, and maintain a healthier, longer life. Prevention truly is

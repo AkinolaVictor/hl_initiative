@@ -1,5 +1,5 @@
 export const polycystic_ovary_syndrome = {
-    id: "a22e-e380-406b-9b7a-3d842",
+    id: "Polycystic_Ovary_Syndrome_(PCOS)",
     title: "Polycystic Ovary Syndrome (PCOS)",
     date: "",
     image: "check_bp_2.jpg",

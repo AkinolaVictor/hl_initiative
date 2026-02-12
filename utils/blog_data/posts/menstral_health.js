@@ -2,7 +2,7 @@
 
 export const menstral_health = {
     id: "menstral_health",
-    title: "MENSTRUAL HEALTH: What’s Normal, What’s No",
+    title: "Menstral Health: What’s Normal, What’s Not",
     description: `Understanding your cycle helps you know when everything is fine and when something needs
         attention...
     `,
@@ -16,7 +16,7 @@ export const menstral_health = {
                 Understanding your cycle helps you know when everything is fine and when something needs attention.
                 <br />
                 <br />
-                *What a Normal Cycle Looks Like
+                What a Normal Cycle Looks Like
                 <br />
                 Your menstrual cycle is the number of days from the first day of one period to the first day of the
                 next.
@@ -35,10 +35,10 @@ export const menstral_health = {
                 • Periods may vary slightly from month to month
                 <br />
                 <br />
-                *Normal looks different for each person. What matters is what’s typical for you.*
+                Normal looks different for each person. What matters is what’s typical for you.
                 <br />
-                *What’s Normal During Your Period*
                 <br />
+                <span className="fsb">What’s Normal During Your Period</span>
                 <br />
                 It’s normal to experience:
                 <br />
@@ -59,8 +59,8 @@ export const menstral_health = {
                 <br />
                 These changes happen because your hormones rise and fall throughout the cycle.
                 <br />
-                *What’s NOT Normal*
                 <br />
+                <span className="fsb">What’s NOT Normal</span>
                 <br />
                 Some symptoms are warning signs:
                 <br />
@@ -81,7 +81,7 @@ export const menstral_health = {
                 endometriosis.
                 <br />
                 <br />
-                *Why Menstrual Health Matters*
+                <span className="fsb">Why Menstrual Health Matters</span>
                 <br />
                 Your menstrual cycle is a key sign of general health.
                 <br />
@@ -101,7 +101,7 @@ export const menstral_health = {
                 Irregular or painful periods aren’t something to “endure”. They may signal underlying problems.
                 <br />
                 <br />
-                *How to Care for Your Menstrual Health*
+                <span className="fsb">How to Care for Your Menstrual Health</span>
                 <br />
                 Simple habits help keep your cycle healthy:
                 <br />
@@ -120,10 +120,10 @@ export const menstral_health = {
                 • Avoid smoking and excessive alcohol
                 <br />
                 <br />
-                *Your whole lifestyle affects your hormones.*
+                Your whole lifestyle affects your hormones.
                 <br />
                 <br />
-                *Hygiene & Comfort*
+                <span className="fsb"></span>
                 <br />
                 • Change pads/tampons regularly
                 <br />
@@ -141,8 +141,7 @@ export const menstral_health = {
                 Good menstrual hygiene prevents infections and improves comfort.
                 <br />
                 <br />
-                *When to See a Doctor*
-                <br />
+                <span className="fsb">When to See a Doctor</span>
                 <br />
                 Seek medical advice if you notice:
                 <br />

@@ -21,13 +21,13 @@ export const blood_pressure = {
                 what risks to watch out for, and simple ways to keep your numbers in check.”
             </p>
 
-            <p>What is Blood Pressure?</p>
+            <p className="mt-5 font-semibold">What is Blood Pressure?</p>
 
             <p>
                 
             </p>
 
-            <p className="mt-3">
+            <p className="my-5">
                 Blood pressure is basically the force of your blood pushing against the walls of your blood
                 vessels as your heart pumps.
             </p>
@@ -38,6 +38,7 @@ export const blood_pressure = {
                 If the pressure is too high, the pipe (blood vessel) can get damaged.
                 <br />
                 If it’s too low, the water (blood) may not reach where it should.
+                <br />
                 <br />
                 It’s Measured as two numbers (e.g., 120/80 mmHg):
                 <br />
@@ -52,16 +53,16 @@ export const blood_pressure = {
                 The higher it goes (and the longer it stays high), the more risk for heart attack, stroke, kidney problems
             </p>
 
-            <p>
+            <p className="my-5 font-semibold">
                 What Are We Looking At in terms of symptoms?
             </p>
 
-            <p>
+            <p className="mb-5">
                 Many have no symptoms. But warning signs: frequent headaches, visual disturbance,
                 nosebleeds, fatigue. Stress about daily life (jobs, school) might be complicating thing
             </p>
             <p>
-                Common causes in 20s
+                <span className="font-semibold">Common causes in 20s</span>
                 <br />
                 ‒ High salt intake
                 <br />
@@ -75,7 +76,7 @@ export const blood_pressure = {
                 <br />
                 ‒ Poor sleep/habits
             </p>
-            <p>
+            <p className="mt-5 mb-2 font-semibold">
                 What you can do; simple lifestyle changes
             </p>
             <p>
@@ -92,8 +93,8 @@ export const blood_pressure = {
                 ‒ Get regular BP checks, even if “young & healthy”
             </p>
 
-            <p>
-                How Often Should You Check?
+            <p className="mt-5">
+                <span className="font-semibold">How Often Should You Check?</span>
                 <br />
                 Suggest getting BP measured at least once a year, or more often if risk factors exist (family
                 history, overweight, high salt diet). Use clinics, or reliable portable machines.

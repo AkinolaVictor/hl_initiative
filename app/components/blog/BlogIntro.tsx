@@ -99,7 +99,7 @@ function BlogIntro(props: Props) {
                     <Header env={env}/>
                 </div>
                 <p 
-                    className={`dmd text-white ${env?"text-[28px]":"text-[42px]"} w-auto max-w-150 text-center opacity-90 mt-15 p-4 home_title5`}
+                    className={`dmd text-white ${env?"text-[28px]":"text-[33px]"} w-auto max-w-150 text-center opacity-90 mt-15 p-4 home_title5`}
                     style={{textShadow:"2px 2px 8px rgba(0,0,0,0.5)"}}
                 >
                     {title}

@@ -1,7 +1,7 @@
 
 
 export const rethink_obesity = {
-    id: "wwmzdj",
+    id: "rethink_obesity",
     title: "Rethinking Obesity: Between Body Positivity and Rising Health Risks",
     description: `Obesity is commonly defined as having too much body fat. A BMI of 30 or higher is the usual
         benchmark for obesity in adults. Obesity increases the risk of serious medical conditions.
@@ -41,14 +41,14 @@ export const rethink_obesity = {
                     *The real question is: how do we celebrate body positivity without ignoring rising health risks?*
                 </p>
 
-                <p>Why Body Positivity Matters</p>
+                <p className="mt-7 mb-2 font-semibold">Why Body Positivity Matters</p>
                 <p>✨ Breaks the chains of unrealistic beauty standards.</p>
                 <p>✨ Boosts confidence and mental health</p>
                 <p>✨ Pushes back against bullying and stigma</p>
 
                 <p>For many, body positivity is more than a trend. It’s finally feeling seen, valued, and free.</p>
 
-                <p className="">But Here’s the Flip Side</p>
+                <p className="my-5">But Here’s the Flip Side</p>
 
                 <p>
                     Obesity isn’t just about looks.
@@ -58,9 +58,10 @@ export const rethink_obesity = {
                     <br/>
                     Ignoring these risks can only mean serious consequences down the road
                     <br/>
-                    💡 “True wellness isn’t about choosing between self-love and health. It’s about living where both meet.”
+                    <span className="my-5">“True wellness isn’t about choosing between self-love and health. It’s about living where both meet.”</span>
                     <br/>
-                    *This is how we get there 👇*
+                    <br/>
+                    <span className="font-semibold ">This is how we get there 👇</span>
                     <br/>
                     Eating healthy and finding safe spaces for activity.
                     <br/>

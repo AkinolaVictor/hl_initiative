@@ -21,7 +21,7 @@ export const vaginal_discharge = {
                 normal, and when you should see a health worker.
                 <br />
                 <br />
-                What Is Vaginal Discharge?
+                <span className="fsb">What Is Vaginal Discharge?</span>
                 <br />
                 <br />
                 Vaginal discharge is a fluid that comes out of the vagina. It helps to:
@@ -37,7 +37,7 @@ export const vaginal_discharge = {
                 Polycystic Ovarian Syndrome, or premenarchal.
                 <br />
                 <br />
-                What Is Normal Vaginal Discharge?
+                <span className="fsb">What Is Normal Vaginal Discharge?</span>
                 <br />
                 <br />
                 Normal vaginal discharge usually:
@@ -62,7 +62,7 @@ export const vaginal_discharge = {
                 These changes are usually normal and not a cause for concern.
                 <br />
                 <br />
-                When Is Vaginal Discharge Abnormal?
+                <span className="fsb">When Is Vaginal Discharge Abnormal?</span>
                 <br />
                 <br />
                 Vaginal discharge may be a sign of a problem if you notice:

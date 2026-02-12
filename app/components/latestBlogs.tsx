@@ -38,8 +38,8 @@ function LatestBlogs(props: Props) {
     return (
         <motion.div 
             className='w-full h-auto min-h-screen bg-white text-black py-17.5 px-4 flex flex-col items-center justify-center'
-            initial={{x: -200, opacity: 0}}
-            whileInView={{x:0, opacity: 1}}
+            initial={{opacity: 0}}
+            whileInView={{opacity: 1}}
             transition={{duration: 1.2, delay: 0.5}}
         >
             <p className='font-semibold text-[25px] text-center'>Latest updates from our Blog</p>

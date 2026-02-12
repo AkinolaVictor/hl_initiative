@@ -3,7 +3,7 @@
 
 
 export const boosting_your_immunity = {
-    id: "boosting_your_immunity",
+    id: "boosting_your_innate_immunity",
     title: "BOOSTING YOUR INNATE IMMUNITY : The Body’s First Defense Line",
     description: `Your body has two types of immunity: innate and adaptive.
         The innate immune system is the one that jumps into action instantly . The “first responders”
@@ -21,12 +21,12 @@ export const boosting_your_immunity = {
                 The innate immune system is the one that jumps into action instantly . The “first responders”
                 that fight off germs even before you realize they’re there.
                 <br />
-                This is called *innate immunity*
+                This is called innate immunity
                 <br />
-                It’s *fast*, *automatic*, and always working even when you’re asleep.
+                It’s fast, automatic, and always working even when you’re asleep.
                 <br />
                 <br />
-                Examples:• Your skin stopping germs
+                Examples: Your skin stopping germs
                 <br />
                 • Tears washing out bacteria from eyes
                 <br />
@@ -37,7 +37,7 @@ export const boosting_your_immunity = {
                 • Immune cells acting like soldiers
                 <br />
                 <br />
-                *Think of it as your body’s “security guard on duty 24/7.”*
+                Think of it as your body’s “security guard on duty 24/7.”
                 <br />
                 When your innate immunity is weak, you fall sick easily from:
                 <br />
@@ -70,7 +70,8 @@ export const boosting_your_immunity = {
                 <br />
                 <br />
 
-                *Ways to boost innate immunity*
+                <span className="fsb">Ways to boost innate immunity</span>
+                <br />
                 <br />
                 1. SLEEP
                 <br />
@@ -79,35 +80,35 @@ export const boosting_your_immunity = {
                 <br />
                 To boost immunity:
                 <br />
-                Aim for *7–9 hours*
+                -Aim for *7–9 hours*
                 <br />
-                Keep your room dark
+                -Keep your room dark
                 <br />
-                Avoid screens 30 mins before bed
+                -Avoid screens 30 mins before bed
                 <br />
-                Stay hydrated
+                -Stay hydrated
                 <br />
-                *Good sleep is the cheapest immune booster.*
+                Good sleep is the cheapest immune booster.
                 <br />
                 <br />
-                2. Nutrition
+                2. NUTRITION
                 <br />
                 Your innate immunity needs specific nutrients to work well.
                 <br />
-                🍊 *Vitamin C*: oranges, pineapple, tomatoes
+                🍊 Vitamin C: oranges, pineapple, tomatoes
                 <br />
-                🥕 *Vitamin A*: carrots, spinach🐟 *Omega-3*: fish, walnuts
+                🥕 Vitamin A: carrots, spinach🐟 *Omega-3*: fish, walnuts
                 <br />
-                🫘 *Zinc*: beans, crayfish, meat
+                🫘 Zinc: beans, crayfish, meat
                 <br />
-                🧄 *Immune herbs*: garlic, ginger, turmeric
+                🧄 Immune herbs: garlic, ginger, turmeric
                 <br />
-                🥬 *High-fibre foods*: vegetables, oats for gut health
+                🥬 High-fibre foods: vegetables, oats for gut health
                 <br />
-                *Healthy food, stronger defenses.*
+                Healthy food, stronger defenses.
                 <br />
                 <br />
-                3. HYGIENE + LIFESTYLEYour body’s first defense includes your skin, nose, mouth, and gut.
+                3. HYGIENE + LIFESTYLE, Your body’s first defense includes your skin, nose, mouth, and gut.
                 <br />
                 To support them:
                 <br />
