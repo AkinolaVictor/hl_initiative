@@ -110,10 +110,10 @@ function BlogIntro(props: Props) {
                     style={{textShadow:"2px 2px 8px rgba(0,0,0,0.5)"}}
                 >
                     {/* {description} */}
-                    {format_by_count(description, 30)}
+                    {format_by_count(description, env?30:201)}
                 </p>
                 
-                {
+                {/* {
                     env && <div className='flex m-2 cursor-pointer'>
                         <div className='w-8 h-8 flex m-2 justify-center items-center bg-blue-500 rounded-full'>
                             <p className='text-white dmd text-[15px]'>f</p>
@@ -125,7 +125,7 @@ function BlogIntro(props: Props) {
                             
                         </div>
                     </div>
-                }
+                } */}
             </div>
         </div>
     )

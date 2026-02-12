@@ -43,7 +43,7 @@ function LatestBlogs(props: Props) {
             transition={{duration: 1.2, delay: 0.5}}
         >
             <p className='font-semibold text-[25px] text-center'>Latest updates from our Blog</p>
-            <p className='opacity-80 text-center text-[14px]'>Check up exercpts from our research</p>
+            <p className='opacity-80 text-center text-[14px]'>Check up excerpts from our research</p>
 
             <div className='w-full flex justify-around flex-wrap items-start mt-10'>
                 {
@@ -54,13 +54,13 @@ function LatestBlogs(props: Props) {
                         const get_img_path = image?seek_path_and_ref_2({path, name: image}):"./check_bp_2.jpg"
                         return (
                             <Link href={`/blog/${id}`} key={index} className='w-auto max-w-65 p-5 flex flex-col justify-center items-center cursor-pointer'>
-                                <div className='w-62.5 h-40'>
+                                <div className='w-62.5 h-40 max-h-40'>
                                     <picture>
                                         {/* <source srcSet="./bg-red.webp" type="image/webp" className='rounded-[20px]'/> */}
                                         <img 
                                             src={get_img_path} 
                                             alt="image" 
-                                            className='rounded-xl' 
+                                            className='rounded-xl w-62.5  h-40 max-h-40 object-cover object-center' 
                                         />
                                     </picture>
                                 </div>

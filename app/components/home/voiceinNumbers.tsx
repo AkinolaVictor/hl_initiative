@@ -37,7 +37,7 @@ function VoiceinNumbers(props: Props) {
                 className='w-full'
                 initial={{opacity: 0}}
                 whileInView={{opacity: 1}}
-                transition={{duration: 1.2, delay: 0.5}}
+                transition={{duration: 1.2, delay: 0}}
             >
                 <p className='dmd text-[25px] text-center'>Our Voice in Numbers</p>
                 <p className='opacity-80 text-center text-[14px]'>How far we have come</p>

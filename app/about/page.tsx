@@ -29,13 +29,13 @@ function About(props: Props) {
             <AboutFoundation />
             <Purpose bg='green' iconbg="#555555"/>
             <OurStory />
+            <VoiceinNumbers />
             <Testimonial 
                 id='about' 
                 dataSet={testimonal_messgaes}
                 description='Real stories of transformation from the individuals, schools, 
-                    and communities whose lives have been changed by our work.'
+                and communities whose lives have been changed by our work.'
             />
-            <VoiceinNumbers />
             <LatestBlogs />
             <Footer />
         </div>

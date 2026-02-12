@@ -90,7 +90,7 @@ function TeamIntro(props: Props) {
                         // width={innerWidth} 
                         // height={window?.innerHeight??"500px"}
                         // height={500}
-                        src={"/gallery/school_club/school_club_5.jpg"}
+                        src={"/gallery/school_club/school_club_9.jpg"}
                         alt='"background image'
                         className='object-cover object-center w-screen h-auto min-h-125 max-h-125 opacity-30'
                     />

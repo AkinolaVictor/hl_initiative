@@ -364,36 +364,36 @@ export const our_story = [
             iconbg: null
         }
     },
-    {
-        title: "Overcoming Resistance",
-        description: `
-            In our early days, we encountered deep-rooted cultural skepticism and traditional misconceptions regarding modern medicine. Rather 
-            than retreating, we chose to listen. By honoring local leaders and speaking the language of the community, we successfully turned 
-            resistance into partnership. We proved that when health education is delivered with respect and empathy, even the most stubborn 
-            myths can be dismantled.
-        `,
-        icon_name: "overcoming.png",
-        colors: {
-            bg: "#5F6C37",
-            color: "white",
-            iconbg: null
-        }
-    },
-    {
-        title: "Growing Through Challenges",
-        description: `
-            The road hasn't been easy; we quickly learned that providing information is only half the battle. We faced logistical 
-            hurdles in rural areas and realized that without physical resources like basic med-kits, our words lacked immediate relief. 
-            These challenges taught us to be more than just teachers—they shaped us into a resilient, holistic organization that 
-            pairs education with tangible, charitable action.
-        `,
-        icon_name: "growing.png",
-        colors: {
-            bg: '#4f3130',
-            color: "white",
-            iconbg: '#d8bd8a'
-        }
-    },
+    // {
+    //     title: "Overcoming Resistance",
+    //     description: `
+    //         In our early days, we encountered deep-rooted cultural skepticism and traditional misconceptions regarding modern medicine. Rather 
+    //         than retreating, we chose to listen. By honoring local leaders and speaking the language of the community, we successfully turned 
+    //         resistance into partnership. We proved that when health education is delivered with respect and empathy, even the most stubborn 
+    //         myths can be dismantled.
+    //     `,
+    //     icon_name: "overcoming.png",
+    //     colors: {
+    //         bg: "#5F6C37",
+    //         color: "white",
+    //         iconbg: null
+    //     }
+    // },
+    // {
+    //     title: "Growing Through Challenges",
+    //     description: `
+    //         The road hasn't been easy; we quickly learned that providing information is only half the battle. We faced logistical 
+    //         hurdles in rural areas and realized that without physical resources like basic med-kits, our words lacked immediate relief. 
+    //         These challenges taught us to be more than just teachers—they shaped us into a resilient, holistic organization that 
+    //         pairs education with tangible, charitable action.
+    //     `,
+    //     icon_name: "growing.png",
+    //     colors: {
+    //         bg: '#4f3130',
+    //         color: "white",
+    //         iconbg: '#d8bd8a'
+    //     }
+    // },
     {
         title: "The Research Shift",
         description: `
@@ -424,21 +424,21 @@ export const our_story = [
             iconbg: 'white'
         }
     },
-    {
-        title: "Our Strength",
-        description: `
-            Our greatest strength lies in our dual-layered approach: we are as scientifically rigorous as a research firm, 
-            yet as boots-on-the-ground as a local neighbor. We combine evidence-based data with high-energy community immersion. 
-            This unique blend of professional expertise and grassroots accessibility allows us to influence behavioral change 
-            where traditional healthcare systems often struggle to reach.
-        `,
-        icon_name: "strength.png",
-        colors: {
-            bg: '#999999',
-            color: "white",
-            iconbg: '#d8bd8a'
-        }
-    },
+    // {
+    //     title: "Our Strength",
+    //     description: `
+    //         Our greatest strength lies in our dual-layered approach: we are as scientifically rigorous as a research firm, 
+    //         yet as boots-on-the-ground as a local neighbor. We combine evidence-based data with high-energy community immersion. 
+    //         This unique blend of professional expertise and grassroots accessibility allows us to influence behavioral change 
+    //         where traditional healthcare systems often struggle to reach.
+    //     `,
+    //     icon_name: "strength.png",
+    //     colors: {
+    //         bg: '#999999',
+    //         color: "white",
+    //         iconbg: '#d8bd8a'
+    //     }
+    // },
     {
         title: "Early Wins",
         description: `
@@ -816,7 +816,7 @@ export function format_img_assets({name, count}:{name:string, count: number}) {
 
 export function format_by_count(word: any, count: number){
     const words = word.split(" ")
-    if (words.length<count) return word
+    if (words.length<count || count>200) return word
 
     let build = ""
     for(let i=0; i<count; i++){
