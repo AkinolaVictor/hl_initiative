@@ -8,7 +8,7 @@ export const depression_creeps_in = {
         bring joy anymore.
     `,
     date: "",
-    image: "check_bp_2.jpg",
+    image: "/blog/understanding_depression.jpg",
     // image: "check_bp_2.jpg",
     // Content <HTMLAllCollection>: <div></div>
     Content: ()=>{

@@ -8,7 +8,7 @@ export const health_essential_checks = {
         the development of severe conditions by identifying risk factors before symptoms appear.
     `,
     date: "",
-    image: "check_bp_2.jpg",
+    image: "/blog/health_essentials.jpg",
     // image: "check_bp_2.jpg",
     // Content <HTMLAllCollection>: <div></div>
     Content: ()=>{

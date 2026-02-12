@@ -9,7 +9,7 @@ export const vaginal_discharge = {
         normal, and when you should see a health worker.
     `,
     date: "",
-    image: "check_bp_2.jpg",
+    image: "/blog/vaginal_discharge.png",
     // image: "check_bp_2.jpg",
     // Content <HTMLAllCollection>: <div></div>
     Content: ()=>{

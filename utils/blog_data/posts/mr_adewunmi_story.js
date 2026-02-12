@@ -8,7 +8,7 @@ export const mr_adewunmi_story = {
         Weeks later, his doctor confirmed the unthinkable: Breast cancer.
     `,
     date: "",
-    image: "check_bp_2.jpg",
+    image: "blog/mr_adewunmi_story.jpg",
     // image: "check_bp_2.jpg",
     // Content <HTMLAllCollection>: <div></div>
     Content: ()=>{

@@ -27,7 +27,7 @@ function BlogContent(props: Props) {
     return (
         <div className={`w-full h-auto min-h-screen bg-white text-black py-17.5 px-4 bp7:px-10 flex flex-col items-center blog_content_parent_section`}>
             <div 
-                className='h-90 min-w-80 w-full max-w-250 rounded-xl' 
+                className='min-h-125 h-auto min-w-80 w-full max-w-250 max-h-180 rounded-xl' 
                 style={{
                     backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat",
                     // backgroundImage: `image-set(

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 
 interface Props {index?:number, title?: string, description?: string, id?: string, date?: string, image?: string}
@@ -13,6 +13,7 @@ function BlogPreview(props: Props) {
     const {index, title, description, id, date, image} = props
     const [mobile, setMobile] = useState(false)
     const path = usePathname()
+    const router = useRouter()
     const img_class = `about-image2_${index}`
     const text_class = `description_container2_${index}`
     const get_img_path = image?seek_path_and_ref({path, name: image}):"./check_bp_2.jpg"
@@ -78,14 +79,14 @@ function BlogPreview(props: Props) {
         return feature_animation()
     }, [])
     return (
-        <div 
+        <div onClick={()=>{router.push(`/blog/${id}`)}} 
             className={`
-                min-w-75 w-full max-w-350 mx-auto min-h-50 h-auto mt-15 rounded-[10px] flex flex-wrap bp8:flex-nowrap justify-center items-center bg-[#819171] text-white
+                min-w-75 w-full max-w-350 mx-auto min-h-50 h-auto mt-15 rounded-[10px] flex flex-wrap bp8:flex-nowrap justify-center cursor-pointer items-center bg-[#819171] text-white
             `}
         >
             <div 
                 className={`text-[13px] w-full p-6 bp7:p-10 ${text_class} ${mobile?"scale-0.5":""}`}
-                style={{transform: "translateX(-400px)"}}
+                style={{transform: "translateX(-600px)"}}
             >
                 <p className='font-semibold text-[15px]'>{title ?? "How to Strengthen Your Immune System Naturally"}</p>
                 <p className='opacity-80 text-[12px]'>{date}</p>
@@ -105,7 +106,7 @@ function BlogPreview(props: Props) {
 
             <div 
                 className={`w-full h-auto p-6 bp9:p-10 flex bp9:justify-end ${img_class} ${mobile?"scale-0.5":""}`}
-                style={{transform: "translateX(500px)"}}
+                style={{transform: "translateX(600px)"}}
             >
                 <div 
                     className='min-w-60 w-full h-auto rounded-xl ' 
@@ -115,7 +116,7 @@ function BlogPreview(props: Props) {
                         <img 
                             src={get_img_path} 
                             alt="image" 
-                            className='rounded-[20px]' 
+                            className='rounded-[20px] w-full h-auto max-w-150 max-h-80 object-cover object-center' 
                         />
                     </picture>
                 </div>

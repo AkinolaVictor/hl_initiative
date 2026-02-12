@@ -7,7 +7,7 @@ export const screen_fatigue = {
         mood, sleep, and overall wellbeing.
     `,
     date: "",
-    image: "check_bp_2.jpg",
+    image: "/blog/screen_fatigue.png",
     // image: "check_bp_2.jpg",
     // Content <HTMLAllCollection>: <div></div>
     Content: ()=>{

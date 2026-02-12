@@ -8,7 +8,7 @@ export const traditional_herbs = {
         strong enough to announce your arrival from streets away.
     `,
     date: "",
-    image: "check_bp_2.jpg",
+    image: "/blog/anonymous.png",
     // image: "check_bp_2.jpg",
     // Content <HTMLAllCollection>: <div></div>
     Content: ()=>{

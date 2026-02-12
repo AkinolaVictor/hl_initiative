@@ -7,7 +7,7 @@ export const menstral_health = {
         attention...
     `,
     date: "",
-    image: "check_bp_2.jpg",
+    image: "/blog/menstral_health.png",
     // image: "check_bp_2.jpg",
     // Content <HTMLAllCollection>: <div></div>
     Content: ()=>{

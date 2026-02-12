@@ -8,7 +8,7 @@ export const rethink_obesity = {
         Treatments include changing what you eat, adding activity and mental health support.
     `,
     date: "",
-    image: "check_bp_2.jpg",
+    image: "/blog/rethink_obesity.png",
     // Content <HTMLAllCollection>: <div></div>
     Content: ()=>{
         return  (

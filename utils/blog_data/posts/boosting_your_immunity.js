@@ -10,7 +10,7 @@ export const boosting_your_immunity = {
         that fight off germs even before you realize they’re there.
     `,
     date: "",
-    image: "check_bp_2.jpg",
+    image: "/blog/innate_immununity.png",
     // image: "check_bp_2.jpg",
     // Content <HTMLAllCollection>: <div></div>
     Content: ()=>{

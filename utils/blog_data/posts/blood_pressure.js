@@ -8,7 +8,7 @@ export const blood_pressure = {
         stage for your heart health for now and decades.
     `,
     date: "",
-    image: "check_bp_2.jpg",
+    image: "/blog/blood_pressure.png",
     // image: "check_bp_2.jpg",
     // Content <HTMLAllCollection>: <div></div>
     Content: ()=>{

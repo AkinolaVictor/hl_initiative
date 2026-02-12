@@ -7,7 +7,7 @@ export const truth_about_ulcer = {
         It weakens your stomach lining, allowing acid to create sores...
     `,
     date: "",
-    image: "check_bp_2.jpg",
+    image: "/blog/ulcer.png",
     // image: "check_bp_2.jpg",
     // Content <HTMLAllCollection>: <div></div>
     Content: ()=>{
