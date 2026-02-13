@@ -27,8 +27,8 @@ function About(props: Props) {
         <div className="flex-col min-h-screen h-auto items-start justify-start bg-zinc-50 font-sans dark:bg-black overflow-y-auto overflow-x-hidden">
             <AboutIntro />
             <AboutFoundation />
+            <div className='w-full h-35 bg-white'/>
             <Purpose bg='green' iconbg="#555555"/>
-            <div className='w-full h-25 bg-white'/>
             <OurStory />
             <VoiceinNumbers />
             <Testimonial 
