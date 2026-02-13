@@ -484,7 +484,7 @@ export const team_members = [
             linkedIn: "https://www.linkedin.com/in/ayooluwadanielonajoko?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
         },
         colors: {
-            bg: 'green',
+            bg: '#004D00',
             color: "white",
             iconbg: 'white'
         }

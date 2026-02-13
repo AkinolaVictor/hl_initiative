@@ -19,7 +19,7 @@ function Page(props: Props) {
         // <div className="flex flex-col min-h-screen h-auto items-start relative justify-start bg-zinc-50 font-sans dark:bg-black overflow-y-auto overflow-x-hidden">
         <div className="relative bg-zinc-50 font-sans dark:bg-black">
             {/* <GalleryTop bgImage="/gallery/school_club/school_club_2.jpg"/> */}
-            <GalleryTop bgImage="/gallery/amr/amr_8.jpg"/>
+            <GalleryTop bgImage="/gallery/amr/amr_8b.jpg"/>
             <GalleryContent preload_data={gallery_activities} where='all'/>
             <Footer />
         </div>

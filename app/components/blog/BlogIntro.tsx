@@ -88,7 +88,7 @@ function BlogIntro(props: Props) {
                     opacity: 0.5,
                     // backgroundImage: "url(./gallery/school_club/school_club_1.jpg)",
                     // backgroundImage: `url(${image??"./gallery/amr/amr_2.jpg"})`,
-                    backgroundImage: `url(${seek_path_and_ref_2({path, name: "gallery/amr/amr_2.jpg"})})`,
+                    backgroundImage: `url(${seek_path_and_ref_2({path, name: "gallery/amr/amr_11.jpg"})})`,
                     backgroundSize:"cover", backgroundPosition: "center", 
                     backgroundRepeat: "no-repeat", margin:0, padding: 0,
                 }}>

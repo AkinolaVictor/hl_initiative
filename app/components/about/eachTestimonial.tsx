@@ -33,9 +33,15 @@ function EachTestimonial(props: Props) {
                 env==="about"?
                 <>
                     <div 
-                        className={`w-45 h-45 mt-15 rounded-full flex justify-center items-center`}
-                        style={{backgroundColor: iconbg||"#4f3130"}}
+                        className={`w-35 h-35 rounded-full flex justify-center items-center`}
+                        // style={{backgroundColor: iconbg||"#4f3130"}}
+                        style={{backgroundColor: bg==="white"?"#D8BD8A":"white"}}
                     >
+                        <img 
+                            src="user_icon.png" 
+                            alt="user_icon" 
+                            className='w-18 h-18'
+                        />
                     </div>
 
                     <p className='font-semibold text-[20px] mt-7 text-center'>{title}</p>

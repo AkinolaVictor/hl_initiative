@@ -34,13 +34,13 @@ export const antimicrobial_resistance = {
         `The session was both vibrant and sobering. By the end, the students pledged to be "AMR Guardians." This experience highlighted the necessity of school-based interventions in building a resilient community that respects the power and limits of modern medicine.`
     ],
     assets: [
+        ...format_img_assets({name: "amr", count: 10}),
         {
             type: "video",
-            name: "amr_10.mp4",
+            name: "amr_11.mp4",
             vid_width: 464,
             vid_height: 832
-        },
-        ...format_img_assets({name: "amr", count: 9})
+        }
     ],
     colors: {
         bg: "#E1E7DD",

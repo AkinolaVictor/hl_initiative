@@ -42,7 +42,7 @@ export const diabetes_the_old_and_young = {
         },
     ],
     colors: {
-        bg: '#572E0E',
+        bg: '#BB6E0E',
         color: "white",
         iconbg: '#d8bd8a'
     }

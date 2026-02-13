@@ -172,7 +172,7 @@ function GalleryContent(props: Props) {
         return (
             <div onClick={()=>{router.push(`/gallery/${id}`)}} 
                 className={`w-full flex flex-col min-h-screen relative cursor-pointer`}
-                style={{backgroundColor: bg||"green", color: color||"white"}}
+                style={{backgroundColor: bg||"#004D00", color: color||"white"}}
             >
                 <div className='w-full h-auto flex justify-center items-center'>
                     <div

@@ -35,7 +35,7 @@ export default function Home() {
       {/* <Header />   */}
       <HomeIntro />
       <Features />
-      <Purpose iconbg="#999999" bg="green"/>
+      <Purpose iconbg="#999999" bg="#004D00"/>
       <LatestBlogs />
       <VoiceinNumbers />
       <RecentPrograms />

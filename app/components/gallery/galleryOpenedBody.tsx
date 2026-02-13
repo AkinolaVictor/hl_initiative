@@ -155,7 +155,7 @@ function GalleryOpenedBody(props: Props) {
 
                 <div className='w-auto h-screen flex programme_body_inner bp10:absolute  bp10:left-90'>
                     {/* <div className='ml-90'>
-                        <NextVideo src={"/gallery/amr/amr_10.mp4"} className='w-125 max-h-95 h-90' height={400}/>
+                        <NextVideo src={"/gallery/amr/amr_11.mp4"} className='w-125 max-h-95 h-90' height={400}/>
                     </div> */}
 
 

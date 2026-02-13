@@ -204,10 +204,10 @@ function FillForm(props: Props) {
                 <p className='text-red-500 font-semibold'>{error}</p>
                 {
                     loading?
-                    <div className='w-40 ml-auto mr-auto h-auto rounded-full bg-green-700 py-2 px-7 text_1 cursor-pointer mt-5'>
+                    <div className='w-40 ml-auto mr-auto h-auto rounded-full bg-[#004D00] py-2 px-7 text_1 cursor-pointer mt-5'>
                         <p className='text-white text-center font-semibold'>Sending...</p>
                     </div>:
-                    <div onClick={sendMessage} className='w-40 ml-auto mr-auto h-auto rounded-full bg-green-700 py-2 px-7 text_1 cursor-pointer mt-5'>
+                    <div onClick={sendMessage} className='w-40 ml-auto mr-auto h-auto rounded-full bg-[#004D00] py-2 px-7 text_1 cursor-pointer mt-5'>
                         <p className='text-white text-center font-semibold'>Send</p>
                     </div>
                 }

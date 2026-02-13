@@ -86,7 +86,7 @@ function ContactIntro(props: Props) {
                 />
             </div> */}
 
-            <div className={`h-auto w-full flex flex-col justify-center items-center py-10 absolutea z-10`} style={{background: "green"}}>
+            <div className={`h-auto w-full flex flex-col justify-center items-center py-10 absolutea z-10`} style={{background: "#004D00"}}>
                 <div className='absolute top-0 left-0 w-full'>
                     <Header />
                 </div>

@@ -40,7 +40,7 @@ export const health_club_wesly = {
         ...format_img_assets({name: "school_club", count: 10})
     ],
     colors: {
-        bg: 'green',
+        bg: '#004D00',
         color: "white",
         iconbg: 'white'
     }
