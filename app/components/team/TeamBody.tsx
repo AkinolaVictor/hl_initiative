@@ -238,7 +238,7 @@ function TeamBody(props: Props) {
                 // HE DEMANDED THAT EVERYONE SHOULD BE PRESENTED USING A VERTICAL SCROLL
                 false?
                 <>
-                    <Testimonial
+                    {/* <Testimonial
                         // prevAnim={!hideTeam}
                         id='team'
                         title='Volunteers'
@@ -248,7 +248,7 @@ function TeamBody(props: Props) {
                         // dataSet={testimonal_messgaes}
                         // dataSet={volunteers_list}
                         dataSet={volunteer_members}
-                    />
+                    /> */}
                 </>:
                 <>
                     {

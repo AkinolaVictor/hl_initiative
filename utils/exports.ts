@@ -178,10 +178,9 @@ export const about_foundation = [
 
 export const testimonal_messgaes = [
     {
-        title: "Amina",
-        description: "A College Student",
-        message: `Joining the Health Club changed my entire perspective. I used to believe dangerous myths, but now I’m teaching my family how to stay 
-            safe using real science. I feel empowered to lead my community.`,
+        title: "Jumoke Sumaya",
+        description: "Ammbassador",
+        message: `This initiative boosted my confidence to educate others on the dangers of littering rather than scolding them. I am grateful to the organizers for creating such an interactive, fun, and impactful program. Thank you!`,
         icon_name: "beginning.png",
         colors: {
             bg: null,
@@ -190,10 +189,9 @@ export const testimonal_messgaes = [
         }
     },
     {
-        title: "Chief Okon",
-        description: "The Community Leader",
-        message: `We were skeptical at first, but this team respected our traditions while bringing life-saving facts. Their recent outreach provided my 
-            people with both hope and essential medications that were previously far beyond our reach.`,
+        title: "Dixon Favour",
+        description: "Beneficiary",
+        message: `The school health clubs of HLI has been a very good platform for me to build my leadership skill. I was never a fan of teamwork, but they helped me see the good part of teamwork.`,
         icon_name: "overcoming.png",
         colors: {
             bg: "white",
@@ -202,10 +200,9 @@ export const testimonal_messgaes = [
         }
     },
     {
-        title: "David",
-        description: "The Webinar Attendee",
-        message: `Their digital sessions are a breath of fresh air. In a world saturated with 'fake news' and health misinformation, I finally have a trusted, 
-            evidence-based source for verified information to protect my physical well-being.`,
+        title: "Iyebiye",
+        description: "Webinar Attendee",
+        message: `The "Building a rewarding career in public health" was indeed a great webinar as  I was enlightened about my area of interest.`,
         icon_name: "growing.png",
         colors: {
             bg: '#4f3130',
@@ -213,54 +210,18 @@ export const testimonal_messgaes = [
             iconbg: '#d8bd8a'
         }
     },
-    {
-        title: "Sarah Aderibigbe",
-        description: "A Mother of Three",
-        message: `I didn't just receive a lecture; I received a health kit that helped my children recover instantly. They truly go the extra mile to 
-            ensure our family stays healthy, supported, and cared for during crises.`,
-        icon_name: "search.png",
-        colors: {
-            bg: '#999999',
-            color: "white",
-            iconbg: '#d8bd8a'
-        }
-    },
-    {
-        title: "Mr. Adeyemi",
-        description: "A School Principal",
-        message: `The transformation in our students’ hygiene and health awareness is truly remarkable. The NGO’s 'Research First' approach makes their 
-            curriculum the most reliable and effective we have ever integrated into our school’s yearly wellness program.`,
-        icon_name: "scale-up.png",
-        colors: {
-            bg: '#777777',
-            color: "white",
-            iconbg: 'white'
-        }
-    },
-    {
-        title: "Dr. Elizabeth",
-        description: "The Volunteer Physician",
-        message: `Partnering with this foundation allows me to see the direct link between education and prevention. We aren't 
-            just treating symptoms; we are changing mindsets and building a sustainable culture of health at the grassroots level`,
-        icon_name: "strength.png",
-        colors: {
-            bg: '#95D5B2',
-            color: "white",
-            iconbg: '#d8bd8a'
-        }
-    },
-    {
-        title: "Mr. Bello",
-        description: "Community Advocate",
-        message: `Before their intervention, our village lacked basic health resources and reliable guidance. Now, equipped with essential drug 
-            packages and vital knowledge, we have become a more resilient community capable of managing our own wellness effectively.`,
-        icon_name: "early_wins.png",
-        colors: {
-            bg: '#081B15',
-            color: "white",
-            iconbg: 'white'
-        }
-    },
+    // {
+    //     title: "Mr. Bello",
+    //     description: "Community Advocate",
+    //     message: `Before their intervention, our village lacked basic health resources and reliable guidance. Now, equipped with essential drug 
+    //         packages and vital knowledge, we have become a more resilient community capable of managing our own wellness effectively.`,
+    //     icon_name: "early_wins.png",
+    //     colors: {
+    //         bg: '#081B15',
+    //         color: "white",
+    //         iconbg: 'white'
+    //     }
+    // },
 ]
 
 export const volunteers_list = [

@@ -28,6 +28,7 @@ function About(props: Props) {
             <AboutIntro />
             <AboutFoundation />
             <Purpose bg='green' iconbg="#555555"/>
+            <div className='w-full h-25 bg-white'/>
             <OurStory />
             <VoiceinNumbers />
             <Testimonial 

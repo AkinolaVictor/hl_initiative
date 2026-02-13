@@ -1,4 +1,5 @@
 "use client"
+import { blog_list } from '@/utils/blog_data/blog_list'
 import { motion } from 'framer-motion'
 import React from 'react'
 
@@ -9,14 +10,15 @@ function VoiceinNumbers(props: Props) {
 
     const achievements = [
         {
-            number: "2",
-            title: "School Health Clubs",
-            description: "We have carried out outreaches and school events that are transformative truly enlightening."
+            number: "44+",
+            title: "School Health Ambassadors",
+            description: "Through our school health clubs initiative, we have equipped these student health champions with the practical health education needed to make informed choices and challenge the health status quo within their immediate communities.",
+            // description: "Students have been equipped through"
         },
         {
-            number: "5",
-            title: "Webinars",
-            description: "We have impacted lives through several webinar sessions, we are unto much more to get done."
+            number: "300+",
+            title: "Webinars Attendees",
+            description: "We have organized insightful discussions around major health issues facilitated by seasoned medical professionals"
         },
         {
             number: "250",
@@ -24,8 +26,8 @@ function VoiceinNumbers(props: Props) {
             description: "We have impacted lives through several webinar sessions and outreaches, we are unto much more to get done"
         },
         {
-            number: "13",
-            title: "Researches/posts",
+            number: blog_list.length,
+            title: "Researches Blogs",
             description: "We have successfully completed 13 comprehensive research studies to drive impactful, evidence-based change."
         },
     ]
