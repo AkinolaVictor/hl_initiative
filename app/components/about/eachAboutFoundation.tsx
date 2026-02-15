@@ -24,7 +24,7 @@ function EachAboutFoundation(props: Props) {
         setMobile(isMobile)
         gsap.registerPlugin(ScrollTrigger);
 
-        const tl3 = gsap.to(`.${text_class}`, {
+        const tl3 = gsap.to([`.${text_class}`, `.${img_class}`], {
             x: 0,
             duration: 1,
             scrollTrigger:  isMobile?{}:{
@@ -32,24 +32,36 @@ function EachAboutFoundation(props: Props) {
                 scrub: true,
                 invalidateOnRefresh: true,
                 start:  isMobile ? "top 10%" : "top 90%", // when head of element reaches 50% of screen
-                end:  isMobile ? "bottom 40%" : "top 30%",  //when top of element reaches 20% of the screen,
+                end:  isMobile ? "bottom 40%" : "top 6%",  //when top of element reaches 20% of the screen,
                 // markers: true,
             }
         })
 
-        const tl2 = gsap.to(`.${img_class}`, {
-            x: 0,
-            duration: 1,
-            // if its mobile, don't apply scrolltrigger
-            scrollTrigger: isMobile?{}:{
-                trigger: `.${img_class}`,
-                scrub: true,
-                invalidateOnRefresh: true,
-                start: isMobile ? "top 10%" : "top 90%", // when head of element reaches 50% of screen
-                end: isMobile ? "bottom 40%" : "top 30%",  //when top of element reaches 20% of the screen,
-                // markers: true
-            },
-        })
+        // const tl3 = gsap.to(`.${text_class}`, {
+        //     x: 0,
+        //     duration: 1,
+        //     scrollTrigger:  isMobile?{}:{
+        //         trigger: `.${text_class}`,
+        //         scrub: true,
+        //         invalidateOnRefresh: true,
+        //         start:  isMobile ? "top 10%" : "top 90%", // when head of element reaches 50% of screen
+        //         end:  isMobile ? "bottom 40%" : "top 30%",  //when top of element reaches 20% of the screen,
+        //     }
+        // })
+
+        // const tl2 = gsap.to(`.${img_class}`, {
+        //     x: 0,
+        //     duration: 1,
+        //     // if its mobile, don't apply scrolltrigger
+        //     scrollTrigger: isMobile?{}:{
+        //         trigger: `.${img_class}`,
+        //         scrub: true,
+        //         invalidateOnRefresh: true,
+        //         start: isMobile ? "top 10%" : "top 90%", // when head of element reaches 50% of screen
+        //         end: isMobile ? "bottom 40%" : "top 30%",  //when top of element reaches 20% of the screen,
+        //         // markers: true
+        //     },
+        // })
 
         if(isMobile) {
             ScrollTrigger.create({
@@ -85,7 +97,8 @@ function EachAboutFoundation(props: Props) {
         <div className={`w-full h-auto min-h-screen flex flex-col bp8:flex-row ${reverse&&"bp8:flex-row-reverse"} justify-between items-center`}>
             <div 
                 className={`w-full px-5 py-10 ${text_class}`}
-                style={{transform: reverse?"translateX(400px)":"translateX(-400px)"}}
+                // style={{transform: reverse?"translateX(400px)":"translateX(-400px)"}}
+                style={{transform: reverse?"translateX(500px)":"translateX(-500px)"}}
             >
                 <p className='font-semibold text-[23px] text-center'>{title}</p>
                 <p className='text-[13px] text-center opacity-70 text-[rosybrown]'>{subTitle}</p>
