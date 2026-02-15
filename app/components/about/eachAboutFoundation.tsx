@@ -31,7 +31,7 @@ function EachAboutFoundation(props: Props) {
                 trigger: `.${text_class}`,
                 scrub: true,
                 invalidateOnRefresh: true,
-                start:  isMobile ? "top 10%" : "top 90%", // when head of element reaches 50% of screen
+                start:  isMobile ? "top 40%" : "top 90%", // when head of element reaches 50% of screen
                 end:  isMobile ? "bottom 40%" : "top 6%",  //when top of element reaches 20% of the screen,
                 // markers: true,
             }
@@ -64,8 +64,10 @@ function EachAboutFoundation(props: Props) {
         // })
 
         if(isMobile) {
+            console.log("is mobile")
             ScrollTrigger.create({
-                trigger: `.${img_class}`,
+                // trigger: [`.${img_class}`, `.${text_class}`],
+                trigger: `.${text_class}`,
                 // start: "top 90%",
                 start: "top bottom",
                 invalidateOnRefresh: true,
@@ -76,16 +78,29 @@ function EachAboutFoundation(props: Props) {
                 // scrub: true,
                 // scrub: true,
             })
+
+            // ScrollTrigger.create({
+            //     trigger: `.${img_class}`,
+            //     // start: "top 90%",
+            //     start: "top bottom",
+            //     invalidateOnRefresh: true,
+            //     // onEnter: () => tl2.restart(),
+            //     // onEnterBack: () => tl2.restart(),
+            //     onEnter: () => tl3.restart(),
+            //     onEnterBack: () => tl3.restart(),
+            //     // scrub: true,
+            //     // scrub: true,
+            // })
             
-            ScrollTrigger.create({
-                trigger: `.${text_class}`,
-                // start: "top 90%",
-                start: "top bottom",
-                invalidateOnRefresh: true,
-                onEnter: () => tl3.restart(),
-                onEnterBack: () => tl3.restart(),
-                // scrub: true
-            })
+            // ScrollTrigger.create({
+            //     trigger: `.${text_class}`,
+            //     // start: "top 90%",
+            //     start: "top bottom",
+            //     invalidateOnRefresh: true,
+            //     onEnter: () => tl3.restart(),
+            //     onEnterBack: () => tl3.restart(),
+            //     // scrub: true
+            // })
         }
 
         // return ()=>ScrollTrigger.getAll().forEach(trigger => trigger.kill());
