@@ -74,6 +74,7 @@ function EachAboutFoundation(props: Props) {
                 onEnter: () => tl3.restart(),
                 onEnterBack: () => tl3.restart(),
                 // scrub: true,
+                // scrub: true,
             })
             
             ScrollTrigger.create({
