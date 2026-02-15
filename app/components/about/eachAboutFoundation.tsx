@@ -64,15 +64,15 @@ function EachAboutFoundation(props: Props) {
         // })
 
         if(isMobile) {
-            ScrollTrigger.create({
-                trigger: `.${img_class}`,
-                // start: "top 90%",
-                start: "top bottom",
-                invalidateOnRefresh: true,
-                onEnter: () => tl2.restart(),
-                onEnterBack: () => tl2.restart(),
-                // scrub: true,
-            })
+            // ScrollTrigger.create({
+            //     trigger: `.${img_class}`,
+            //     // start: "top 90%",
+            //     start: "top bottom",
+            //     invalidateOnRefresh: true,
+            //     onEnter: () => tl2.restart(),
+            //     onEnterBack: () => tl2.restart(),
+            //     // scrub: true,
+            // })
             
             ScrollTrigger.create({
                 trigger: `.${text_class}`,
