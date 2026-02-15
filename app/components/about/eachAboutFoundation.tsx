@@ -70,6 +70,7 @@ function EachAboutFoundation(props: Props) {
                 trigger: `.${text_class}`,
                 // start: "top 90%",
                 start: "top bottom",
+                // end: "top 90%",
                 invalidateOnRefresh: true,
                 // onEnter: () => tl2.restart(),
                 // onEnterBack: () => tl2.restart(),
