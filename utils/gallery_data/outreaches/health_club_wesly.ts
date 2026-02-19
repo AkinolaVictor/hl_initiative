@@ -48,11 +48,7 @@ export const health_club_wesly = {
 
 
 
-// PROMPT_SAMPLE TO CHATGPT AND GEMINI
-
-// In my NGO Foundation, we went for an outreach to a secondary school called Wesley Girls Junior Secondary School.
-
-// We went to enlighten the students on antimicrobial resistance (AMR), how to prevent this and things they must set in place to ensure this does not occur with them in their families, communities, and to friends.
+// We carried out a webinar session on the theme Fighting Cancer with Healthy Habits in my NGO
 
 // write me a description of less than 31 words to paste on the front page
 
