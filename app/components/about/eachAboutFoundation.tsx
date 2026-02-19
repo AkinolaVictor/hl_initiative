@@ -64,7 +64,7 @@ function EachAboutFoundation(props: Props) {
         // })
 
         if(isMobile) {
-            console.log("is mobile")
+            // console.log("is mobile")
             ScrollTrigger.create({
                 // trigger: [`.${img_class}`, `.${text_class}`],
                 trigger: `.${text_class}`,

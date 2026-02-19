@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 export const diabetes_the_old_and_young = {
     // id: uuidv4(),
-    id: "0dca22be-e380-406b-9b7a-3d8424861001",
+    id: "Diabetes:_The_Old_And_Young_Why_no_age_is_exempted",
     type: ["webinar"],
     path: "webinar",
     title: "Diabetes: The Old And Young",

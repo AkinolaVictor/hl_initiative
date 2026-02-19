@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 // uuidv4()
 export const depression = {
     // id: uuidv4(),
-    id: "zbca22be-e380-406b-9b7a-3d8424861001",
+    id: "Depression_Is_Suicide_An_Option?",
     type: ["webinar"],
     path: "webinar",
     title: "Depression",

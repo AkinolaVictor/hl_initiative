@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 // uuidv4()
 export const building_public_health_career = {
     // id: uuidv4(),
-    id: "bhca22be-e380-406b-9b7a-3d8424861034",
+    id: "Building_a_career_in_public_health",
     type: ["webinar"],
     path: "webinar",
     title: "Building a career in public health",

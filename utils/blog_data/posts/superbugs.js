@@ -8,7 +8,7 @@ export const superbugs = {
         Thanos: a single, powerful germ (bacteria) that...
     `,
     date: "",
-    image: "/blog/anonymous.png",
+    image: "/blog/superbugs.jpg",
     // image: "check_bp_2.jpg",
     // Content <HTMLAllCollection>: <div></div>
     Content: ()=>{

@@ -5,6 +5,7 @@ import { health_club_wesly } from "./outreaches/health_club_wesly";
 import { breast_cancer } from "./webinars/breast_cancer";
 import { depression } from "./webinars/depression";
 import { building_public_health_career } from "./webinars/building_public_health_career";
+import { fighting_cancer } from "./webinars/fighting_cancer";
 
 
 
@@ -16,4 +17,5 @@ export const gallery_activities = [
     depression,
     antimicrobial_resistance,
     building_public_health_career,
+    fighting_cancer,
 ]

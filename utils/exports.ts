@@ -618,6 +618,36 @@ export const team_members = [
 
 export const volunteer_members = [
     {
+        name: "Ibukunoluwa Folarin",
+        role: "Research Team",
+        image: "team_2.jpg",
+        social: {
+            x: "",
+            instagram: "",
+            linkedIn: "https://linkedin.com/in/ibukunoluwa-folarin-571682185"
+        },
+        colors: {
+            bg: '#572E0E',
+            color: "white",
+            iconbg: '#d8bd8a'
+        }
+    },
+    {
+        name: "Tomi Adeyanju",
+        role: "Media Team",
+        image: "team_16.jpg",
+        social: {
+            x: "",
+            instagram: "",
+            linkedIn: ""
+        },
+        colors: {
+            bg: '#666D4B',
+            color: "white",
+            iconbg: '#d8bd8a'
+        }
+    },
+    {
         name: "Tolani Ajisegiri",
         role: "Programs Team",
         image: "team_6.jpg",
@@ -646,36 +676,6 @@ export const volunteer_members = [
             bg: "white",
             color: "black",
             iconbg: null
-        }
-    },
-    {
-        name: "Ibuknoluwa Folarin",
-        role: "Research Team",
-        image: "team_2.jpg",
-        social: {
-            x: "",
-            instagram: "",
-            linkedIn: "https://linkedin.com/in/ibukunoluwa-folarin-571682185"
-        },
-        colors: {
-            bg: '#572E0E',
-            color: "white",
-            iconbg: '#d8bd8a'
-        }
-    },
-    {
-        name: "Tomi Adeyanju",
-        role: "Media Team",
-        image: "team_16.jpg",
-        social: {
-            x: "",
-            instagram: "",
-            linkedIn: ""
-        },
-        colors: {
-            bg: '#666D4B',
-            color: "white",
-            iconbg: '#d8bd8a'
         }
     },
     // {

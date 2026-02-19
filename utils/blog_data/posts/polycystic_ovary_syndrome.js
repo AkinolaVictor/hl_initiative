@@ -2,7 +2,7 @@ export const polycystic_ovary_syndrome = {
     id: "Polycystic_Ovary_Syndrome_(PCOS)",
     title: "Polycystic Ovary Syndrome (PCOS)",
     date: "",
-    image: "/blog/pcos.png",
+    image: "/blog/pcos.jpg",
     description: `Polycystic Ovary Syndrome (PCOS) is one of the most common hormonal disorders affecting
         people with ovaries. It impacts how the ovaries work and can influence reproductive health,
         metabolism, and overall well-being. While there’s no cure, PCOS can be effectively managed
