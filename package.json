@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "git": "git add . && git commit -m 'new_blog' && git push hl_initiative master"
+    "git": "git add . && git commit -m testing && git push hl_initiative master"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.11.2",
