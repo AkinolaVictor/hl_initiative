@@ -12,8 +12,10 @@ import { health_essential_checks } from "./posts/health_essential_checks";
 import { boosting_your_immunity } from "./posts/boosting_your_immunity";
 import { menstral_health } from "./posts/menstral_health";
 import { vaginal_discharge } from "./posts/vaginal_discharge";
+import { How_Our_Surroundings_Affect_Our_Wellbeing } from "./posts/How_Our_Surroundings_Affect_Our_Wellbeing";
 
 export const blog_list = [
+    How_Our_Surroundings_Affect_Our_Wellbeing,
     polycystic_ovary_syndrome,
     rethink_obesity,
     superbugs,
@@ -26,5 +28,5 @@ export const blog_list = [
     health_essential_checks,
     boosting_your_immunity,
     menstral_health,
-    vaginal_discharge
+    vaginal_discharge,
 ]

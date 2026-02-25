@@ -91,3 +91,7 @@ i am using the next.js app router for my project.
 I already a page.tsx in a folder called gallery which gives me access to a "/gallery" route on the web browser
 in the
 
+
+
+
+git add . && git commit -m "more updates" && git push hl_initiative master
