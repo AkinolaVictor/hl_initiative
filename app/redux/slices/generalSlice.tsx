@@ -6,7 +6,17 @@ const initialState = {
     modal: false,
     hideTeam: false,
     show_overlay_menu: false,
-    menu_overlay_listener: false
+    menu_overlay_listener: false,
+    adminAuth: false,
+    show_admin_modal: false,
+    updated_database: 1,
+    team: [],
+    gallery: [],
+    blog: [],
+    edit_team_data: {},
+    edit_gallery_data: {},
+    edit_blog_data: {},
+    admin_sub_route: "menu"
 }
 
 

@@ -16,8 +16,11 @@ interface Props {right?: boolean, bg?:string, color?:string, env?:string, item?:
 function TeamBody(props: Props) {
     const {env} = props
     const [mobile, setMobile] = useState(false)
-    // const {hideTeam} = useSelector((state:any)=>state.generalSlice)
-
+    const {setGeneralAlpha} = generalFunctions()
+    const working = useRef(false)
+    const timeout = useRef(false)
+    const called = useRef(false)
+    const {team} = useSelector((state:any)=>state.generalSlice)
     const nums = [1,2,2,2,2,2,2,2]
 
     function EachComp(props2: Props){
@@ -70,6 +73,7 @@ function TeamBody(props: Props) {
                 // className='w-full min-h-screen p-10 flex flex-col justify-center items-center bg-white text-white' style={{backgroundColor: "green"}}
                 className='w-full bp7:min-h-screen h-auto p-4 bp9:p-10 flex flex-col justify-center items-center bg-white  bp7:text-white bp7:bg-[rgb(0,128,0)]'
                 style={{backgroundColor: bg, color }}
+                onClick={()=>console.log(image)}
             >
                 <div 
                     // className={`w-full bp9:w-[80%] h-auto bp7:rounded-[25px] mt-12.5`} 
@@ -79,12 +83,22 @@ function TeamBody(props: Props) {
                         //     url(./check_bp.webp) type("image/webp"),
                         //     url(./check_bp-2.jpg) type("image/jpeg")
                         // )`,
-                        backgroundImage: `url(${env=="volunteer"?"./../":"./"}team/${image})`,
+                        // backgroundImage: `url(${env=="volunteer"?"./../":"./"}team/${image})`,
+                        backgroundImage: `url(${image})`,
                         backgroundSize:"cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", 
                         width: "300px", minHeight: "360px", height: "auto", maxHeight: "400px"
                     }}
                 >
                     {/* <img src="./team/team_9.jpg" alt="image" className='h-auto max-w-99 w-auto rounded-[15px]'/> */}
+                    {/* <img 
+                        src={image} 
+                        alt="image" 
+                        className='rounded-[30px] object-cover object-center'
+                        style={{
+                            width: "300px", minHeight: "360px", height: "auto", maxHeight: "400px",
+                            // backgroundSize:"cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", 
+                        }}
+                    /> */}
                 </div>
 
                 <p className='text-[22px] font-semibold mt-10'>{name}</p>
@@ -141,6 +155,8 @@ function TeamBody(props: Props) {
     }
 
     function feature_animation(){
+        if(!team.length) return
+
         const screen_width = window.innerWidth
         const screen_height = window.innerHeight
         const isMobile = screen_width <= 700;
@@ -188,20 +204,53 @@ function TeamBody(props: Props) {
     }
 
     function decideData(){
-        if(env == "volunteer") return volunteer_members
-        else return team_members
+        const vol = []
+        const mem = []
+
+        for(let i=0; i<team.length; i++){
+            const data = {...team[i]}
+            data.image = data.photourl
+            data.role = data.title
+            data.social = {
+                x: data.x,
+                linkedIn: data.linkein,
+                instagram: data.instagram
+            }
+
+            data.colors = {
+                bg: data.bg_color,
+                color: data.tx_color
+            }
+
+            if(data.category == "Volunteer"){
+                vol.push(data)
+            } else {
+                mem.push(data)
+            }
+        }
+        
+        // if(env == "volunteer") return [...vol, ...volunteer_members]
+        // else return [...mem, ...team_members]
+
+        if(env == "volunteer") return [...vol]
+        else return [...mem]
     }
     
-    const {setGeneralAlpha} = generalFunctions()
-    const working = useRef(false)
-    const timeout = useRef(false)
-    const called = useRef(false)
+
     useEffect(()=>{
         gsap.registerPlugin(ScrollTrigger);
         overlay_menu_listener({ScrollTrigger, working, timeout, called, setGeneralAlpha, threshold: 330})
     }, [])
-    useEffect(feature_animation, [])
 
+    useEffect(feature_animation, [team])
+
+    if(!team.length){
+        return (
+            <div className='w-full h-auto p-10 flex justify-center items-center bg-white text-black'>
+                <p>Waiting for data to load...</p>
+            </div>
+        )
+    }
 
     return (
         // <div className=' text-black w-full min-h-screen h-auto'>

@@ -1,5 +1,7 @@
 import { generalFunctions } from "@/app/redux/store_controllers/generalFunctions"
+import { v4 as uuidv4 } from 'uuid';
 
+export const genID = () => uuidv4()
 
 export const allLinks = [
     {
@@ -775,16 +777,56 @@ export function format_img_assets({name, count}:{name:string, count: number}) {
 
 
 
-export function format_by_count(word: any, count: number){
+export function format_by_count(word: any, count: number, avoidDots?: boolean){
     const words = word.split(" ")
     if (words.length<count || count>200) return word
 
-    let build = ""
+    // let build = ""
+    let build = []
     for(let i=0; i<count; i++){
-        build = build + " " + words[i]
+        build.push(words[i])
     }
 
-    build = build + "..."
+    const final = `${build.join(" ")}${avoidDots?"":"..."}`
+    return final
+}
+
+
+export function buildGalleryData(gallery: any, where: any){
+    if(!gallery.length) return []
+
+    const build:any = []
+
+    for(let i=0; i<gallery.length; i++){
+        const data = {...gallery[i]}
+        data.colors = {
+            bg: data.bg_color,
+            color: data.tx_color
+        }
+        const assets = data.photourl.map((url: string)=>{
+            return {
+                type: "image",
+                name: url
+            }
+        })
+
+        const cate = data.category.toLowerCase()
+
+        data.assets = [...assets],
+        data.image = data.photourl[0]
+        data.type = [cate]
+        data.id = data.theme.split(" ").join("_")
+        data.introduction = data.introduction.split("\n\n")
+        data.objective = data.objective.split("\n\n")
+        data.impact = data.impact.split("\n\n")
+
+        if(where === "all"){
+            build.push(data)
+        } else if(where === cate){
+            build.push(data)
+        }
+        
+    }
 
     return build
 }

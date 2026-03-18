@@ -5,12 +5,15 @@ import GalleryTop from '@/app/components/gallery/galleryTop'
 import { gallery_activities } from '@/utils/gallery_data/gallery_activites'
 import { usePathname } from 'next/navigation'
 import React, { Fragment, useState } from 'react'
+// import { useSelector } from 'react-redux'
 
 interface Props {}
 
 function GalleryNavigator(props: Props) {
     const {} = props
     const path = usePathname()
+    // const {gallery} = useSelector((state:any)=>state.generalSlice)
+    // const gallery_activities = useSelector((state:any)=>state.generalSlice.gallery)
     const [imageUrl, setImageUrl] = useState("/gallery/school_club/school_club_2.jpg")
 
     function get_where(){
@@ -21,6 +24,7 @@ function GalleryNavigator(props: Props) {
     
     function get_gallery_data(){
         const id = get_where()
+
         if(!(id==="outreach" || id==="webinar")){
             return false
         }
@@ -32,8 +36,8 @@ function GalleryNavigator(props: Props) {
                 pack.push(each)
             }
         }
-        return pack
 
+        return pack
     }
 
     function getImage(){

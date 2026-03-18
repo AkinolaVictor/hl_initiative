@@ -1,12 +1,13 @@
 "use client"
 import { generalFunctions } from '@/app/redux/store_controllers/generalFunctions';
-import { overlay_menu_listener, seek_path_and_ref } from '@/utils/exports';
-import { gallery_activities } from '@/utils/gallery_data/gallery_activites';
+import { buildGalleryData, overlay_menu_listener, seek_path_and_ref } from '@/utils/exports';
+// import { gallery_activities } from '@/utils/gallery_data/gallery_activites';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import NextVideo from 'next-video';
 import { usePathname } from 'next/navigation';
 import React, { useEffect, useRef, useState } from 'react'
+import { useSelector } from 'react-redux';
 
 interface Props {updater: any}
 
@@ -15,16 +16,19 @@ function GalleryOpenedBody(props: Props) {
     const path = usePathname()
     const [data, setData] = useState<any>({})
     const [isMobile, setIsMobile] = useState(false)
+    const {gallery} = useSelector((state:any)=>state.generalSlice)
     
     function get_gallery_data(){
+        const gallery_activities = buildGalleryData(gallery, "all")
         const path_split = path?.split("/").reverse() ?? []
         const id = path_split[0]
         for(let i=0; i<gallery_activities.length; i++){
             const each = gallery_activities[i]
             if(id === each.id){
-                const image_ref = `gallery/${each.path}/${each.image}`
-                const img = seek_path_and_ref({path: path, name: image_ref})
-                updater(img)
+                // const image_ref = `gallery/${each.path}/${each.image}`
+                // const img = seek_path_and_ref({path: path, name: image_ref})
+                // updater(img)
+                updater(each.image)
                 return each
             }
         }
@@ -33,6 +37,7 @@ function GalleryOpenedBody(props: Props) {
     }
     
     function feature_animation(){
+        if(!gallery.length) return
         if(!data.assets) return
 
         const screen_width = window.innerWidth
@@ -76,16 +81,16 @@ function GalleryOpenedBody(props: Props) {
     useEffect(()=>{
         gsap.registerPlugin(ScrollTrigger);
         overlay_menu_listener({ScrollTrigger, working, timeout, called, setGeneralAlpha, threshold: 500})
-    }, [])
+    }, [gallery])
     
-    useEffect(feature_animation, [data])
+    useEffect(feature_animation, [data, gallery])
     useEffect(()=>{
         const mobile = window.innerWidth < 768;
         setIsMobile(mobile)
 
         const datum = get_gallery_data()
         setData(datum)
-    }, [])
+    }, [gallery])
     // console.log({isMobile})
     return (
         <div className='w-full h-auto'>
@@ -142,8 +147,8 @@ function GalleryOpenedBody(props: Props) {
                 <div className='h-screen min-w-90 max-w-90 flex flex-col justify-center text-center items-center bg-amber-400d px-6 py-10 bp10:absolute bp10:z-2 bg-white'>
                     <p className='font-semibold text-[16px]'>{data.title}</p>
                     <p className='mt-5'>{data.theme}</p>
-                    <p className='mt-0'>{data.date}</p>
-                    <p>{`Venue: ${data.venue}`}</p>
+                    <p className='mt-3 text-justify'>{data.description}</p>
+                    {/* <p>{`Venue: ${data.venue}`}</p> */}
                 </div>
 
                 <div 
@@ -209,8 +214,9 @@ function GalleryOpenedBody(props: Props) {
                     {
                         (data.assets||[]).map((item:any, index:number)=>{
                             const {name, type, vid_width, vid_height} = item
-                            const image_ref = `gallery/${data.path}/${name}`
-                            const img = seek_path_and_ref({path: path, name: image_ref})
+                            // const image_ref = `gallery/${data.path}/${name}`
+                            // const img = seek_path_and_ref({path: path, name: image_ref})
+                            const img = name
                             // const ratio = type==="video"?vid_height/vid_width:1
                             // const ratio = 464/820
                             // if(ratio<1){

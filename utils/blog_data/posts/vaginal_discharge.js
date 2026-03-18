@@ -3,10 +3,7 @@
 export const vaginal_discharge = {
     id: "vaginal_discharge",
     title: "Vaginal Discharge: What Is Normal and When to Seek Help",
-    description: `Vaginal discharge is something many women experience, yet it is often misunderstood. Some
-        women feel worried or embarrassed about it, but the truth is that vaginal discharge is often
-        normal and healthy. This write up will help you understand what vaginal discharge is, when it is
-        normal, and when you should see a health worker.
+    description: `Vaginal discharge is something many women experience, yet it is often misunderstood. Some women feel worried or embarrassed about it, but the truth is that vaginal discharge is often normal and healthy. This write up will help you understand what vaginal discharge is, when it is normal, and when you should see a health worker.
     `,
     date: "",
     image: "/blog/vaginal_discharge.png",
@@ -127,3 +124,63 @@ export const vaginal_discharge = {
         </div>
     }
 }
+
+
+
+
+// Vaginal discharge is something many women experience, yet it is often misunderstood. Some women feel worried or embarrassed about it, but the truth is that vaginal discharge is often normal and healthy. This write up will help you understand what vaginal discharge is, when it is normal, and when you should see a health worker.
+
+// ##What Is Vaginal Discharge?
+
+// Vaginal discharge is a fluid that comes out of the vagina. It helps to:
+// • Keep the vagina clean
+// • Protect against infections
+// • Maintain a healthy balance of bacteria
+// Every woman’s body is different, and the amount of discharge can vary from person to person. It increases with increased estrogen states: pregnancy,oral contraceptive pills , mid-cycle, Polycystic Ovarian Syndrome, or premenarchal.
+
+// ##What Is Normal Vaginal Discharge?
+
+// Normal vaginal discharge usually:
+// • Is clear or milky white
+// • Has little or no smell
+// • Is not itchy or painful
+
+// It can change at different times, such as:
+// • During different stages of the menstrual cycle
+// • During pregnancy
+// • With sexual arousal
+// • When using hormonal contraceptives
+// These changes are usually normal and not a cause for concern.
+
+// ##When Is Vaginal Discharge Abnormal?
+
+// Vaginal discharge may be a sign of a problem if you notice:
+// • A strong or foul smell, especially a fishy smell
+// • Itching, burning, or pain
+// • Green, yellow, or gray discharge
+// • Thick, white discharge that looks like cottage cheese
+// • Blood-stained discharge when you are not menstruating
+// If you notice any of these signs, it is important to seek medical advice. Common Causes of Abnormal Vaginal Discharge
+
+// Some common causes include:
+// 1. Yeast Infections (Candidiasis)
+// 2. Bacterial Vaginosis
+// 3. Sexually Transmitted Infections
+// 4. Poor Vaginal Hygiene
+// 5. Foreign Objects
+
+// What You Should NOT Do
+// • Do not self-medicate repeatedly without seeing a health worker
+// • Avoid vaginal douching and herbal mixtures
+// • Do not ignore symptoms that keep coming back
+
+// These actions can make the problem worse.
+// How Can Vaginal Discharge Be Prevented?
+// • Wash the genital area with clean water (external use only)
+// • Keep the area clean and dry
+// • Wear clean, breathable underwear
+// • Avoid sharing towels or underwear
+// • Practice safe sex
+// • Go for regular medical check-ups
+
+// Vaginal discharge is not always a disease. Knowing what is normal helps you identify when something is wrong. There is no shame in seeking medical care. Early attention keeps you healthy and prevents serious problem

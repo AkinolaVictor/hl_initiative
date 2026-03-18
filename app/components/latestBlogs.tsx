@@ -5,12 +5,14 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 interface Props {}
 
 function LatestBlogs(props: Props) {
     const {} = props
     const path = usePathname()
+    const {blog} = useSelector((state:any)=>state.generalSlice)
 
     const blogs = [
         {
@@ -47,13 +49,14 @@ function LatestBlogs(props: Props) {
 
             <div className='w-full flex justify-around flex-wrap items-start mt-10'>
                 {
-                    [...blog_list].map((item, index)=>{
+                    [...blog].map((item, index)=>{
                         // if(index>3) return null
                         if(index>3) return null
-                        const {title, description, image, id} = item
-                        const get_img_path = image?seek_path_and_ref_2({path, name: image}):"./check_bp_2.jpg"
+                        const {title, description, image, photourl, data_id} = item
+                        // const get_img_path = image?seek_path_and_ref_2({path, name: image}):"./check_bp_2.jpg"
+                        const get_img_path = photourl
                         return (
-                            <Link href={`/blog/${id}`} key={index} className='w-auto max-w-65 p-5 flex flex-col justify-center items-center cursor-pointer'>
+                            <Link href={`/blog/${data_id}`} key={index} className='w-auto max-w-65 p-5 flex flex-col justify-center items-center cursor-pointer'>
                                 <div className='w-62.5 h-40 max-h-40'>
                                     <picture>
                                         {/* <source srcSet="./bg-red.webp" type="image/webp" className='rounded-[20px]'/> */}
@@ -66,6 +69,7 @@ function LatestBlogs(props: Props) {
                                 </div>
                                 <p className='font-semibold mt-6 text-[14px] text-center'>{title}</p>
                                 <p className='text-[13px] opacity-70 text-center mt-2'>{format_by_count(description, 20)}</p>
+                                {/* <p className='text-[13px] opacity-70 text-center mt-2'>{description}</p> */}
                             </Link>
                         )
                     })

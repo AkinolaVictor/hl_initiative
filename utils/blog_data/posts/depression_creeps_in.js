@@ -3,9 +3,7 @@
 export const depression_creeps_in = {
     id: "depression_creeps_in",
     title: "Slowly, Depression Crept In.",
-    description: `Imagine studying so hard for an exam or interview, but when the results came back, they
-        weren’t what you hoped. Suddenly, everything felt heavier, and even things you enjoy didn’t
-        bring joy anymore.
+    description: `Imagine studying so hard for an exam or interview, but when the results came back, they weren’t what you hoped. Suddenly, everything felt heavier, and even things you enjoy didn’t bring joy anymore.
     `,
     date: "",
     image: "/blog/understanding_depression.jpg",

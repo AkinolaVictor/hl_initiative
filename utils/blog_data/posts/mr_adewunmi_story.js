@@ -3,9 +3,7 @@
 export const mr_adewunmi_story = {
     id: "mr_adewunmi_story",
     title: "Mr. Adewunmi’s Story",
-    description: `Mr Adewunmi, a 62 year Old lecturer noticed a small lump under his left nipple, he brushed it
-        off. “Men don’t get breast cancer,” he told himself. But the lump grew and so did his worry.
-        Weeks later, his doctor confirmed the unthinkable: Breast cancer.
+    description: `Mr Adewunmi, a 62 year Old lecturer noticed a small lump under his left nipple, he brushed it off. “Men don’t get breast cancer,” he told himself. But the lump grew and so did his worry. Weeks later, his doctor confirmed the...
     `,
     date: "",
     image: "blog/mr_adewunmi_story.jpg",
@@ -49,3 +47,21 @@ export const mr_adewunmi_story = {
         </div>
     }
 }
+
+
+
+
+// Mr Adewunmi, a 62 year Old lecturer noticed a small lump under his left nipple, he brushed it off. “Men don’t get breast cancer,” he told himself. But the lump grew and so did his worry. Weeks later, his doctor confirmed the unthinkable: Breast cancer.
+
+// He was stunned. Like most men, Adewunmi never imagined he could face it. Yet according to the National Breast Cancer Foundation, “All people, whether male or female, are born with breast tissue, and those cells can become cancerous.”
+
+// ##The Hidden Threat</span>
+// Breast cancer in men is rare but real about 1 in 1,000 men will develop it. It often appears after age 60 and can be linked to family history, obesity, radiation exposure, or genetic mutations like BRCA1 and BRCA2.
+
+// Adewunmi’s Wake-Up Call
+// After surgery and treatment, he made it through and decided to speak out. “If I can get it, any man can,” he says. “Don’t ignore any lump or change. Get checked.”
+
+// ##The Takeaway
+// Breast cancer doesn’t have a gender.
+// Early detection saves lives.
+// Real men check, too.

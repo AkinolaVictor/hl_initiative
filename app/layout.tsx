@@ -7,6 +7,8 @@ import { Provider } from "react-redux";
 import dataStore from "./redux/store";
 import OverlayMenu from "./components/overlayMenu";
 import OverlayHeader from "./components/overlayHeader";
+import AdminModal from "./components/admin/adminModal";
+import Workings from "./components/workings";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -41,6 +43,8 @@ export default function RootLayout({
         <Provider store={dataStore}>
           {/* <Header /> */}
           <OverlayHeader />
+          <AdminModal />
+          <Workings />
           <div className="classcc">
             {children}
           </div>

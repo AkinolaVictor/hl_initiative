@@ -3,9 +3,7 @@
 export const blood_pressure = {
     id: "blood_pressure",
     title: "What is Blood Pressure?",
-    description: ` “Think you’re too young to worry about blood pressure? You might think high blood pressure
-        is something older people worry about. Think again. What happens in your 20s can set the
-        stage for your heart health for now and decades.
+    description: ` “Think you’re too young to worry about blood pressure? You might think high blood pressure is something older people worry about. Think again. What happens in your 20s can set the stage for your heart health for now and decades.
     `,
     date: "",
     image: "/blog/blood_pressure.png",
@@ -108,3 +106,56 @@ export const blood_pressure = {
         </div>
     }
 }
+
+
+
+
+
+
+// “Think you’re too young to worry about blood pressure? You might think high blood pressure is something older people worry about. Think again. What happens in your 20s can set the stage for your heart health for now and decades. Let’s talk about why checking in now matters, what risks to watch out for, and simple ways to keep your numbers in check.”
+            
+
+// ##What is Blood Pressure?
+     
+// Blood pressure is basically the force of your blood pushing against the walls of your blood vessels as your heart pumps.
+            
+// Think of it like water flowing through a pipe:
+// If the pressure is too high, the pipe (blood vessel) can get damaged.
+// If it’s too low, the water (blood) may not reach where it should.
+
+// It’s Measured as two numbers (e.g., 120/80 mmHg):
+// Top number (Systolic): Pressure when your heart beats.
+// Bottom number (Diastolic): Pressure when your heart rests between beats.
+// Normal = below 120/80 mmHg
+// Above that = your heart is working harder than it should
+// The higher it goes (and the longer it stays high), the more risk for heart attack, stroke, kidney problems
+            
+// ##What Are We Looking At in terms of symptoms?
+
+// Many have no symptoms. But warning signs: frequent headaches, visual disturbance, nosebleeds, fatigue. Stress about daily life (jobs, school) might be complicating thing
+
+// ##Common causes in 20s
+// ‒ High salt intake
+// ‒ Stress (work, studies, finances)
+// ‒ Lack of physical activity
+// ‒ Too much caffeine/stimulants
+// ‒ Family history/genetics
+// ‒ Poor sleep/habits
+
+// ##What you can do; simple lifestyle changes
+
+// ‒ Eat more local vegetables, reduce salt in soups & stews, avoid too much processed/fast food, Reduce salt,
+// ‒ Exercise more: aim for regular cardio exercise
+// ‒ Manage stress through mindfulness, break time, good support
+// ‒ Limit alcohol/stimulants
+// ‒ Sleep well, Sleep well
+// ‒ Get regular BP checks, even if “young & healthy”
+
+// ##How Often Should You Check?
+// Suggest getting BP measured at least once a year, or more often if risk factors exist (family history, overweight, high salt diet). Use clinics, or reliable portable machines.
+
+// What To Do Now
+
+// Get your BP checked; share this with friends; set small goals: less salt this week, add one fruit/day, 30 min walk 3× per week.
+
+

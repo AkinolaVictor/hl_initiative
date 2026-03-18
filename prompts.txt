@@ -95,3 +95,29 @@ in the
 
 
 git add . && git commit -m "more updates" && git push hl_initiative master
+
+
+
+I created a 3D app (using three.js) where people can view objects like sphere, torusknot, octahedron, cone, etc
+These are basic geometrical objects.
+
+i also added some features like being able to adjust the environmental light, point light, being able to view in 
+wireframe mode, and more
+
+Write two different posts to share: one on twitter, the other on linkedIn.
+
+
+
+
+
+
+
+I created a 3D app (using three.js) that is a partial simulation of the solar system, where the moon revolves around the earth
+and the earth and other planets revolves about the sun.
+
+I implemented quite a number of features like adding of textures (for planets, moons, and sun), and also a cube texture loader.
+
+Write two different posts to share: one on twitter, the other on linkedIn.
+
+Here's the link to the product: https://solar-system-three-eta.vercel.app/
+

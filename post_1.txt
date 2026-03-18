@@ -1,0 +1,45 @@
+Headline: Experimenting with 3D Graphics in the Browser
+
+I’ve always been fascinated by how light interacts with geometry in a digital space. To dive deeper into WebGL, I recently built a 3D object viewer using Three.js.
+
+The goal was to create a functional sandbox where users can manipulate basic geometric primitives—like cones, spheres, and torusknot geometries—while seeing the immediate impact of lighting changes.
+
+Key features implemented:
+
+    Dynamic Lighting: Toggleable Point and Environmental lights to test material reflections and shadows.
+
+    Geometry Visualization: A dedicated wireframe mode to inspect the underlying mesh and polygon density.
+
+    Interactive UI: Integrated controls for real-time parameter adjustment.
+
+This project was a great exercise in understanding scene, camera positioning, and performance optimization in 3D web environments.
+
+Check out the page here: https://3dobjects.vercel.app
+
+I'd love to hear from any fellow 3D devs—what are your favorite libraries for handling complex shaders?
+
+#SoftwareEngineering #ThreeJS #WebDevelopment #Frontend #3DGraphics #WebGL
+
+
+
+
+
+
+
+
+
+Built a small 3D playground with Three.js 🚀
+
+Users can interact with basic geometries like sphere, torus knot, octahedron, cone, etc.
+
+Features:
+• Adjustable environment light
+• Point light control
+• Wireframe mode toggle
+• Real-time visual experimentation
+
+Check out the page here: https://3dobjects.vercel.app
+
+Really enjoying pushing deeper into 3D web graphics 🌍✨
+
+#ThreeJS #WebGL #JavaScript #CreativeCoding #WebDev

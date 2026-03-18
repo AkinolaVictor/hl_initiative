@@ -3,8 +3,7 @@
 export const truth_about_ulcer = {
     id: "truth_about_ulcer",
     title: "“The Truth About Ulcers — What You Should Really Know”",
-    description: `Most ulcers are caused by a *bacterium called *Helicobacter pylori (H. pylori)*.*
-        It weakens your stomach lining, allowing acid to create sores...
+    description: `Most ulcers are caused by a *bacterium called *Helicobacter pylori (H. pylori)*.* It weakens your stomach lining, allowing acid to create sores...
     `,
     date: "",
     image: "/blog/ulcer.png",
@@ -117,3 +116,62 @@ export const truth_about_ulcer = {
         </div>
     }
 }
+
+
+
+// "Ulcer isn’t just caused by skipping meals!”
+// Let’s clear some myths and uncover the real truth about stomach ulcers.
+
+// The Common Misconception
+
+// You’ve probably heard: “Ulcer comes from hunger or stress.” But guess what?
+
+// That’s only <span className="fsb">half true!
+
+// Ulcers are not just about what (or when) you eat , they’re about *what’s happening inside your body.*
+
+// ##The Real Cause:
+// Most ulcers are caused by a *bacterium called *Helicobacter pylori (H. pylori)*.*
+// It weakens your stomach lining, allowing acid to create sores.
+
+// ##Other triggers? Yes
+// * Excess use of painkillers (like ibuprofen)* Smoking or alcohol
+// * High stress levels
+// * Skipping meals *consistently* (not occasionally)
+
+// ##How It Feels:
+// Ulcers don’t always mean severe pain.
+
+// ##It can come in signs like:
+// * Burning or dull stomach pain
+// * Nausea or bloating
+// * Loss of appetite
+// * Heartburn or vomiting
+
+// If you have these often, it’s time to check in with a doctor and not just self-medicate.
+
+// ##Treatment Truth:
+// Ulcers can *heal completely* with proper care!
+// ✅ Doctors usually prescribe antibiotics (to kill H. pylori)
+// ✅ Antacids or acid blockers (to reduce acid)
+// ✅ And of course ; lifestyle adjustments like balanced meals and less caffeine.
+
+// 🚫 Don’t rely on random herbal mixes or soda remedies, they can worsen it!
+
+// ##What to Eat & Avoid:
+// Eat more: bananas, papaya, oats, yogurt, veggies, and lean protein.
+// Avoid: spicy, acidic, or fried foods, alcohol, and too much coffee.
+// Pro tip - small, frequent meals are easier on your stomach.
+
+// Quick Myth Busters:
+// ❌ Ulcer is not a “rich man’s disease.”
+// ❌ It’s not caused by drinking garri or pepper alone.
+// ❌ Soda does not cure ulcer pain , it can make it worse.
+// ✅ Seeing a doctor early is the best move.
+
+// ##Call to Action / Outro:
+// Ulcers are *treatable*, but ignoring the signs can lead to serious complications.
+// So please — *don’t self-diagnose. Don’t self-medicate.*
+// Talk to a healthcare professional today.
+
+// Share this post, someone might need the truth

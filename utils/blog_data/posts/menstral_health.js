@@ -3,8 +3,7 @@
 export const menstral_health = {
     id: "menstral_health",
     title: "Menstral Health: What’s Normal, What’s Not",
-    description: `Understanding your cycle helps you know when everything is fine and when something needs
-        attention...
+    description: `Understanding your cycle helps you know when everything is fine and when something needs attention...
     `,
     date: "",
     image: "/blog/menstral_health.png",
@@ -165,3 +164,88 @@ export const menstral_health = {
         </div>
     }
 }
+
+
+
+
+// Understanding your cycle helps you know when everything is fine and when something needs attention.
+
+// What a Normal Cycle Looks Like
+// Your menstrual cycle is the number of days from the first day of one period to the first day of the next.
+
+// A healthy cycle usually:
+// • Lasts *21–35 days*
+// • Bleeding lasts *2–7 days*
+// • Flow can be light, moderate, or slightly heavy
+// • Cramps, bloating, mood changes and fatigue can happen
+// • Periods may vary slightly from month to month
+
+// Normal looks different for each person. What matters is what’s typical for you.
+
+// ##What’s Normal During Your Period
+// It’s normal to experience:
+// • Mild–moderate cramps
+// • Headache or back pain
+// • Mood changes
+// • Acne breakouts
+// • Food cravings
+// • Breast tenderness
+// • Slight clots (small and occasional)
+
+// These changes happen because your hormones rise and fall throughout the cycle.
+
+// ##What’s NOT Normal
+// Some symptoms are warning signs:
+// ⚠ Very heavy bleeding (soaking a pad/tampon every 1–2 hours)
+// ⚠ Period lasting more than 7–8 days
+// ⚠ Extremely painful cramps that stop your daily activities
+// ⚠ Bleeding between periods or after sex
+// ⚠ Cycles shorter than 24 days or longer than 38 days
+// ⚠ Going months without a period (not pregnant or breastfeeding)
+
+// These may point to issues like fibroids, hormonal imbalance, thyroid problems, PCOS or endometriosis.
+
+// ##Why Menstrual Health Matters
+// Your menstrual cycle is a key sign of general health.
+// It reflects:
+// • Hormonal balance
+// • Stress Levels
+// • Nutrition
+// • Reproductive health
+// • Overall wellbeing
+
+// Irregular or painful periods aren’t something to “endure”. They may signal underlying problems.
+
+// How to Care for Your Menstrual Health
+// Simple habits help keep your cycle healthy:
+// • Track your cycle and symptoms
+// • Eat balanced meals
+// • Stay hydrated
+// • Rest and sleep well
+// • Manage stress
+// • Use clean, safe menstrual products
+// • Avoid smoking and excessive alcohol
+
+// Your whole lifestyle affects your hormones.
+
+// • Change pads/tampons regularly
+// • Wash hands before and after changing products
+// • Use warm compress for cramps
+// • Wear breathable underwear
+// • Stay active — gentle exercise reduces cramps
+// • Don’t ignore severe pain
+
+// Good menstrual hygiene prevents infections and improves comfort.
+
+// ##When to See a Doctor
+// Seek medical advice if you notice:
+// • Sudden cycle changes
+// • Severe pain every month
+// • Very heavy or prolonged bleeding
+// • Signs of anaemia (weakness, dizziness)
+// • No period for months
+// • Bleeding after sex
+// • Strong odour or unusual discharge during periods
+
+// Early check-ups help you stay healthy and prevent complications
+

@@ -3,9 +3,7 @@
 export const rethink_obesity = {
     id: "rethink_obesity",
     title: "Rethinking Obesity: Between Body Positivity and Rising Health Risks",
-    description: `Obesity is commonly defined as having too much body fat. A BMI of 30 or higher is the usual
-        benchmark for obesity in adults. Obesity increases the risk of serious medical conditions.
-        Treatments include changing what you eat, adding activity and mental health support.
+    description: `Obesity is commonly defined as having too much body fat. A BMI of 30 or higher is the usual benchmark for obesity in adults. Obesity increases the risk of serious medical conditions. Treatments include changing what you eat, adding activity and mental health support.
     `,
     date: "",
     image: "/blog/rethink_obesity_2.jpg",
@@ -75,3 +73,43 @@ export const rethink_obesity = {
         )
     }
 }
+
+// Love yourself as you are” meets “watch your health” but do the two always agree?
+
+// Obesity is commonly defined as having too much body fat. A BMI of 30 or higher is the usual benchmark for obesity in adults. Obesity increases the risk of serious medical conditions. Treatments include changing what you eat, adding activity and mental health support.
+
+// Obesity is one of the fastest-growing health challenges in the world. According to the World Health Organization, childhood obesity has quadrupled since 1990, and adults living with obesity have more than doubled. Doctors warn us that excess weight raises the risk of heart disease, diabetes, certain cancers and even mobility issues.
+
+
+// The Rise of Body Positivity 
+// The body positivity movement began as a way to fight discrimination and unfair beauty standards. It has helped people who felt excluded to build confidence and has reduced some of the shame linked with weight. On social media, the movement spread quickly, encouraging self-love and representation for all body types. Many people say body positivity has improved their mental health, self-esteem and sense of belonging.
+
+// *The real question is: how do we celebrate body positivity without ignoring rising health risks?*
+
+
+// ##Why Body Positivity Matters
+// ✨ Breaks the chains of unrealistic beauty standards.
+// ✨ Boosts confidence and mental health
+// ✨ Pushes back against bullying and stigma
+
+// For many, body positivity is more than a trend. It’s finally feeling seen, valued, and free.
+
+// But Here’s the Flip Side
+
+
+// Obesity isn’t just about looks.
+// It’s a medical condition shaped by gene. environment,sleep, lifestyle, and stress.
+// Doctors warn that belly fat especially raises the risk of diabetes and heart disease.
+// Ignoring these risks can only mean serious consequences down the road
+
+// “True wellness isn’t about choosing between self-love and health. It’s about living where both meet.”
+
+
+// ##This is how we get there 👇
+
+// Eating healthy and finding safe spaces for activity.
+// Supports without judgement: healthcare that uplifts, not shames.
+// Focus on habits, not just numbers, and this involves nourishing well, moving often, resting deeply, and managing stress.
+// Respect always: every body deserves dignity.
+
+

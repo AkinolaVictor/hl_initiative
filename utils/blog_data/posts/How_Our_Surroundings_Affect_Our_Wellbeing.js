@@ -125,3 +125,70 @@ export const How_Our_Surroundings_Affect_Our_Wellbeing = {
         </div>
     }
 }
+
+
+// Ever notice how some places just *drain* you…
+// and others make you feel calm?
+
+// Not village people.
+// Not vibes.
+// ##Your environment
+
+// Your surroundings affect:
+
+// * How well you sleep
+// * How calm you feel
+// * How often you fall sick
+
+// Health isn’t only about medicine.
+// It’s also about where you live and work.
+
+// The Air We Breathe
+
+// That tired feeling inside:
+
+// * Packed buses
+// * Small shops with no windows
+//  * One-room spaces with everyone inside
+ 
+//  It’s not laziness. It’s stale air stressing your body.
+
+// Light & Mood
+
+// Staying indoors all day with:
+ 
+// * Curtains drawn
+// * Generator noise outside
+// * Little or no sunlight
+ 
+// Your mood drops quietly.
+// Your body needs light—real light.
+// Noise Is Everyday Stress
+
+// Traffic horns.
+// Neighbour’s TV on full volume.
+// Generator humming since morning.
+
+// You may be used to it—
+// your body is not.
+
+// Constant noise = constant stress.
+
+// Cleanliness Hits Different
+// Blocked gutters.
+// Standing water.
+// Overfilled bins nearby.
+
+// It’s not just unpleasant—
+//  it increases germs, infections, and sickness around you.
+
+// You don’t need a perfect environment.
+
+// Just:
+
+// * More fresh air
+// * Better light
+// * Cleaner spaces
+// * Less noise where possible
+
+// *Small changes. Real impact.*

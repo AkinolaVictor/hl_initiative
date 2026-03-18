@@ -16,7 +16,8 @@ function BlogPreview(props: Props) {
     const router = useRouter()
     const img_class = `about-image2_${index}`
     const text_class = `description_container2_${index}`
-    const get_img_path = image?seek_path_and_ref({path, name: image}):"./check_bp_2.jpg"
+    const get_img_path = image
+    // const get_img_path = image?seek_path_and_ref({path, name: image}):"./check_bp_2.jpg"
     // console.log({image, get_img_path})
     
     function feature_animation(){

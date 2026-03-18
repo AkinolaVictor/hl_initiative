@@ -5,9 +5,11 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
 // import axios from 'axios';
-import { gallery_activities } from '@/utils/gallery_data/gallery_activites';
+// import { gallery_activities } from '@/utils/gallery_data/gallery_activites';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import { buildGalleryData } from '@/utils/exports';
+import { useSelector } from 'react-redux';
 
 interface Props {title?: string, date?: string, bgImage?: string}
 
@@ -15,9 +17,11 @@ function GalleryTop(props: Props) {
     const {title, date, bgImage} = props
     const path = usePathname()
     const [data, setData] = useState<any>({})
+    const {gallery} = useSelector((state:any)=>state.generalSlice)
     
-
+    
     function get_gallery_data(){
+        const gallery_activities = buildGalleryData(gallery, "all")
         const path_split = path?.split("/").reverse() ?? []
         const id = path_split[0]
 
@@ -34,7 +38,7 @@ function GalleryTop(props: Props) {
     useEffect(()=>{
         const datum = get_gallery_data()
         setData(datum)
-    }, [])
+    }, [gallery])
 
 
     function animate_home_title(elem: {head:string, description: string}) {

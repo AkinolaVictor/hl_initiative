@@ -6,8 +6,9 @@ import Link from 'next/link'
 import React, { Fragment, useEffect, useRef, useState } from 'react'
 import Footer from '../footer'
 import { generalFunctions } from '@/app/redux/store_controllers/generalFunctions'
-import { overlay_menu_listener, seek_path_and_ref } from '@/utils/exports'
+import { buildGalleryData, format_by_count, overlay_menu_listener, seek_path_and_ref } from '@/utils/exports'
 import { usePathname, useRouter } from 'next/navigation'
+import { useSelector } from 'react-redux'
 // import { gallery_activities } from '@/utils/gallery_data/gallery_activites'
 
 interface Props {
@@ -27,14 +28,15 @@ interface Props {
 
 function GalleryContent(props: Props) {
     const {preload_data, where} = props
-    const gallery_activities = preload_data || []
+    const {gallery} = useSelector((state:any)=>state.generalSlice)
+    const gallery_activities = buildGalleryData(gallery, where)
     const [mobile, setMobile] = useState(false)
-    const imgs = ["check_bp", "bg-white", "bg-red", "bg-white", "check_bp", "bg-red", "bg-white"]
     const router = useRouter()
-    // const [where, setWhere] = useState("all")
     const path_main = usePathname()
 
     function feature_animation(){
+        if(!gallery.length) return
+
         // if(prevAnim) return
         const screen_width = window.innerWidth
         const screen_height = window.innerHeight
@@ -42,7 +44,6 @@ function GalleryContent(props: Props) {
         setMobile(isMobile)
         
         if(isMobile) return
-
 
         // const card_size = 340
 
@@ -107,7 +108,7 @@ function GalleryContent(props: Props) {
         })
     }, [])
     
-    useEffect(feature_animation, [])
+    useEffect(feature_animation, [gallery])
     
     function EachGalleryComp(props2: Props){
         const {image, title2, description2} = props2
@@ -183,7 +184,8 @@ function GalleryContent(props: Props) {
                             //     url(./${image||"bg-red"}.webp) type("image/webp"),
                             //     url(./${image||"bg-red"}-2.jpg) type("image/jpeg")
                             // )`,
-                            backgroundImage: `url(${img})`,
+                            // backgroundImage: `url(${img})`,
+                            backgroundImage: `url(${image})`,
                             // backgroundImage: `url(./../gallery/amr/amr_1.jpg)`,
                             backgroundSize:"cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", 
                             width: "300px", minHeight: "360px", height: "auto", maxHeight: "450px"
@@ -220,7 +222,13 @@ function GalleryContent(props: Props) {
         )
     }
 
-
+    if(!gallery.length) {
+        return (
+            <div className='w-full h-auto p-40'>
+                <p>Loading Data...</p>
+            </div>
+        )
+    }
 
     return (
         // <div className='w-full min-h-screen h-auto bg-white text-black'>
