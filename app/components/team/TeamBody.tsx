@@ -62,8 +62,8 @@ function TeamBody(props: Props) {
                     /> */}
                 </div>
 
-                <p className='text-[22px] font-semibold mt-10'>{name}</p>
-                <p className='text-[13px]'>{role}</p>
+                <p className='text-[22px] font-semibold mt-10 w-full text-center'>{name}</p>
+                <p className='text-[13px] text-center w-full'>{role}</p>
 
                 {/* <div className='flex m-2 cursor-pointer mb-10'>
                     <div className='w-8 h-8 flex m-2 justify-center items-center bg-blue-500 rounded-full'>
