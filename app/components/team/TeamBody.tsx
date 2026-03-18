@@ -23,45 +23,6 @@ function TeamBody(props: Props) {
     const {team} = useSelector((state:any)=>state.generalSlice)
     const nums = [1,2,2,2,2,2,2,2]
 
-    function EachComp(props2: Props){
-        const {right, bg, color} = props2
-
-        return (
-            <div 
-                className={`w-full h-full flex ${right?"flex-col-reverse":"flex-col"} items-center`}
-                style={{backgroundColor: bg||"white", color}}
-            >
-                <div 
-                    className={`w-[80%] h-[80%] rounded-[25px] ${right?"mb-12.5":"mt-12.5"}`} 
-                    style={{
-                        backgroundImage: `image-set(
-                            url(./bg-red.webp) type("image/webp"),
-                            url(./bg-red-2.jpg) type("image/jpeg")
-                        )`,
-                        backgroundSize:"cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", 
-                        minHeight: "calc(50vh - 50px)"
-                    }}>
-                </div>
-                <div 
-                    className=' text-center p-10 w-full h-full flex flex-col justify-center items-center' 
-                    style={{minHeight: "calc(100vh / 2)"}}
-                >
-                    <p className='font-semibold text-[16px]'>Medical Outreach to Erin-Ijesha Community</p>
-                    <p className='text-[13px]'>August 6, 2025</p>
-                    <p className='text-center w-full max-w-125 mt-5 text-[13px] mb-10'>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
-                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore 
-                        magna aliquam erat volutpat. Ut wisi enim ad minim veniam, 
-                        quis nostrud exerci tation ullamcorper.
-                    </p>
-                    <Link href={"/volunteer"} className='w-auto h-auto text-white font-semibold rounded-full bg-black py-2 px-7 text_1 cursor-pointer'>
-                        Explore
-                    </Link>
-                </div>
-            </div>
-        )
-    }
-
     function Part_A(props2: Props){
         const {item} = props2
         const {name, role, colors, social, image} = item
@@ -213,7 +174,7 @@ function TeamBody(props: Props) {
             data.role = data.title
             data.social = {
                 x: data.x,
-                linkedIn: data.linkein,
+                linkedIn: data.linkedin,
                 instagram: data.instagram
             }
 

@@ -106,6 +106,7 @@ function BlogContent(props: Props) {
                     <img src="./../bg-red_2.jpg" alt="image" className='rounded-[20px] max-h-70'/>
                 </picture> */}
             </div>
+            
 
             {/* <div className='min-w-80 w-full max-w-250 h-70 rounded-xl bg-gray-500'>
 
