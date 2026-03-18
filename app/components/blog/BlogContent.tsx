@@ -100,7 +100,7 @@ function BlogContent(props: Props) {
                     // backgroundImage: `url(${get_img_path})`,
                 }}
             >
-                <img src={get_img_path} alt="" className='min-w-102 w-full max-w-121 h-auto mx-auto'/>
+                <img src={get_img_path} alt="" className='min-w-75 w-full max-w-121 h-auto mx-auto'/>
                 {/* <picture>
                     <source srcSet="./../bg-red.webp" type="image/webp" className='rounded-[20px] max-h-70'/>
                     <img src="./../bg-red_2.jpg" alt="image" className='rounded-[20px] max-h-70'/>
