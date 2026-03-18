@@ -11,7 +11,7 @@ function AdminHeader(props: Props) {
     // const [which, setWhich] = useState("blog")
 
     return (
-        <div className='w-full h-auto bg-white p-10 text-black text-[13px] pt-30'>
+        <div className='w-full h-auto bg-white p-4 bp:6p-10 text-black text-[13px] pt-30'>
             {/* <p className='text-[16px] w-full text-center'>Admin Page</p> */}
 
             <div className='w-[80%] my-4 mx-auto p-3 pb-1 rounded-[100px] font-semibold text-[13px] bg-[#004D00] text-white flex justify-center items-center gap-10'>
