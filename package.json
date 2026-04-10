@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "git": "git add . && git commit -m sitemap2 && git push hl_initiative master"
+    "git": "git add . && git commit -m favicon && git push hl_initiative master"
   },
   "dependencies": {
     "@editorjs/editorjs": "^2.31.4",
