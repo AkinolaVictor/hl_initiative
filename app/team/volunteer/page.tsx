@@ -8,7 +8,7 @@ interface Props {}
 
 export const metadata: Metadata = {
     title: "Team - The HL Initiative",
-    description: "Informaation about the Health enlight initiative team",
+    description: "Information about the Health enLight initiative team",
 };
 
 

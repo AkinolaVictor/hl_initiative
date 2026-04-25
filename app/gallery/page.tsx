@@ -9,7 +9,7 @@ interface Props {}
 
 export const metadata: Metadata = {
   title: "Gallery-The HL Initiative",
-  description: "Our Programmes: Health enlight initiative home page",
+  description: "Our Programmes: Health enLight initiative home page",
 };
 
 function Page(props: Props) {

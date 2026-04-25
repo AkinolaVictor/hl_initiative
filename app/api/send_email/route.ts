@@ -64,11 +64,11 @@ export async function POST(request: Request) {
     };
 
     const emailOptions = {
-        from: 'Health_EnLight <akinolavictor26@gmail.com>',
+        from: 'Health_enLight <akinolavictor26@gmail.com>',
         to: userEmail,
         subject,
         html,
-        text: `This message is from Health EnLight ${html}`,
+        text: `This message is from Health enLight ${html}`,
     }
 
     const sender = await emailSender(emailOptions).then((result)=>{

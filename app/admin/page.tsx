@@ -9,7 +9,7 @@ import Header from '../components/header';
 
 export const metadata: Metadata = {
   title: "NGO-Admin",
-  description: "The Health enlight initiative Admin page",
+  description: "The Health enLight initiative Admin page",
 };
 
 interface Props {}

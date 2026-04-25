@@ -14,7 +14,7 @@ import HomeIntro from "./components/home/homeIntro";
 
 export const metadata: Metadata = {
   title: "NGO-The HL Initiative",
-  description: "The Health enlight initiative home page",
+  description: "The Health enLight initiative home page",
 };
 
 

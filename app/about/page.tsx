@@ -13,7 +13,7 @@ import VoiceinNumbers from '../components/home/voiceinNumbers';
 
 export const metadata: Metadata = {
   title: "About Us - The HL Initiative",
-  description: "Information about the Health enlight initiative",
+  description: "Information about the Health enLight initiative",
 };
 
 interface Props {}

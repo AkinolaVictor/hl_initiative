@@ -13,7 +13,7 @@ function LatestBlogs(props: Props) {
     const {} = props
     const path = usePathname()
     const {blog} = useSelector((state:any)=>state.generalSlice)
-
+    // const 
     const blogs = [
         {
             number: "33",
@@ -49,7 +49,7 @@ function LatestBlogs(props: Props) {
 
             <div className='w-full flex justify-around flex-wrap items-start mt-10'>
                 {
-                    [...blog].map((item, index)=>{
+                    [...blog].reverse().map((item, index)=>{
                         // if(index>3) return null
                         if(index>3) return null
                         const {title, description, image, photourl, data_id} = item

@@ -73,7 +73,7 @@ function FillForm(props: Props) {
             `
             const sender_payload = {
                 userEmail: `${email}`,
-                subject: 'Health EnLight Initiative',
+                subject: 'Health enLight Initiative',
                 html: html_2
             }
             await emailSender({data: sender_payload})

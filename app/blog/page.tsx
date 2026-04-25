@@ -7,7 +7,7 @@ import Footer from '../components/footer';
 
 export const metadata: Metadata = {
     title: "Blog - The HL Initiative",
-    description: "The Health enlight initiative blog page",
+    description: "The Health enLight initiative blog page",
 };
 
 interface Props {}
