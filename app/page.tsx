@@ -15,6 +15,31 @@ import HomeIntro from "./components/home/homeIntro";
 export const metadata: Metadata = {
   title: "The Health enLight Initiative",
   description: "OUR VISION: To build a healthier and more informed society by equipping individuals especially young people - with the knowledge and tools to prevent diseases and promote well-being",
+  
+  alternates: {
+    canonical: "/",
+  },
+
+  openGraph: {
+    title: "Health enLight Initiative",
+    description: `OUR VISION: To build a healthier and more informed society by equipping individuals especially young people - with the knowledge and tools to prevent diseases and promote well-being`,
+    url: `https://www.thehealthenlightinitiative.org`,
+    siteName: "Health enLight Initiative",
+    images: ["/favicon.ico"],
+    type: "website",
+  },
+  
+  twitter: {
+    card: "summary_large_image",
+    title: "Health enLight Initiative",
+    description: `OUR VISION: To build a healthier and more informed society by equipping individuals especially young people - with the knowledge and tools to prevent diseases and promote well-being`,
+    images: ["/favicon.ico"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 
