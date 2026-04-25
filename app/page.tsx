@@ -13,8 +13,8 @@ import HomeIntro from "./components/home/homeIntro";
 
 
 export const metadata: Metadata = {
-  title: "NGO-The HL Initiative",
-  description: "The Health enLight initiative home page",
+  title: "Health enLight Initiative",
+  description: "OUR VISION: To build a healthier and more informed society by equipping individuals especially young people - with the knowledge and tools to prevent diseases and promote well-being",
 };
 
 
