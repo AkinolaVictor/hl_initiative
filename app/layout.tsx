@@ -22,6 +22,7 @@ import CentralBodyOverlay from "./centralBodyOverlay";
 // const description = `OUR VISION: To build a healthier and more informed society by equipping individuals especially young people - with the knowledge and tools to prevent diseases and promote well-being`,
 // const url = `https://www.thehealthenlightinitiative.org`
 // const title = "Health enLight Initiative"
+// const title = "Health enLight Initiative"
 
 export const metadata: Metadata = {
   title: "Health enLight Initiative",
