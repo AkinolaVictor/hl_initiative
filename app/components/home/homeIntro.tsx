@@ -106,7 +106,8 @@ function HomeIntro(props: Props) {
                     //     url(./bg-red.webp) type("image/webp"),
                     //     url(./bg-red-2.jpg) type("image/jpeg")
                     // )`,
-                    backgroundImage: "url(./gallery/amr/amr_4.jpg)",
+                    // backgroundImage: "url(./gallery/amr/amr_4.jpg)",
+                    backgroundImage: "url(./gallery/new/goodlife_2.jpg)",
                     // backgroundColor: "white",
                     opacity: 0.35,
                     backgroundSize:"cover", backgroundPosition: "center", 
