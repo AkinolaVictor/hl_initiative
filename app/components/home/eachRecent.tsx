@@ -118,7 +118,7 @@ function EachRecent(props: Props) {
             </div>
 
             <div 
-                className={`w-full max-w-125 h-auto p-0 bp8:p-5 my-5 bp8:my-0 mt-8 bp8:mt-0 ${img_class} `}
+                className={`w-full max-w-125 h-auto max-h-120 p-0 bp8:p-5 my-5 bp8:my-0 mt-8 bp8:mt-0 ${img_class} `}
                 style={{transform: reverse?"translateX(-500px)":"translateX(500px)"}}
             >
                 {/* <img 
@@ -127,7 +127,7 @@ function EachRecent(props: Props) {
                 /> */}
                 <picture>
                     {/* <source srcSet="check_bp.webp" type="image/webp" className='rounded-[15px]'/> */}
-                    <img src={image} alt="image" className='rounded-[15px]'/>
+                    <img src={image} alt="image" className='rounded-[15px] max-h-120 object-cover object-center'/>
                 </picture>
             </div>
             {/* {isLast?null:<div className='w-full h-px bg-black bp8:hidden mt-5 opacity-50'/>} */}

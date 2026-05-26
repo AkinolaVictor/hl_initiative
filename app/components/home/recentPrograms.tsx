@@ -1,11 +1,12 @@
 "use client"
 // import Link from 'next/link'
 // import React from 'react'
-import { health_club_wesly } from '@/utils/gallery_data/outreaches/health_club_wesly'
+// import { health_club_wesly } from '@/utils/gallery_data/outreaches/health_club_wesly'
+// import { antimicrobial_resistance } from '@/utils/gallery_data/outreaches/antimicrobial_resistance'
 import EachRecent from './eachRecent'
-import { antimicrobial_resistance } from '@/utils/gallery_data/outreaches/antimicrobial_resistance'
 import { usePathname } from 'next/navigation'
-import { seek_path_and_ref } from '@/utils/exports'
+import { buildGalleryData, seek_path_and_ref } from '@/utils/exports'
+import { useSelector } from 'react-redux'
 // import { motion } from 'framer-motion'
 
 interface Props {}
@@ -14,6 +15,8 @@ function RecentPrograms(props: Props) {
     const {} = props
     const path = usePathname()
     const arr = ["Ikorodu Oga", "Ikeja Lane", "Maritonous Pech", "Webinar Session", "Research Validation"]
+    const {gallery} = useSelector((state:any)=>state.generalSlice)
+    const gallery_activities = buildGalleryData(gallery, "outreach")
     
 
     return (
@@ -26,14 +29,17 @@ function RecentPrograms(props: Props) {
             {
                 // arr.map((item, index)=>{
                 [
-                    {...health_club_wesly, title: "School Health Club at Wesley Girls High School Lagos"}, 
-                    {...antimicrobial_resistance}
+                    // {...health_club_wesly, title: "School Health Club at Wesley Girls High School Lagos"}, 
+                    // {...antimicrobial_resistance},
+                    ...gallery_activities.reverse()
                 ].map((item:any, index)=>{
+                    if (index>2) return null
+
                     const {title, description, id, date, image, image_alt} = item
-                    const thisPath = item.path
-                    const which_image = image==="amr_1.jpg"?image_alt:image
-                    const image_ref = `gallery/${thisPath}/${which_image}`
-                    const img = seek_path_and_ref({path: path, name: image_ref})
+                    // const thisPath = item.path
+                    // const which_image = image==="amr_1.jpg"?image_alt:image
+                    // const image_ref = `gallery/${thisPath}/${which_image}`
+                    // const img = seek_path_and_ref({path: path, name: image_ref})
                     return (
                         <EachRecent 
                             key={index} 
@@ -43,7 +49,7 @@ function RecentPrograms(props: Props) {
                             index={index} 
                             reverse={index%2==1} 
                             date={date}
-                            image={img}
+                            image={image}
                             // isLast={index==arr.length-1}
                         />
                     )

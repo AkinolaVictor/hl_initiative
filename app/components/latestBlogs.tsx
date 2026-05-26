@@ -1,6 +1,6 @@
 "use client"
 import { blog_list } from '@/utils/blog_data/blog_list'
-import { format_by_count, seek_path_and_ref_2 } from '@/utils/exports'
+import { buildGalleryData, format_by_count, seek_path_and_ref_2 } from '@/utils/exports'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -11,8 +11,9 @@ interface Props {}
 
 function LatestBlogs(props: Props) {
     const {} = props
-    const path = usePathname()
+    // const path = usePathname()
     const {blog} = useSelector((state:any)=>state.generalSlice)
+    // const gallery_activities = buildGalleryData(gallery, "all")
     // const 
     const blogs = [
         {

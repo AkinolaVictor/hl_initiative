@@ -167,33 +167,36 @@ function GalleryContent(props: Props) {
     function EachGalleryComp_2(props2: Props){
         const {image, title, description, id, colors, type, path} = props2
         const {bg, color} = colors
-        const image_ref = `gallery/${path}/${image}`
-        const img = seek_path_and_ref({path: path_main, name: image_ref})
+        // const image_ref = `gallery/${path}/${image}`
+        // const img = seek_path_and_ref({path: path_main, name: image_ref})
         // console.log({type})
         return (
-            <div onClick={()=>{router.push(`/gallery/${id}`)}} 
+            <div 
+                onClick={()=>{router.push(`/gallery/${id}`)}}
+                // onClick={()=>{ console.log(props2)}}
                 className={`w-full flex flex-col min-h-screen relative cursor-pointer`}
                 style={{backgroundColor: bg||"#004D00", color: color||"white"}}
             >
                 <div className='w-full h-auto flex justify-center items-center'>
-                    <div
+                    {/* <div
                         // className='w-full h-85' 
                         className={`rounded-[20px] mt-10 w-80.5 h-auto max-h-99`} 
                         style={{
-                            // backgroundImage: `image-set(
-                            //     url(./${image||"bg-red"}.webp) type("image/webp"),
-                            //     url(./${image||"bg-red"}-2.jpg) type("image/jpeg")
-                            // )`,
-                            // backgroundImage: `url(${img})`,
                             backgroundImage: `url(${image})`,
-                            // backgroundImage: `url(./../gallery/amr/amr_1.jpg)`,
                             backgroundSize:"cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", 
                             width: "300px", minHeight: "360px", height: "auto", maxHeight: "450px"
                             // height: "100vh", margin:0, padding: 0,
                         }}
-                    >
-
-                    </div>
+                    ></div> */}
+                    <img 
+                        src={image} 
+                        alt="project photo"
+                        className={`rounded-[20px] mt-10 w-80.5 h-90 max-h-99 object-cover object-center`} 
+                        style={{
+                            // backgroundSize:"cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", 
+                            // width: "300px", minHeight: "360px", height: "auto", maxHeight: "450px"
+                        }}
+                    />
                 </div>
 
                 <div 
