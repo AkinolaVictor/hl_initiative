@@ -105,7 +105,7 @@ function ContactIntro(props: Props) {
                     <div className={`w-75 h-auto p-5 bg-[rgba(0,0,0,0.4)] rounded-0 text-white m-5 flex flex-col justify-center items-center hover:bg-white hover:text-black`}>
                         <h1 className='font-bold'>Address</h1>
                         <p className='text-[13px] mt-4'>Fadeke Street, Ikorodu</p>
-                        <p className='text-[13px]'>Lagos, Nigeria</p>
+                        <p className='text-[13px]'>Lagos, Nigeria.</p>
                     </div>
                     
                     <Link href={"tel:+2349031710194"} className={`w-75 h-auto p-5 bg-[rgba(0,0,0,0.4)] rounded-0 text-white m-5 flex flex-col justify-center items-center hover:bg-white hover:text-black`}>
